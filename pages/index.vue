@@ -1,27 +1,31 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <portrait />
       <h1 class="title">
-        macivor-tech
+        James MacIvor
       </h1>
       <h2 class="subtitle">
-        my personal website
+        My Personal Site
       </h2>
       <div class="links">
+        <a class="button--green">My Career</a>
         <a
           href="https://nuxtjs.org/"
           target="_blank"
           class="button--green"
         >
-          Documentation
+          My Blog
+        </a>
+        <a class="button--green">
+          My Company
         </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey"
+          class="button--green"
         >
-          GitHub
+          About Me
         </a>
       </div>
     </div>
@@ -29,11 +33,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import portrait from '~/components/portrait.vue'
 
 export default {
   components: {
-    Logo
+    portrait
   }
 }
 </script>
