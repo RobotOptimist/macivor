@@ -5,4 +5,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 body {
     font-family: 'Roboto Slab', serif;
+    @apply bg-gray-100;
+}
+.container-center {
+    @apply flex justify-center flex-col items-center text-center mx-auto;
+}
+.container-title {
+  background: linear-gradient(90deg, #4c51bf, #313587);
+}
+.container-title > h1 {
+  color: white;
+}
+.container {
+  @apply pl-24 pr-24 pt-8
 }

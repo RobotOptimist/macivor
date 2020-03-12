@@ -1,10 +1,6 @@
 <template>
-  <div class="">    
-    <div class="container-title bg-indigo-700 flex justify-center">
-        <h1 class="font-semibold text-5xl md:text-4xl m-5">
-          Hi, I'm James MacIvor
-        </h1>
-    </div>
+  <div>    
+    <page-header title="Hi, I'm James MacIvor" />
     <div class="container-center mt-8">      
       <portrait />
       <h2 class="subtitle font-medium text-3xl mb-5 p-2">
@@ -22,10 +18,11 @@
 
 <script>
 import portrait from '~/components/portrait.vue'
-
+import pageHeader from "~/components/page-header"
 export default {
   components: {
-    portrait
+    portrait,
+    pageHeader
   }
 }
 </script>
