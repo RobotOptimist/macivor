@@ -16,6 +16,50 @@ body {
 .container-title > h1 {
   color: white;
 }
-.container {
-  @apply pl-24 pr-24 pt-8
+.section-container {
+  @apply flex justify-center;
+}
+.article-container {
+  
+}
+h1 {
+  @apply font-semibold text-5xl m-5;
+}
+h2 {
+  @apply font-semibold text-3xl m-3;
+}
+p {
+  @apply text-xl mb-2 max-w-xs ml-16 mr-16;
+}
+hr {
+  @apply m-2
+}
+
+@screen sm {
+  p {
+    @apply max-w-sm;
+  }
+}
+@screen md {
+  .article-container {
+    @apply pl-16 pr-16;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  p {
+    @apply max-w-md;
+  }
+}
+
+@screen lg {
+  p {
+    @apply max-w-lg;
+  }
+}
+
+@screen xl {
+  p {
+    @apply max-w-xl;
+  }
 }
