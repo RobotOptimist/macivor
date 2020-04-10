@@ -1,5 +1,9 @@
 <template>
     <div class="flex justify-center mb-4">
-        <img class="w w-3/4 md:w-40 rounded-lg" src="../assets/images/jamesportrait.webp" alt="a picture of james macivor - completely on brand with crooked glasses, bad haircut, and beard stubble, smirking, looks kinda ridiculous."/>
+        <picture class="w w-3/4 md:w-56 rounded-lg">
+            <source class="rounded-lg" srcset="../assets/images/jamesportrait2_90.webp" type="image/webp">
+            <source class="rounded-lg" srcset="../assets/images/selfportrait03.jpg" type="image/jpg">
+            <img class="rounded-lg" src="../assets/images/selfportrait03.jpg" alt="a picture of james macivor - completely on brand with crooked glasses and beard stubble, smirking, looks kinda ridiculous."/>
+        </picture>        
     </div>
 </template>

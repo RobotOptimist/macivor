@@ -19,9 +19,6 @@ body {
 .section-container {
   @apply flex justify-center;
 }
-.article-container {
-  
-}
 h1 {
   @apply font-semibold text-5xl m-5;
 }
@@ -29,12 +26,15 @@ h2 {
   @apply font-semibold text-3xl m-3;
 }
 p {
-  @apply text-xl mb-2 max-w-xs ml-16 mr-16;
+  @apply text-xl mb-2 max-w-xs;
 }
 hr {
-  @apply m-2
+  @apply m-2;
 }
-
+.svg-logo {
+  max-width: 100%;
+  height: 15rem;
+}
 @screen sm {
   p {
     @apply max-w-sm;
@@ -54,12 +54,12 @@ hr {
 
 @screen lg {
   p {
-    @apply max-w-lg;
+    @apply max-w-2xl;
   }
 }
 
 @screen xl {
   p {
-    @apply max-w-xl;
+    @apply max-w-4xl;
   }
 }
