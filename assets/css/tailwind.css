@@ -5,7 +5,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 body {
     font-family: 'Roboto Slab', serif;
-    @apply bg-gray-100;
+    @apply bg-gray-100 min-h-full;
+}
+div {
+  @apply block;
+}
+.body-container {
+  @apply  h-screen grid;
+  grid-template-rows: auto 1fr auto;
 }
 .container-center {
     @apply flex justify-center flex-col items-center text-center mx-auto;

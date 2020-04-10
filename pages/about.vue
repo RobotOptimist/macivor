@@ -2,7 +2,7 @@
     <section>        
         <page-header title="About Me" />
         <article class="article-container">
-            <div class="container-center">
+            <div>
                 <div class="text-center">
                     <h2>I'm not a serious person</h2>
                 </div>
@@ -23,8 +23,11 @@
                 </div>
                 <div class="flex justify-center mb-4">
                     <p>Lately, I've been replaying Final Fantasy VII on my phone and playing Outer Worlds on the Playstation. In the past I've really enjoyed Horizons: Zero Dawn and the The Last of Us.</p>                    
-                </div>                
-                <div class="flex flex-col md:flex-row justify-center">
+                </div>    
+                <div class="flex justify-center mt-4">
+                    <p>On PC, I played Mount and Blade and Battletech quite a bit.</p>
+                </div>            
+                <div class="flex flex-col md:flex-row justify-center mt-4">
                     <div class="flex justify-center w-full lg:w-2/6">
                         <picture class="block md:max-w-xs">
                             <source srcset="../assets/images/outerworlds.webp" type="image/webp">
@@ -35,12 +38,9 @@
                     <div class="flex justify-center w-full lg:w-2/6">
                         <final-fantasy-logo class="svg-logo m-3"></final-fantasy-logo>         
                     </div>                    
-                </div>
-                <div class="flex justify-center mt-4">
-                    <p>On PC, I played Mount and Blade and Battletech quite a bit.</p>
-                </div>
+                </div>                
                 <div class="flex flex-col md:flex-row justify-center">
-                    <div class="flex justify-center w-11/12 lg:w-2/6 m-4 pt-20">
+                    <div class="flex justify-center w-11/12 lg:w-2/6 m-4 pt-24">
                         <picture class="block md:max-w-xs">
                             <source srcset="../assets/images/mountandblade.webp" type="image/webp">
                             <source srcset="../assets/images/mountandblade.png" type="image/png">
