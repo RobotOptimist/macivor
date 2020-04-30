@@ -1,7 +1,7 @@
 <template>
     <section>
         <page-header title="Career"/>
-        <div class="p-4">         
+        <div class="p-4 max-w-viewport">         
             <div class="block xl:flex mt-8">                
                 <career-card 
                     logoFileName="hmb-logo" 

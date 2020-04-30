@@ -45,6 +45,9 @@ a:visited {
   @apply  h-screen grid;
   grid-template-rows: auto 1fr auto;
 }
+.max-w-viewport {
+  max-width: 100vw;
+}
 .container-center {
     @apply flex justify-center flex-col items-center text-center mx-auto;
 }
