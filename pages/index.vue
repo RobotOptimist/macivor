@@ -7,10 +7,10 @@
         Welcome to My Website
       </h2>
       <div class="links w-full">
-          <nuxt-link to="/career">Career</nuxt-link>
-          <nuxt-link to="/blog">Blog</nuxt-link>
-          <nuxt-link to="/company">Company</nuxt-link>
-          <nuxt-link to="/about">About Me</nuxt-link>
+          <nuxt-link class="no-underline" to="/career">Career</nuxt-link>
+          <nuxt-link class="no-underline" to="/blog">Blog</nuxt-link>
+          <nuxt-link class="no-underline" to="/company">Company</nuxt-link>
+          <nuxt-link class="no-underline" to="/about">About Me</nuxt-link>
       </div>
     </div>
   </div>
