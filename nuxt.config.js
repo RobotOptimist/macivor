@@ -63,6 +63,13 @@ export default {
     '@nuxtjs/dotenv',
     'nuxt-svg-loader'
   ],
+  svgLoader: {
+    svgoConfig: {
+      plugins: [
+        {removeTitle: false}
+      ]
+    }
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

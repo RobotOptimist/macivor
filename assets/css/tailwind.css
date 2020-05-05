@@ -82,6 +82,10 @@ a:visited {
 .sub .career-card picture {
   @apply h-auto;
 }
+.company-logo {
+  max-height: 24rem;
+}
+
 @screen sm {
   p {
     @apply max-w-sm;
