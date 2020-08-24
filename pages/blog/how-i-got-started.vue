@@ -33,7 +33,7 @@
             Seemed like lots of people were taking this plunge. Some were doing bootcamps. Others were trying to teach themselves using online resources. Still others were going back to school at a community college or similar.
             I knew that I wouldn't be able to do any of those things. I was poor, how could I go back to school and also have a job and still have money to eat? I didn't see a way.
         </p>
-        <aside class="p-8 bg-indigo-300">
+        <aside class="p-8 bg-indigo-100">
           <p class="italic text-md">Here is a list of dev blogs with some non-technical articles (it's usually a mix so you can pick and choose what to read according to your skill)</p>
           <div class="flex justify-center">
             <ul class="text-left list-disc ml-6 mt-4">
@@ -96,7 +96,7 @@
             Note: Higher Computing for Everyone has long since been abandoned and is no longer available. 
         </p>
         <p class="text-left">
-            Luckily, around that same time, I discovered <a href="https://www.autohotkey.com/">AHK</a> and I focused my efforts around learning this language. There was no tutorial series at that time,
+            Luckily, around that same time, I discovered <a href="https://www.autohotkey.com/">AutoHotKey</a> a windows scripting language, and I focused my efforts around learning this language. There was no tutorial series at that time,
             so I had to dive into the documentation to learn it. It had major advantages in that I could start using the language to do things for my job right away and I could compile the scripts
             into executables and share them with my coworkers and friends. (I got in trouble for this eventually - please follow your organization's policies). 
         </p>
@@ -105,7 +105,7 @@
         </p>
         <p class="text-left">
             But this ultimately left me unsatisfied. I was making changes but I wasn't learning what I really needed to know. I wasn't getting to my goal of being a developer. I felt like the hero of my department
-            but all I also pissed off some HR people while doing it. (This is now a fun story to tell at parties, but at the time I worried I could be fired.) I needed a better plan.
+            but I also pissed off some HR people while doing it. (This is now a fun story to tell at parties, but at the time I worried I could be fired.) I needed a better plan.
         </p>
         <p class="text-left">
             Once again I found myself back at <a href="https://reddit.com/r/learnprogramming">/r/learnprogramming</a> trying to find that perfect fit. It took time and patience, but I eventually found
