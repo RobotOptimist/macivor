@@ -60,6 +60,9 @@ a:visited {
 .section-container {
   @apply flex justify-center;
 }
+.article-container {
+  @apply flex justify-center flex-col
+}
 .svg-logo {
   max-width: 100%;
   height: 15rem;

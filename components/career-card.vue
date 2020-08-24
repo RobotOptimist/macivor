@@ -1,11 +1,8 @@
 <template>
     <div class="career-card w-full">
         <div class="main-career">
-            <picture v-if="logoFileExtension !== 'svg'">
-                <source :srcset="`logos/${logoFileName}.webp`" type="image/webp">
-                <source :srcset="`logos/${logoFileName}.${logoFileExtension}`" :type="`image/${logoFileExtension}`">
-                <img class="rounded-lg w-64 max-w-full" :src="`logos/${logoFileName}.${logoFileExtension}`" :alt="altText">
-            </picture>
+            <picture-wrapper v-if="logoFileExtension != 'svg'" :fileName="`logos/${logoFileName}`" :fileExtension="logoFileExtension" :altText="altText" classes="rounded-lg w-64 max-w-full">              
+            </picture-wrapper>
             <div v-else>
                 <slot name="svg-content"></slot>
             </div>
@@ -24,7 +21,11 @@
 </template>
 
 <script>
+import pictureWrapper from "./picture-wrapper";
 export default {
+    components: {
+        pictureWrapper
+    },
     props: {        
         subCard: {
             type: Boolean,
