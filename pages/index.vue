@@ -11,7 +11,7 @@
           <nuxt-link class="no-underline" to="/blog">Blog</nuxt-link>
           <nuxt-link class="no-underline" to="/company">Company</nuxt-link>
           <nuxt-link class="no-underline" to="/about">About Me</nuxt-link>
-      </div>
+      </div>      
     </div>
   </div>
 </template>
