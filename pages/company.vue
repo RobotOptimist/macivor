@@ -1,7 +1,7 @@
 <template>
     <div>
         <page-header title="Company" />
-        <section>
+        <section class="article-container">
             <div class="flex justify-center">
                 <macivor-logo class="company-logo"></macivor-logo>                
             </div>            

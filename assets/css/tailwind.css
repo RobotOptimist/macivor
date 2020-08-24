@@ -60,7 +60,7 @@ a:visited {
   @apply flex justify-center;
 }
 .article-container {
-  @apply flex justify-center flex-col
+  @apply mx-8 flex justify-center flex-col
 }
 .svg-logo {
   max-width: 100%;
@@ -86,6 +86,7 @@ a:visited {
 }
 .company-logo {
   max-height: 24rem;
+  width: 100%
 }
 
 @screen sm {
@@ -103,7 +104,6 @@ a:visited {
   }
 }
 @screen md {
-  
   .article-container {
     @apply pl-16 pr-16;
   }
@@ -111,13 +111,13 @@ a:visited {
     @apply text-4xl;
   }
   p {
-    @apply max-w-md;
+    @apply max-w-none;
   }
 }
 
 @screen lg {  
   p {
-    @apply max-w-2xl;
+    @apply max-w-none;
   }
 }
 
