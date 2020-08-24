@@ -1,16 +1,15 @@
 
 export default {
   target: 'static',
-  //mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'MacIvor Website' || '',
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: 'All about my career, my company and my blog.' || '' },
       { name:"msapplication-TileColor", content:"#ffffff"},
       { name:"msapplication-TileImage", content:"/ms-icon-144x144.png"},
       { name:"theme-color", content:"#ffffff" }
@@ -81,6 +80,7 @@ export default {
   ** Build configuration
   */
   build: {
+    analyze: false,
     /*
     ** You can extend webpack config here
     */

@@ -41,6 +41,18 @@ export default {
     components: {
         pageHeader,
         macivorLogo
+    },
+    head() {
+        return {
+            title: 'MacIvor Technical LLC',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Describing the company, it\'s mission, and it\'s initiatives.'
+                }
+            ]
+        }
     }
 }
 </script>

@@ -60,17 +60,29 @@ export default {
   },
   methods: {
     async submit(e) {
-      e.preventDefault();  
+      e.preventDefault()
       this.response = await fetch('https://formspree.io/myyddpzn', {
         method: 'POST',
         mode: 'cors',
         headers: {
-            'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(this.data),
       })
       this.data.message = ''
     },
+  },
+  head() {
+    return {
+      title: 'Contact James MacIvor',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Tell me what's on your mind",
+        },
+      ],
+    }
   },
 }
 </script>

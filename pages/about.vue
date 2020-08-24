@@ -69,8 +69,8 @@
                     <div class="flex justify-center lg:w-2/6 m-4">
                         <picture class="block md:max-w-xs">
                             <source srcset="../assets/images/shadowrun_logo.webp" type="image/webp">
-                            <source srcset="../assets/images/shadowrun_logo.png" type="image/png">
-                            <img class="rounded-lg" src="../assets/images/shadowrun_logo.png" alt="Shadowrun logo">
+                            <source srcset="../assets/images/shadowrun_logo.jpg" type="image/jpg">
+                            <img class="rounded-lg" src="../assets/images/shadowrun_logo.jpg" alt="Shadowrun logo">
                         </picture>      
                     </div>     
                     <div class="flex justify-center lg:w-2/6 m-4">
@@ -101,7 +101,19 @@ import finalFantasyLogo from "@/assets/images/final-fantasy-vii.svg";
 export default {
     components: {
         pageHeader,
-        finalFantasyLogo
+        finalFantasyLogo        
+    },
+    head() {
+        return {
+            title: 'About James MacIvor',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: 'About James MacIvor\'s life and interests.'
+                }
+            ]
+        }
     }
 }
 </script>

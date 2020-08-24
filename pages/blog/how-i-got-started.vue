@@ -217,5 +217,17 @@ export default {
     pageHeader,
     pictureWrapper,
   },
+  head() {
+    return {
+      title: 'Blog: How I Got Started As A Software Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "A short story of how I got my start along with advice and links for anyone else.",
+        },
+      ],
+    }
+  },
 }
 </script>

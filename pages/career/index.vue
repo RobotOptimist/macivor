@@ -173,6 +173,18 @@ export default {
         pageHeader,
         unifiedTrustLogo,
         careerCard
+    },
+    head() {
+    return {
+      title: 'James MacIvor\'s Career',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "All of the stuff I've done so far in my career",
+        },
+      ],
     }
+  },
 }
 </script>

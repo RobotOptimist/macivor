@@ -14,6 +14,18 @@ import pageHeader from "~/components/page-header"
 export default {
     components: {
         pageHeader
+    },
+    head() {
+    return {
+      title: 'James MacIvor\'s Blog Index',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "A list of my blogs",
+        },
+      ],
     }
+  },
 }
 </script>
