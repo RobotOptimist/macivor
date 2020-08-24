@@ -5,6 +5,9 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
+  purge: [
+    './**/*.vue'    
+  ],
   theme: {
     boxShadow: {//(76, 81, 191)
       default: '0 1px 3px 0 rgba(76, 81, 191, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)',

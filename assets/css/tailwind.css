@@ -7,7 +7,6 @@ body {
     font-family: 'Roboto Slab', serif;
     @apply bg-gray-100 min-h-full;
 }
-//elements
 div {
   @apply block;
 }
@@ -80,7 +79,7 @@ a:visited {
   @apply mt-2 px-4;
 }
 .career-card picture {
-  @apply block flex justify-center items-center mx-4 bg-indigo-100 rounded-lg p-4 shadow h-64;
+  @apply flex justify-center items-center mx-4 bg-indigo-100 rounded-lg p-4 shadow h-64;
 }
 .sub .career-card picture {
   @apply h-auto;
