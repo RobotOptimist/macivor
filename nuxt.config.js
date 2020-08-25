@@ -1,4 +1,3 @@
-
 export default {
   target: 'static',
   head: {
@@ -57,11 +56,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    '@nuxtjs/markdownit'
   ],
   svgLoader: {
     svgoConfig: {
@@ -70,11 +66,15 @@ export default {
       ]
     }
   },
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,    
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
   },
   /*
   ** Build configuration

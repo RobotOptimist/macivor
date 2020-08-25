@@ -4,7 +4,10 @@
             <source :srcset="`/${fileName}.webp`" type="image/webp">
             <source :srcset="`/${fileName}.${fileExtension}`" :type="`image/${fileExtension}`">
             <img :class="classes" :src="`/${fileName}.${fileExtension}`" :alt="altText">
-        </picture>        
+        </picture>      
+        <div v-if="attribution != ''" class="attribution flex justify-center">
+            <p class="text-xs italic">{{ attribution }}</p>
+        </div>  
     </div>
 </template>
 
@@ -24,6 +27,10 @@ export default {
             default: 'default image'
         },
         classes: {
+            type: String,
+            default: ''
+        },
+        attribution: {
             type: String,
             default: ''
         }
