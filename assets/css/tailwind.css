@@ -66,6 +66,9 @@ a:visited.text-white{
  ul {
    @apply text-left list-disc ml-6 my-4 text-xl;
  }
+ ul ul {
+   list-style-type: circle;
+ }
  ol {
    @apply text-left list-decimal ml-6 my-4 text-xl;
  }
