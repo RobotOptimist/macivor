@@ -49,10 +49,10 @@ hr {
   @apply m-2;
 }
 a {
-  @apply underline text-indigo-500;
+  @apply underline text-indigo-700;
 }
 a:visited {
-  @apply text-indigo-600;
+  @apply text-indigo-800;
 }
 a:visited.text-white{
   @apply text-indigo-100;
