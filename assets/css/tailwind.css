@@ -23,22 +23,54 @@ h4 {
   @apply font-semibold text-xl;
 }
 p {
+  text-rendering: optimizeLegibility;
   @apply text-xl mb-2 max-w-xs;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-style: italic;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 hr {
   @apply m-2;
 }
 a {
-  @apply underline text-indigo-500;
+  @apply underline text-indigo-700;
 }
 a:visited {
-  @apply text-indigo-600;
+  @apply text-indigo-800;
+}
+a:visited.text-white{
+  @apply text-indigo-100;
 }
  nav a {
    @apply no-underline
  }
  nav a:visited {
    @apply text-indigo-200;
+ }
+ ul {
+   @apply text-left list-disc ml-6 my-4 text-xl;
+ }
+ ul ul {
+   list-style-type: circle;
+ }
+ ol {
+   @apply text-left list-decimal ml-6 my-4 text-xl;
  }
 .body-container {
   @apply  h-screen grid;
@@ -60,7 +92,15 @@ a:visited {
   @apply flex justify-center;
 }
 .article-container {
-  @apply mx-8 flex justify-center flex-col
+  overflow-wrap: break-word;
+  word-break: break-word;
+  @apply mx-8 flex flex-col justify-center;
+}
+.article-container p {
+  
+}
+.article-container p.text-center {
+  @apply text-center;
 }
 .svg-logo {
   max-width: 100%;
@@ -122,6 +162,9 @@ a:visited {
 }
 
 @screen xl {
+  .article-container {
+    @apply max-w-4xl
+  }
   .career-card {
     @apply px-32 m-4;
   }
