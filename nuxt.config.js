@@ -44,7 +44,17 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/globalComponents'
   ],
+
+  content: {
+    markdown: {
+      remarkPlugins: [
+        'remark-containers',
+        'remark-bracketed-spans'
+      ]
+    }
+  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -57,24 +67,52 @@ export default {
   */
   modules: [
     'nuxt-svg-loader',
-    '@nuxtjs/markdownit'
+    '@nuxt/content',
+    '@nuxtjs/feed'    
   ],
+
+  feed() {
+    const baseUrlBlogs = "https://www.macivortech.com/blogs"
+    const baseLinkFeedBlogs = "/feed/blogs"
+    const feedFormats = {
+      rss: {type: 'rss2', file: 'rss.xml'},
+      json: {type: 'json1', file: 'feed.json'}
+    }
+    const {$content} = require ('@nuxt/content')
+    const createFeedBlogs = async (feed) => {
+      feed.options = {
+        title: "James MacIvor's Blog",
+        description: "Technology, Business, Teaching and Mentoring",
+        link: baseUrlBlogs
+      }
+      const blogs = await $content('blogs').fetch()
+      blogs.forEach(blog => {
+        const url = `${baseUrlBlogs}/${blog.slug}`
+        feed.addItem({
+          title: blog.title,
+          id: url,
+          link: url,
+          date: blog.published,
+          description: blog.summary,
+          content: blog.summary,
+          author: blog.authors
+        })
+      })
+    }
+
+    return Object.values(feedFormats).map(({ file, type }) => ({
+      path: `${baseLinkFeedBlogs}/${file}`,
+      type: type,
+      create: createFeedBlogs
+    }))
+  },
+
   svgLoader: {
     svgoConfig: {
       plugins: [
         {removeTitle: false}
       ]
     }
-  },
-
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,    
-    use: [
-      'markdown-it-div',
-      'markdown-it-attrs'
-    ]
   },
   /*
   ** Build configuration
