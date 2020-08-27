@@ -5,13 +5,7 @@
 </template>
 
 <script>
-import pageHeader from '~/components/page-header'
-import pictureWrapper from '~/components/picture-wrapper.vue'
 export default {
-  components: {
-    pageHeader,
-    pictureWrapper,
-  },
   head() {
     return {
       title: 'Blog: The Cure For Imposter Syndrome',
