@@ -1,4 +1,31 @@
+let posts = [];
+
+const create = async (feed) => {
+  feed.options = {
+    title: "James MacIvor's Blog",
+    description: "Technology, Business, Teaching and Mentoring",
+    link: process.env.NODE_ENV === 'production' ? 'https://www.macivortech.com/feed.xml' : 'localhost:3000/feed.xml'
+  }
+
+  // eslint-disable-next-line global-require
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('blogs').fetch()
+
+  posts.forEach((post) => {
+    const url = process.env.NODE_ENV === 'production' ? `https://www.macivortech.com/blog/${post.slug}` : `localhost:3000/blog/${post.slug}`
+    feed.addItem({
+      title: post.title,
+      id: url,
+      link: url,
+      description: post.description,
+      content: post.stuff
+    })
+  })
+}
+
 export default {
+  mode: 'universal',
   target: 'static',
   head: {
     title: 'MacIvor Website' || '',
@@ -67,45 +94,49 @@ export default {
   */
   modules: [
     'nuxt-svg-loader',
+    '@nuxtjs/dotenv',
     '@nuxt/content',
     '@nuxtjs/feed'    
   ],
 
-  feed() {
-    const baseUrlBlogs = "https://www.macivortech.com/blogs"
-    const baseLinkFeedBlogs = "/feed/blogs"
-    const feedFormats = {
-      rss: {type: 'rss2', file: 'rss.xml'},
-      json: {type: 'json1', file: 'feed.json'}
+  feed: [
+    {
+      path: '/feed.xml',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2'
+    },
+    {
+      path: '/feed.json',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      type: 'json1'
     }
-    const {$content} = require ('@nuxt/content')
-    const createFeedBlogs = async (feed) => {
-      feed.options = {
-        title: "James MacIvor's Blog",
-        description: "Technology, Business, Teaching and Mentoring",
-        link: baseUrlBlogs
-      }
-      const blogs = await $content('blogs').fetch()
-      blogs.forEach(blog => {
-        const url = `${baseUrlBlogs}/${blog.slug}`
-        feed.addItem({
-          title: blog.title,
-          id: url,
-          link: url,
-          date: blog.published,
-          description: blog.summary,
-          content: blog.summary,
-          author: blog.authors
-        })
-      })
-    }
+  ],
 
-    return Object.values(feedFormats).map(({ file, type }) => ({
-      path: `${baseLinkFeedBlogs}/${file}`,
-      type: type,
-      create: createFeedBlogs
-    }))
+  hooks: {
+    'content:file:beforeInsert': async (document) => {
+      const { Database, getOptions } = require('@nuxt/content')
+
+      const database = new Database(getOptions())
+
+      if (document.extension === '.md' && document.body) {
+        const stuff = await database.markdown.toJSON(document.text);
+
+        document.stuff = stuff;
+      }
+    }
   },
+
+  // hooks: {
+  //   'content:file:beforeInsert': (document) => {
+  //     if (document.extension === '.md') {
+  //       const text = document.text;
+  //       const resolvedComponents = VueWithCompiler.compile(text);
+  //       document.bodyPlainText = text;
+  //     }
+  //   }
+  // },
 
   svgLoader: {
     svgoConfig: {

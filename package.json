@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.7.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/feed": "^2.0.0",
     "nuxt": "^2.14.3",
     "nuxt-svg-loader": "^1.2.0",
