@@ -1,4 +1,43 @@
+const fs = require('fs').promises;
+const path = require('path');
+
+let posts = [];
+
+const constructFeedItem = async (post, dir, hostname) => {  
+  const filePath = path.join(__dirname, `dist/rss/${post.slug}/index.html`);
+  const content = await fs.readFile(filePath, 'utf8');
+  const url = `${hostname}/${dir}/${post.slug}`;
+  return {
+    title: post.title,
+    id: url,
+    link: url,
+    description: post.description,
+    content: content
+  }
+} 
+
+const create = async (feed, args) => {
+  const [filePath, ext] = args;
+  console.log('in create func');
+  const hostname = process.NODE_ENV === 'production' ? 'https://www.macivortech.com' : 'http://localhost:3000'
+  feed.options = {
+    title: "James MacIvor's Blog",
+    description: "Technology, Business, Teaching and Mentoring",
+    link: `${hostname}/feed.${ext}`
+  }
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content(filePath).fetch();
+
+  for (const post of posts) {
+    const feedItem = await constructFeedItem(post, filePath, hostname);
+    feed.addItem(feedItem);
+  }
+  return feed;
+}
+
 export default {
+  mode: 'universal',
   target: 'static',
   head: {
     title: 'MacIvor Website' || '',
@@ -44,7 +83,17 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/globalComponents'
   ],
+
+  content: {
+    markdown: {
+      remarkPlugins: [
+        'remark-containers',
+        'remark-bracketed-spans'
+      ]
+    }
+  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -57,24 +106,34 @@ export default {
   */
   modules: [
     'nuxt-svg-loader',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/dotenv',
+    '@nuxt/content',
+    '@nuxtjs/feed'    
   ],
+
+  feed: [
+    {
+      path: '/feed.xml',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2',
+      data: [ 'blog', 'xml' ]
+    },
+    {
+      path: '/feed.json',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      type: 'json1',
+      data: [ 'blog', 'json' ]
+    }
+  ],
+
   svgLoader: {
     svgoConfig: {
       plugins: [
         {removeTitle: false}
       ]
     }
-  },
-
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,    
-    use: [
-      'markdown-it-div',
-      'markdown-it-attrs'
-    ]
   },
   /*
   ** Build configuration

@@ -71,7 +71,7 @@
                     endYear="Current (part time)"                 
                     title="MacIvor Technical LLC">
                     <template v-slot:main-description>
-                        <p class="mt-4 mb-1 text-lg">I created my own company in order to offer leadership and technology solutions for SafeRx Solutions, a compliance medecine startup.</p>
+                        <p class="mt-4 mb-1 text-lg">I created my own company in order to offer leadership and technology solutions for SafeRx Solutions, a compliance medicine startup.</p>
                         <p class="text-lg">I also created OffCode. It's an in person learning resource to teach people to code. I debuted OffCode at Nationwide Financial where I taught PowerShell and how to make a chrome extension.</p>
                     </template>  
                     <template v-slot:sub-careers>                        

@@ -11,13 +11,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.10",
-    "highlight.js": "^10.1.2",
-    "markdown-it": "^11.0.0",
-    "markdown-it-attrs": "^2.4.1",
-    "markdown-it-div": "^1.1.0",
+    "@nuxt/content": "^1.7.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/feed": "^2.0.0",
     "nuxt": "^2.14.3",
-    "nuxt-svg-loader": "^1.2.0"
+    "nuxt-svg-loader": "^1.2.0",
+    "remark-bracketed-spans": "^3.0.0",
+    "remark-containers": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.4.1",
