@@ -1,27 +1,39 @@
+const fs = require('fs').promises;
+const path = require('path');
+
 let posts = [];
 
-const create = async (feed) => {
+const constructFeedItem = async (post, dir, hostname) => {  
+  const filePath = path.join(__dirname, `dist/rss/${post.slug}/index.html`);
+  const content = await fs.readFile(filePath, 'utf8');
+  const url = `${hostname}/${dir}/${post.slug}`;
+  return {
+    title: post.title,
+    id: url,
+    link: url,
+    description: post.description,
+    content: content
+  }
+} 
+
+const create = async (feed, args) => {
+  const [filePath, ext] = args;
+  console.log('in create func');
+  const hostname = process.NODE_ENV === 'production' ? 'https://www.macivortech.com' : 'http://localhost:3000'
   feed.options = {
     title: "James MacIvor's Blog",
     description: "Technology, Business, Teaching and Mentoring",
-    link: process.env.NODE_ENV === 'production' ? 'https://www.macivortech.com/feed.xml' : 'localhost:3000/feed.xml'
+    link: `${hostname}/feed.${ext}`
   }
-
-  // eslint-disable-next-line global-require
   const { $content } = require('@nuxt/content')
   if (posts === null || posts.length === 0)
-    posts = await $content('blogs').fetch()
+    posts = await $content(filePath).fetch();
 
-  posts.forEach((post) => {
-    const url = process.env.NODE_ENV === 'production' ? `https://www.macivortech.com/blog/${post.slug}` : `localhost:3000/blog/${post.slug}`
-    feed.addItem({
-      title: post.title,
-      id: url,
-      link: url,
-      description: post.description,
-      content: post.stuff
-    })
-  })
+  for (const post of posts) {
+    const feedItem = await constructFeedItem(post, filePath, hostname);
+    feed.addItem(feedItem);
+  }
+  return feed;
 }
 
 export default {
@@ -104,39 +116,17 @@ export default {
       path: '/feed.xml',
       create,
       cacheTime: 1000 * 60 * 15,
-      type: 'rss2'
+      type: 'rss2',
+      data: [ 'blog', 'xml' ]
     },
     {
       path: '/feed.json',
       create,
       cacheTime: 1000 * 60 * 15,
-      type: 'json1'
+      type: 'json1',
+      data: [ 'blog', 'json' ]
     }
   ],
-
-  hooks: {
-    'content:file:beforeInsert': async (document) => {
-      const { Database, getOptions } = require('@nuxt/content')
-
-      const database = new Database(getOptions())
-
-      if (document.extension === '.md' && document.body) {
-        const stuff = await database.markdown.toJSON(document.text);
-
-        document.stuff = stuff;
-      }
-    }
-  },
-
-  // hooks: {
-  //   'content:file:beforeInsert': (document) => {
-  //     if (document.extension === '.md') {
-  //       const text = document.text;
-  //       const resolvedComponents = VueWithCompiler.compile(text);
-  //       document.bodyPlainText = text;
-  //     }
-  //   }
-  // },
 
   svgLoader: {
     svgoConfig: {

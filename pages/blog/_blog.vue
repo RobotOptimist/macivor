@@ -8,18 +8,18 @@
 export default {
   head() {
     return {
-      title: 'Blog: How I Got Started As A Software Developer',
+      title: this.page.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: "A short story of how I got my start along with advice and links for anyone else.",
+          content: this.page.description
         },
       ],
     }
   },
-  async asyncData({ $content }) {
-        const page = await $content('blogs/how-i-got-started').fetch()
+  async asyncData({ $content, params }) {
+        const page = await $content(`blog/${params.blog}`).fetch()
         return {
             page
         }
