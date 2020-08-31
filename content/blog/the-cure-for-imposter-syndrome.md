@@ -63,7 +63,7 @@ Do any of these sound familiar? The fact is that we all experience some of this 
 
 It comes from comparing yourself to others, not how they are but how you imagine them to be. There are so many tremendously smart people in tech, it's tempting to see them as giants. Like they, through 100% of their own merit, were given opportunities to work on new technologies and present themselves to the world. Even though many of them would be the first to deny this alt-version of themselves! People like [Scott Hanselman are quick to remind others that he once stood where you are](https://www.hanselman.com/blog/ImAPhonyAreYou.aspx). Moreover, Dan Abramov directly addresses reality vs. hype for developer expertise in his [blog post](https://overreacted.io/things-i-dont-know-as-of-2018/).
 
-More common, but less obvious, is when you compare ourself to people whom you think you should have parity and are shocked when they have deep knowledge of something unfamiliar to you. This happens to all of us. How quick we are to scold ourselves for not making the same decisions, studying the same things, making the same sacrifices. We're not fair to ourselves.
+More common, but less obvious, is when you compare yourself to people whom you think you should have parity and are shocked when they have deep knowledge of something unfamiliar to you. This happens to all of us. How quick we are to scold ourselves for not making the same decisions, studying the same things, making the same sacrifices. We're not fair to ourselves.
 
 And yet, it's useless to talk ourselves out of these feelings. It's a rare day when I can negotiate with my feelings regardless! I just hide the negative ones, same as you I expect. 
 
