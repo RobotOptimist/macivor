@@ -1,8 +1,8 @@
 ---
-title: The Cure For Imposter Syndrome
-description: A description of Imposter Syndrome and how to overcome it.
+title: The Cure For Impostor Syndrome
+description: A description of Impostor Syndrome and how to overcome it.
 ---
-<page-header title="The Cure For Imposter Syndrome"></page-header>
+<page-header title="The Cure For Impostor Syndrome"></page-header>
 
 ::: div container-center
 
@@ -10,7 +10,7 @@ description: A description of Imposter Syndrome and how to overcome it.
 
 ::: div flex justify-center
 
-<picture-wrapper file-extension="jpg" file-name="heroes/the-four-sights" alt-text="Painting of monks praying and point as a man suffers and dies" attribution="The Four Sights, a depiction of the suffering witnessed by Buddha"></picture-wrapper>
+<picture-wrapper file-extension="jpeg" file-name="heroes/the-four-sights" alt-text="Painting of monks praying and point as a man suffers and dies" attribution="The Four Sights, a depiction of the suffering witnessed by Buddha"></picture-wrapper>
 
 :::
 
@@ -24,11 +24,11 @@ description: A description of Imposter Syndrome and how to overcome it.
     * Don't challenge the senior developer.
     * Don't go for that promotion.            
 
-Of course, I'm talking about Imposter Syndrome.
+Of course, I'm talking about Impostor Syndrome.
 
-### What Even Is Imposter Syndrome?
+### What Even Is Impostor Syndrome?
 
-Imposter Syndrome runs rampant in our industry, preying on our fragile mental health. It's likely most frequently seen with junior developers, but I've seen it with mid levels and senior developers as well.
+Impostor Syndrome runs rampant in our industry, preying on our fragile mental health. It's likely most frequently seen with junior developers, but I've seen it with mid levels and senior developers as well.
 
 And, in a good team, it can be somewhat mitigated. There is a support structure of people who will reassure you that you're doing a good job. Or will make themselves a little bit vulnerable to show you that you're not alone. This is good healthy communication.
 
@@ -40,13 +40,13 @@ But not all teams are like that. In fact, that might be a bit of an exception. T
 
 :::
 
-So, the working definition for Imposter Syndrome is this (from Wikipedia):
+So, the working definition for Impostor Syndrome is this (from Wikipedia):
 
-> Imposter Syndrome is a psychological pattern in which an individual doubts their accomplishments and has a persistent internalized fear of being exposed as a "fraud".
+> Impostor Syndrome is a psychological pattern in which an individual doubts their accomplishments and has a persistent internalized fear of being exposed as a "fraud".
 
-And here is the rub - the root of Imposter Syndrome is disbelief in your own success. How does that happen? You're accomplishments are right there in the ol' resume. You can track through a long list of completed user stories. You can see old PRs of your contributions - and yet no matter what evidence is presented this feeling persists.
+And here is the rub - the root of Impostor Syndrome is disbelief in your own success. How does that happen? You're accomplishments are right there in the ol' resume. You can track through a long list of completed user stories. You can see old PRs of your contributions - and yet no matter what evidence is presented this feeling persists.
 
-This is a defining symptom of Imposter Syndrome. the psychological journal [verywellmind](https://www.verywellmind.com/) has an [article](https://www.verywellmind.com/imposter-syndrome-and-social-anxiety-disorder-4156469) that has the following bulleted list of characteristics:
+This is a defining symptom of Impostor Syndrome. the psychological journal [verywellmind](https://www.verywellmind.com/) has an [article](https://www.verywellmind.com/Impostor-syndrome-and-social-anxiety-disorder-4156469) that has the following bulleted list of characteristics:
 
 * Self-doubt
 * **An inability to realistically assess your competence and skills**
@@ -67,15 +67,15 @@ More common, but less obvious, is when you compare yourself to people whom you t
 
 And yet, it's useless to talk ourselves out of these feelings. It's a rare day when I can negotiate with my feelings regardless! I just hide the negative ones, same as you I expect. 
 
-In the Time article ["How to Deal With Imposter Syndrome"](https://time.com/5312483/how-to-deal-with-impostor-syndrome/#:~:text=How%20to%20deal%20with%20impostor,more%20critically%20question%20those%20thoughts.) Psychologist Audrey Ervine says
+In the Time article ["How to Deal With Impostor Syndrome"](https://time.com/5312483/how-to-deal-with-impostor-syndrome/#:~:text=How%20to%20deal%20with%20impostor,more%20critically%20question%20those%20thoughts.) Psychologist Audrey Ervine says
 
 > There’s no single answer. Some experts believe it has to do with personality traits—like anxiety or neuroticism—while others focus on family or behavioral causes, Sometimes childhood memories, such as feeling that your grades were never good enough for your parents or that your siblings outshone you in certain areas, can leave a lasting impact.
 
-The verywellmind article further explains the causes of Imposter Syndrome.
+The verywellmind article further explains the causes of Impostor Syndrome.
 
 >  We also know that entering a new role can trigger impostor syndrome. For example, starting college or university might leave you feeling as though you don't belong and are not capable.
 
-Moreover, we learn that Social Anxiety Disorder and Imposter Syndrom overlap, which makes a lot of sense when you consider that Imposter Syndrome results in a great deal of anxiety regarding how we're perceived by others.
+Moreover, we learn that Social Anxiety Disorder and Impostor Syndrome overlap, which makes a lot of sense when you consider that Impostor Syndrome results in a great deal of anxiety regarding how we're perceived by others.
 
 ### Wait, You Promised A Cure?
 
@@ -103,7 +103,7 @@ It's natural and right to use mentoring and teaching to improve ourselves and th
 
 ::: div flex justify-center my-4
 
-<picture-wrapper file-extension="jpg" file-name="expanding-brain-meme" alt-text="Expanding brain meme, little brain is feeling inadequate in your job, larger brain is combating your own imposter syndrome, next largest brain is realizing you've been competent all along, enlightened brain is dismantling structural problems in your job that exist to make people feel incompetent"></picture-wrapper>
+<picture-wrapper file-extension="jpg" file-name="expanding-brain-meme" alt-text="Expanding brain meme, little brain is feeling inadequate in your job, larger brain is combating your own Impostor syndrome, next largest brain is realizing you've been competent all along, enlightened brain is dismantling structural problems in your job that exist to make people feel incompetent"></picture-wrapper>
 
 :::
 

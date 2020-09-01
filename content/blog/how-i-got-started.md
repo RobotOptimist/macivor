@@ -39,7 +39,7 @@ I began reading a lot of developer blogs. Not the technical articles, but more l
 
 **I convinced myself that it was impossible and continued in my customer service career for five more years.**
 
-Then, one day, something changed. I'd successfully quit smoking cigarrettes, and realized I could apply the same discipline to do anything I wanted. I resolved to learn on my own. Reading dev blogs, I'd gleaned a little bit of wisdom from people who had done the same. It was similar to the advice that writers give each other.
+Then, one day, something changed. I'd successfully quit smoking cigarettes, and realized I could apply the same discipline to do anything I wanted. I resolved to learn on my own. Reading dev blogs, I'd gleaned a little bit of wisdom from people who had done the same. It was similar to the advice that writers give each other.
 
 * Make a plan and stick to it
 * Apply what you learn to real life situations
@@ -67,9 +67,9 @@ Once again I found myself back at <a href="https://reddit.com/r/learnprogramming
  the <a href="https://www.theodinproject.com">The Odin Project</a>. It ticked all of the boxes for me.
 
 * It had a thoughtful and pragmatic syllabus.
-* It focused on programming skills that were transferrable to other languages.
+* It focused on programming skills that were transferable to other languages.
 * It addressed tooling and other obstacles that frustrate beginners.
-* It took a wholeistic approach to learning - keeping in mind the mental limits of the students.
+* It took a holistic approach to learning - keeping in mind the mental limits of the students.
 * It engaged the community and allowed students to collaborate and share code.
 
 The Odin Project impressed me and it became my go to learning guide.
@@ -81,14 +81,14 @@ Also during this time I read the following books:
 ::: aside
 
 * <a href="https://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319">Code</a> by Charles Petzold. It's a great resource for lay people to start to grasp how computers work at a very low level and build up from there.
-* <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a> by Andrew Hunt and David Thomas. It's about how to approach progamming problems and how to manage your career. 
-* <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a> by Robert Martin. It's about how to organize code in an ObjectOriented way. It claims to show you how to keep things maintainable and testable - but it's fairly controversial for some of the author's design decisions. Still, it's a great book awell worth the read.
+* <a href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">The Pragmatic Programmer</a> by Andrew Hunt and David Thomas. It's about how to approach programming problems and how to manage your career. 
+* <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a> by Robert Martin. It's about how to organize code in an Object Oriented way. It claims to show you how to keep things maintainable and testable - but it's fairly controversial for some of the author's design decisions. Still, it's a great book well worth the read.
   
 :::
 
 I became aware of a developer job within my company. It was with a product I knew very well because I supported it as a Business Analyst. However, it was a .NET Developer position! All of my work was in Ruby and JavaScript. Also, it was not a web dev job - it was supporting a Windows Forms application. 
 
-Luckily, the lessons from the Odin Project were largely transferrable to C#. Logical thinking has no language. I had to get used to strong types, but I already knew some of that from C!
+Luckily, the lessons from the Odin Project were largely transferable to C#. Logical thinking has no language. I had to get used to strong types, but I already knew some of that from C!
 The hiring manager said that he was strongly considering me, and he noted I had a reputation for being able to learn new things. He told me that he intended to open another position  in 3 months and if I could show improvement in C# by then I would likely be hired.
 
 I jumped on it! Three months to learn a language? I felt like I could get there. I also networked with the developers who would be interviewing me.  I could do this because we already basically worked together. I found I needed to know the basics of C# and a few common design patterns used in .NET.
