@@ -19,7 +19,7 @@ const constructFeedItem = async (post, dir, hostname) => {
 const create = async (feed, args) => {
   const [filePath, ext] = args;
   console.log('in create func');
-  const hostname = process.NODE_ENV === 'production' ? 'https://www.macivortech.com' : 'http://localhost:3000'
+  const hostname = process.env.NODE_ENV === 'production' ? 'https://www.macivortech.com' : 'http://localhost:3000'
   feed.options = {
     title: "James MacIvor's Blog",
     description: "Technology, Business, Teaching and Mentoring",
