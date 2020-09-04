@@ -10,6 +10,8 @@ date: 2020-09-01
 
 <picture-wrapper file-extension="jpg" file-name="heroes/nuxt_title" alt-text="The Nuxt logo with the text, Nuxt a great case for vue. The quick and easy way to spin up a Vue.js application"></picture-wrapper>
 
+::: div article-container
+
 ## I Love Vue
 
 I love Vue.js. It's a fantastic JavaScript framework - easily outclassing in my mind the other offerrings - which is saying something because I think they are cool too. And yeah, they do some things better than Vue. Some of them have done things *before* Vue and Vue adopted it later. But even so, there are solid reasons for preferring Vue.
@@ -78,5 +80,40 @@ We'll also need to create this form. We'd selected bootstrap, so we'll use [boot
 Finally, we have this PWA requirement. There is a module for that too. [@nuxtjs/pwa](https://pwa.nuxtjs.org/setup) looks to have everything we need as well. It will handle all of the icon and manifest stuff, and allow us to easily register a service worker and determine what routes and behavior should be used when a user is offline. 
 
 Now, notice all of the things I'm not needing to specify. I don't need to call up Vue router because that's already in the mix. Vuex is also in there, and you can bet we'd create a store to manage our state for this form. 
+
+We create the project by running this command:
+
+```
+
+npx create-nuxt-app <project-name>
+
+```
+
+While this runs it actually gives the option to add almost all of the modules we need. The scaffolding tool will then add and configure the module to reasonables defaults. The only thing we need to add is the @nuxt/auth.
+
+```
+
+npm install @nuxtjs/auth
+
+```
+
+and then we modify the nuxt.config.js to add to the modules property:
+
+```
+
+modules: [
+  '@nuxtjs/axios',
+  '@nuxtjs/auth'
+],
+
+auth: {
+  // Options
+}
+
+```
+
+
+
+:::
 
 :::
