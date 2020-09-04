@@ -162,13 +162,7 @@ a:visited.text-white{
 }
 
 @screen xl {
-  .article-container {
-    @apply max-w-4xl
-  }
   .career-card {
     @apply px-32 m-4;
-  }
-  p {
-    @apply max-w-4xl;
   }
 }
