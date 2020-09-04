@@ -165,7 +165,4 @@ a:visited.text-white{
   .career-card {
     @apply px-32 m-4;
   }
-  p {
-    @apply max-w-4xl;
-  }
 }
