@@ -11,10 +11,10 @@
     "generate": "cross-env NODE_ENV=production nuxt generate"
   },
   "dependencies": {
-    "@nuxt/content": "^1.7.0",
+    "@nuxt/content": "^1.8.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/feed": "^2.0.0",
-    "nuxt": "^2.14.3",
+    "nuxt": "^2.14.4",
     "nuxt-svg-loader": "^1.2.0",
     "remark-bracketed-spans": "^3.0.0",
     "remark-containers": "^1.2.0"
@@ -25,7 +25,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "html-loader": "^1.3.0",
-    "prettier": "^2.1.0",
+    "prettier": "^2.1.1",
     "webpack-bundle-analyzer": "^3.8.0"
   }
 }
