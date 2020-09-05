@@ -58,7 +58,7 @@ Dad and I talked about doing a lot more fishing. We both loved to fish. Now Gavi
 
 ::: div flex justify-center my-8
 
-::: div w-1/2
+::: div max-w-sm
 
 <picture-wrapper file-extension="jpg" file-name="fishing-with-dad" alt-text="Me and dad pose next to the tiniest fish ever caught"></picture-wrapper>
 
