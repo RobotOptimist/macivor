@@ -112,6 +112,15 @@ auth: {
 
 ```
 
+The scaffolding tool also helped us to select a testing tool. I chose Jest. 
+
+Thanks for the reminder Nuxt! Testing is important.
+
+Finally, @nuxtjs/auth reminds us that we need to initialize the vuex store by adding an index.js file to the store directory. Nuxt will automatically import vuex and configure it for use when the index.js file is added. (This prevents vuex being added to projects that don't need it.)
+
+Lets take look at what all of this looks like: 
+
+[Here it is!](https://github.com/RobotOptimist/demo_survey_app)
 
 
 :::
