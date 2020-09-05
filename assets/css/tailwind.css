@@ -159,6 +159,9 @@ a:visited.text-white{
   p {
     @apply max-w-none;
   }
+  .article-container {
+    @apply max-w-2xl;
+  }
 }
 
 @screen xl {

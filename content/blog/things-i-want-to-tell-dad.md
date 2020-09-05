@@ -32,7 +32,7 @@ Best of all, he saw all of his grandkids. He perked up when they were there. He 
 
 ::: div my-8 flex justify-center
 
-<picture-wrapper file-extension="jpg" file-name="dad-with-the-grandkids" alt-text="My dad with my niece Evie, my son Gavin, and my nephew Gino" classes="w-1/2"></picture-wrapper>
+<picture-wrapper file-extension="jpg" file-name="dad-with-the-grandkids" alt-text="My dad with my niece Evie, my son Gavin, and my nephew Gino" classes="w-1/2 max-w-sm"></picture-wrapper>
 
 :::
 
