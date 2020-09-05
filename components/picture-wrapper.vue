@@ -1,11 +1,11 @@
 <template>
     <div>
-        <picture>
+        <picture :class="classes">
             <source :srcset="`/${fileName}.webp`" type="image/webp">
             <source :srcset="`/${fileName}.${fileExtension}`" :type="`image/${fileExtension}`">
-            <img :class="classes" :src="`/${fileName}.${fileExtension}`" :alt="altText">
+            <img  :src="`/${fileName}.${fileExtension}`" :alt="altText">
         </picture>      
-        <div v-if="attribution != ''" class="attribution flex justify-center">
+        <div v-if="attribution != ''" class="attribution flex justify-center max-w-md">
             <p class="text-xs italic">{{ attribution }}</p>
         </div>  
     </div>
