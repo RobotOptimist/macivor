@@ -89,7 +89,9 @@ npx create-nuxt-app <project-name>
 
 ```
 
-While this runs it actually gives the option to add almost all of the modules we need. The scaffolding tool will then add and configure the module to reasonables defaults. The only thing we need to add is the @nuxt/auth.
+While this runs it will allow us some options to pull in some of our dependencies. PWA is an option, but an additional npm installation is required for that. We'll also be using Axios so that could make more sense to use for now. We get bootstrap all set up though, which is nice.
+
+Lets go ahead and pull in the auth module:
 
 ```
 
@@ -97,9 +99,17 @@ npm install @nuxtjs/auth
 
 ```
 
-and then we modify the nuxt.config.js to add to the modules property:
+And, if you haven't already, make sure to install axios:
 
 ```
+
+npm intall @nuxtjs/axios
+
+```
+
+and then we modify the nuxt.config.js to add to the modules property:
+
+``` json
 
 modules: [
   '@nuxtjs/axios',
@@ -117,6 +127,27 @@ The scaffolding tool also helped us to select a testing tool. I chose Jest.
 Thanks for the reminder Nuxt! Testing is important.
 
 Finally, @nuxtjs/auth reminds us that we need to initialize the vuex store by adding an index.js file to the store directory. Nuxt will automatically import vuex and configure it for use when the index.js file is added. (This prevents vuex being added to projects that don't need it.)
+
+Next lets pull in the PWA module:
+
+```
+
+npm install @nuxtjs/pwa
+
+```
+
+And lets not forget to set up our manifest!
+
+``` json
+
+manifest: {
+    name: 'Fire hydrant surveyor',
+    short_name: 'Hydrant Surveyor',
+    lang: 'en',
+    display: 'standalone',
+},
+
+```
 
 Lets take look at what all of this looks like: 
 
