@@ -1,10 +1,10 @@
 ---
-title: Nuxt, A Great Case For Vue
-description: Different Use Cases For Nuxt
-date: 2020-09-01
+title: Nuxt, Offline First PWA Tutorial
+description: Explains Nuxt and walks through a simple offline first PWA project
+date: 2020-09-12
 ---
 
-<page-header title="Nuxt: A Great Case For Vue"></page-header>
+<page-header title="Nuxt: Offline First PWA Tutorial"></page-header>
 
 ::: div container-center mt-8
 
@@ -49,9 +49,9 @@ It's difficult to describe how Nuxt can be used without providing an example - s
 
 ### Example App Requirements
 
-First, lets get some requirements together. 
+First, lets get some requirements. 
 
-Let's make this a survey app. It's for fire hydrant inspectors who are required to periodically inspect fire hydrants. So it has these requirements:
+Let's make this a survey app. It's for fire hydrant inspectors who are required to periodically inspect fire hydrants (pretty sure this is a fake job). So it has these requirements:
 
 1. Requires log in of a user.
 2. Collects data about a fire hydrant as a form. (Hydrant serial number and condition)
@@ -63,7 +63,7 @@ Okay great. Lets make some decisions about the app's architecture then.
 
 It needs a log in, so we'll use Auth0. Auth0 will allow us to integrate with other authentication systems so we can have a support for a variety of fire hydrant inspector companies.
 
-It needs to have a form, so we'll use bootstrap and some sort of easy form validation to cover that requirement. There are newer, better(?), CSS frameworks available but bootstrap will give us everything we need (and a lot we don't) with very little work.
+It needs to have a form, so we'll use bootstrap to cover that requirement. There are newer, better(?), CSS frameworks available but bootstrap will give us everything we need (and a lot we don't) with very little work.
 
 Hmm, requirements 3, 4, and 5 really point to PWA ([Progressive Web Application](https://web.dev/what-are-pwas/)). So we'll make this app a PWA as well.
 
@@ -79,7 +79,7 @@ We'll also need to create this form. We'd selected bootstrap, so we'll use [boot
 
 Finally, we have this PWA requirement. There is a module for that too. [@nuxtjs/pwa](https://pwa.nuxtjs.org/setup) looks to have everything we need as well. It will handle all of the icon and manifest stuff, and allow us to easily register a service worker and determine what routes and behavior should be used when a user is offline. 
 
-Now, notice all of the things I'm not needing to specify. I don't need to call up Vue router because that's already in the mix. Vuex is also in there, and you can bet we'd create a store to manage our state for this form. 
+Now, notice all of the things I'm not needing to specify. I don't need to call up Vue router because that's already in the mix. Vuex is also in there and it's a dependency of nuxt auth, but we may not need it ourselves.
 
 We create the project by running this command:
 
@@ -159,7 +159,7 @@ Nuxt PWA is actually 5 different modules in one, only one of which will need som
 
 Lets take look at what all of this looks like: 
 
-[Here it is!](https://github.com/RobotOptimist/demo_survey_app)
+[Here it is!](https://github.com/RobotOptimist/demo_survey_app/tree/initial-setup)
 
 
 Just like that we have a functioning application with PWA capabilities, a CSS framework and authentication built in.
@@ -195,7 +195,7 @@ auth: {
 
 ```
 
-The options object is defined in a separate file: auth_config.js. 
+The options object is defined in a separate file: auth_config.js. I did this for my project for convenience, but for a real project I would use a .env file so I could inject the correct values for each environment via the CI/CD pipeline.
 
 ``` javascript
 
@@ -443,37 +443,6 @@ When I initially did this, I looked at a lot of potential solutions - including 
 
 Turns out, all of that is unnecessary because the nuxt/pwa module workbox will take care of it all for us.
 
-First thing first, we need to set up the pwa module. If you haven't already, do install it.
-
-``` bash
-
-npm install @nuxtjs/pwa
-
-```
-
-Then we need to configure it in the ```nuxt.config.js``` file.
-
-Lets configure the manifest first. This will provide information so people could add the application to their home screen.
-
-``` javascript
-
-pwa: {
-  manifest: {
-    name: 'Fire hydrant surveyor',
-    short_name: 'Hydrant Surveyor',
-    lang: 'en',
-    display: 'standalone'
-  }
-},
-
-```
-
-We also need to add an icon.png file to the static directory.
-
-The meta module's defaults are just fine, so no need to mess with that.
-
-But what about workbox? We definitely want that - and it can take care of our entire offline experience with very little code.
-
 In order to enable the behavior we want - which is resending failed requests that occur when the app is offline - we need to create a special plugin for workbox.
 
 In the plugins folder I created a file called ```workbox-sync.js``` and added this code:
@@ -528,9 +497,56 @@ If you cannot count on that, then you may need to go with an alternate solution 
 
 <picture-wrapper file-extension="png" file-name="screen-shots/successful-retry-send" alt-text="Chrome dev tools showing a succesful retry send to our api" class="w-1/2"></picture-wrapper>
 
-Lets take a look [here.](https://github.com/RobotOptimist/demo_survey_app/tree/pwa-config)
+For the final result of our code lets take a look [here.](https://github.com/RobotOptimist/demo_survey_app/tree/pwa-config)
+
+We met all of our requirements with very little custom code.
+
+Now for deployment, Auth0 needs configured to accept my production domain name.
+
+Also, we need to go ahead and refactor out auth.config.js and replace it with .env.
+
+I went ahead and did that, first installing cross-env
+
+```
+npm install cross-env
+
+```
+
+Then I created .env file and populated it like so:
+
+```
+
+DOMAIN='dev-iml-5t99.us.auth0.com'
+CLIENTID='7ykFnxTHYpleErWfUtCajI6fr4Tfomtm'
+REDIRECTURI='/signed-in'
+
+```
+
+I then removed the import of auth.config from nuxt.config and replaced the options with the following:
+
+``` javascript
+
+auth: {
+    redirect: {
+      login: '/',
+      callback: process.env.REDIRECTURI
+    },
+    strategies: {
+      local: false,
+      auth0: {
+        domain: process.env.DOMAIN,
+        client_id: process.env.CLIENTID,
+      }
+    }
+  },
 
 
+```
+Now I can inject the variables via the CI/CD pipeline.
+
+[And here is the final result.](https://epic-ramanujan-cef898.netlify.app/)
+
+Nuxt has a huge variety of libraries and plugins that can help you achieve what you're seeking to do. It's great to get something off the ground quickly so you can hone in on the business needs. 
 
 :::
 
