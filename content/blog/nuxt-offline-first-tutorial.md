@@ -2,7 +2,7 @@
 title: Nuxt, Offline First PWA Tutorial
 description: Explains Nuxt and walks through a simple offline first PWA project
 date: 2020-09-12
-tags: nuxtjs, vuejs, pwa, workbox, bootstrap, tutorial
+tags: nuxtjs, vuejs, pwa, workbox, bootstrap, tutorial, auth0
 ---
 
 <page-header title="Nuxt: Offline First PWA Tutorial"></page-header>
@@ -44,7 +44,7 @@ If I'm creating a new Vue project, unless it's very small, it's rare when I'll u
 
 In fact, you can view the structure of this blog as an example. Here is the [GitHub](https://github.com/RobotOptimist/macivor).
 
-Nuxt can fill many roles. In the case of this blog, it's a git based CMS and static site generator. But I've also used it to create a single page application, providing a rich experience for the browser. It also can be a universal application, providing prerendered or even server side rendered pages very easily. In fact, to create a server side rendered application instead of a single page application here is the line of configuration from nuxt.config.js: 
+Nuxt can fill many roles. In the case of this blog, it's a git based CMS and static site generator. But I've also used it to create a single page application, providing a rich experience for the browser. It can be a universal application, providing prerendered or even server side rendered pages very easily. In fact, to create a server side rendered application instead of a single page application here is the line of configuration from nuxt.config.js: 
 
 ```
 ssr: true, // will be a spa if set to false
@@ -60,7 +60,7 @@ Let's make this a survey app. It's for fire hydrant inspectors who are required 
 
 ::: div max-w-xs md:max-w-md
 
-1. Requires log in of a user.
+1. Requires login of a user.
 2. Collects data about a fire hydrant as a form. (Hydrant serial number and condition)
 3. Must work offline (fire hydrants aren't always in proximity to cell towers or WIFI).
 4. Must transmit fire hydrant data when connected (or reconnected).
@@ -68,9 +68,9 @@ Let's make this a survey app. It's for fire hydrant inspectors who are required 
 
 :::
 
-Okay great. Lets make some decisions about the app's architecture then.
+Okay great. Lets make some decisions about the app's architecture.
 
-It needs a log in, so we'll use Auth0. Auth0 will allow us to integrate with other authentication systems so we can have a support for a variety of fire hydrant inspector companies.
+It needs a login, so we'll use Auth0. Auth0 will allow us to integrate with other authentication systems so we can have a support for a variety of fire hydrant inspector companies.
 
 It needs to have a form, so we'll use bootstrap to cover that requirement. There are newer, better(?), CSS frameworks available but bootstrap will give us everything we need (and a lot we don't) with very little work.
 
@@ -80,15 +80,15 @@ OK. Now what? Well all of this can be done via Nuxt.
 
 ### Do It In Nuxt
 
-For authentication we could use [@nuxtjs/auth](https://auth.nuxtjs.org/). This is perfect because it has a built in integration with Auth0. But if I didn't want to use Auth0, it has built-in support for a handful of other Auth providers, or we can extend it to use any Auth provider we need. 
+For authentication we could use [@nuxtjs/auth](https://auth.nuxtjs.org/). This is perfect because it has a built in integration with Auth0. But if I didn't want to use Auth0, it has built-in support for a handful of other authentication providers, or we can extend it to use any authentication provider we need. 
 
-Nuxt auth has a dependency of [@nuxtjs/axios](https://axios.nuxtjs.org/) an ajax library - which is perfect since we'll need that to transmit our form data anyway.
+Nuxtjs/auth has a dependency of [@nuxtjs/axios](https://axios.nuxtjs.org/) an ajax library - which is perfect since we'll need that to transmit our form data anyway.
 
-We'll also need to create this form. We'd selected bootstrap, so we'll use [bootstrap-vue](https://bootstrap-vue.org/docs#getting-started-with-nuxtjs) which has a handy Nuxt.js module to make all of this easy. Also, bootstrap-vue has a away to specify which bootstrap features we're using so we can use the JavaScript build tool to treeshake out the rest. Great! It's not a perfect fix for bootstrap's drawbacks, but it's something.
+We'll also need to create this form. We selected bootstrap, so we'll use [bootstrap-vue](https://bootstrap-vue.org/docs#getting-started-with-nuxtjs) which has a handy Nuxt.js module to make all of this easy. Also, bootstrap-vue has a way to specify which bootstrap features we're using so we can use webpack (which is built into Nuxt) to treeshake out the rest. Great! It's not a perfect fix for bootstrap's drawbacks, but it's something.
 
-Finally, we have this PWA requirement. There is a module for that too. [@nuxtjs/pwa](https://pwa.nuxtjs.org/setup) looks to have everything we need as well. It will handle all of the icon and manifest stuff, and allow us to easily register a service worker and determine what routes and behavior should be used when a user is offline. 
+Finally, we have this PWA requirement. There is a module for that too. [@nuxtjs/pwa](https://pwa.nuxtjs.org/setup) looks to have everything we need. It will handle all of the icon and manifest stuff, and allow us to easily register a service worker and determine what routes and behavior should be used when a user is offline. 
 
-Now, notice all of the things I'm not needing to specify. I don't need to call up Vue router because that's already in the mix. Vuex is also in there and it's a dependency of nuxt auth, but we may not need it ourselves.
+Now, notice all of the things I'm not needing to specify. I don't need to call up Vue router because that's already in the mix. Vuex is also in there and it's a dependency of nuxt/auth, but we may not need it ourselves.
 
 We create the project by running this command:
 
@@ -96,7 +96,7 @@ We create the project by running this command:
 npx create-nuxt-app <project-name>
 ```
 
-While this runs it will allow us some options to pull in some of our dependencies. PWA is an option, but an additional npm installation is required for that. We'll also be using Axios so that could make more sense to use for now. We get bootstrap all set up though, which is nice.
+While this runs it will allow us some options to pull in some of our dependencies. PWA is an option, but an additional npm installation is still required for that. We'll also be using Axios so that could make more sense to use for now. We can also opt for bootstrap, or a bunch of other CSS frameworks.
 
 Lets go ahead and pull in the auth module:
 
@@ -104,7 +104,7 @@ Lets go ahead and pull in the auth module:
 npm install @nuxtjs/auth
 ```
 
-And, if you haven't already, make sure to install axios:
+And, if you haven't already, make sure to install Axios:
 
 ```
 npm intall @nuxtjs/axios
@@ -125,9 +125,9 @@ auth: {
 
 The scaffolding tool also helped us to select a testing tool. I chose Jest. 
 
-Thanks for the reminder Nuxt! Testing is important.
+Thanks for the reminder Nuxt! Testing is important. But I will not be talking about testing for this tutorial, sorry.
 
-Finally, @nuxtjs/auth reminds us that we need to initialize the vuex store by adding an index.js file to the store directory. Nuxt will automatically import vuex and configure it for use when the index.js file is added. (This prevents vuex being added to projects that don't need it.)
+Finally, @nuxtjs/auth reminds us that we need to initialize the Vuex store by adding an index.js file to the store directory. Nuxt will automatically import Vuex and configure it for use when the index.js file is added. (This prevents Vuex being added to projects that don't need it.)
 
 Next lets pull in the PWA module:
 
@@ -170,9 +170,11 @@ At this point we should consider our remaining tasks:
 
 Lets go for it. Starting with #1.
 
-[Creating an Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) account is super easy. You can log in using GitHub. Auth0 will automatically set up an application for you. You can then grab all of he information you need for the nuxtjs/auth module. You will need to set up a few things in Auth0 Application Settings, such as allowed origins, allowed callback URIs and similar. You can refer to [Auth0 documentation](https://auth0.com/docs/get-started/dashboard/application-settings) on how to do that.
+[Creating an Auth0](https://auth0.com/signup?&signUpData=%7B%22category%22%3A%22button%22%7D) account is super easy. You can log in using GitHub. Auth0 will automatically set up an application for you. You can then grab all of the information you need for the nuxtjs/auth module. You will need to set up a few things in Auth0 Application Settings, such as allowed origins, allowed callback URIs and similar. You can refer to [Auth0 documentation](https://auth0.com/docs/get-started/dashboard/application-settings) on how to do that.
 
 In nuxt.config.js you'll need to define the redirect and strategies objects. Note that the callback and login cannot be the same value. The module needs to route to a different page in order to finish processing the user data returned from the login event.
+
+In nuxt.config.js:
 
 ``` javascript
 auth: {
@@ -318,7 +320,13 @@ Bootstrap-vue makes it all pretty easy. It encompasses the bootstrap classes as 
 </template>
 ```
 
-A very simple form - we only need a couple of things. We'll be sending the completed result back to the parent by emitting the result. Here is the script portion of the component:
+Bootstrap-vue took the route of making the grid system into components. I sometimes quibble with that decision, but it is easy to use. In this template, the container (b-container) has a collection of rows (b-row or b-form-row). Each row can have up to 12 columns. Additional columns wrap to the next line. The b-col component can represent any number of columns between 1 and 12. You can then decide how many columns it should take up for each viewport size.
+
+For example, you may want bootstrap b-col to take up 12 columns (full width) on mobile so you'd specify cols="12" as an attribute on the b-col component. But then you might decide it should take up 6 columns (half width) on tablet so you'd specify sm="6", which is also an attribute. This allows you to declare in the html how a elements should be displayed, in terms of width, on each viewport. Pretty handy!
+
+Aside from the fairly decent grid system that bootstrap-vue abstracts for us, there are a number of utility components we can use. In this form, I only need an input, a select, and a button - so I use the bootstrap-vue version of these. Bootstrap has out of the box support for good accessibility on forms and the options on components can remind you of things - like setting a placeholder for example.
+
+This is a very simple form - we only need a couple of things. We'll be sending the completed result back to the parent by emitting the result. Here is the script portion of the component:
 
 ``` javascript
 export default {
@@ -414,9 +422,7 @@ Okay, so now when I send the request I'm getting a result posted to the console.
 
 But what about when I'm offline? 
 
-When I initially did this, I looked at a lot of potential solutions - including initiating indexdb and creating a service worker that would detect if I was online and then send the data.
-
-Turns out, all of that is unnecessary because the nuxt/pwa module workbox will take care of it all for us.
+Turns out, all we need is the nuxt/pwa module where workbox will take care of it all for us.
 
 In order to enable the behavior we want - which is resending failed requests that occur when the app is offline - we need to create a special plugin for workbox.
 
@@ -489,8 +495,8 @@ npm install cross-env
 Then I created .env file and populated it like so:
 
 ```
-DOMAIN='dev-iml-5t99.us.auth0.com'
-CLIENTID='7ykFnxTHYpleErWfUtCajI6fr4Tfomtm'
+DOMAIN='...auth0.com'
+CLIENTID='aHashFromAuth0'
 REDIRECTURI='/signed-in'
 ```
 
@@ -516,6 +522,8 @@ Now I can inject the variables via the CI/CD pipeline.
 [And here is the final result.](https://epic-ramanujan-cef898.netlify.app/)
 
 Nuxt has a huge variety of libraries and plugins that can help you achieve what you're seeking to do. It's great to get something off the ground quickly so you can hone in on the business needs. 
+
+I hope this is helpful for anyone doing an offline first application!
 
 :::
 
