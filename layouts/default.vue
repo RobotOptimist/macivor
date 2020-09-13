@@ -2,6 +2,7 @@
   <div class="body-container">
     <site-nav />
     <nuxt />
+    <div class="hidden my-8 w-1/2 max-w-sm"></div>
     <site-footer />
   </div>
 </template>
