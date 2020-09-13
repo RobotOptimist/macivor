@@ -1,6 +1,7 @@
 ---
 title: How I Got Started As A Software Developer
 description: A short story of how I got my start along with advice and links for anyone else.
+date: 2020-08-25
 ---
 
 <page-header title="How I Got Started As A Software Developer"></page-header>

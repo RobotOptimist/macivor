@@ -1,6 +1,7 @@
 ---
 title: Things I Want To Tell My Dad
 description: Things I want to say to my dad as he lays dying in hospice care
+date: 2020-09-05
 ---
 <page-header title="Things I Want To Tell My Dad"></page-header>
 
@@ -77,3 +78,5 @@ I love you dad.
 :::
 
 :::
+
+<div style="display: none;" class="my-8 max-w-sm" data-reason="css_class_includer"></div>
