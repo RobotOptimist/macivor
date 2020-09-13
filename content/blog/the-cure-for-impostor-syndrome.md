@@ -1,6 +1,7 @@
 ---
 title: The Cure For Impostor Syndrome
 description: A description of Impostor Syndrome and how to overcome it.
+date: 2020-08-31
 ---
 <page-header title="The Cure For Impostor Syndrome"></page-header>
 

@@ -3,6 +3,11 @@
     <site-nav />
     <nuxt />
     <div class="hidden my-8 w-1/2 max-w-sm"></div>
+    <pre class="hidden line-numbers language-javascript">
+      <code>
+        <span class="token operator string punctuation"></span>
+      </code>
+    </pre>
     <site-footer />
   </div>
 </template>

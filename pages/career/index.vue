@@ -166,7 +166,7 @@
 
 <script>
 import pageHeader from "~/components/page-header";
-import unifiedTrustLogo from "@/static/logos/unifiedtrust-logo.svg"
+import unifiedTrustLogo from "@/static/logos/unifiedtrust-logo.svg?inline"
 import careerCard from "~/components/career-card";
 export default {
     components: {

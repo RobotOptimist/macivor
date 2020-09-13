@@ -16,6 +16,17 @@ const constructFeedItem = async (post, dir, hostname) => {
   }
 } 
 
+const createSitemapRoutes = async () => {
+  let routes = [];
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('blog').fetch();
+  for (const post of posts) {
+    routes.push(`blog/${post.slug}`);
+  }
+  return routes;
+}
+
 const create = async (feed, args) => {
   const [filePath, ext] = args;
   console.log('in create func');
@@ -100,7 +111,12 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics'
   ],
+
+  googleAnalytics: {
+    id: 'UA-177865005-1'
+  },
   /*
   ** Nuxt.js modules
   */
@@ -108,8 +124,15 @@ export default {
     'nuxt-svg-loader',
     '@nuxtjs/dotenv',
     '@nuxt/content',
-    '@nuxtjs/feed'    
+    '@nuxtjs/feed',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://www.macivortech.com',
+    gzip: true,
+    routes: createSitemapRoutes
+  },
 
   feed: [
     {
