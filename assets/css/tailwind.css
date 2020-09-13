@@ -72,6 +72,9 @@ a:visited.text-white{
  ol {
    @apply text-left list-decimal ml-6 my-4 text-xl;
  }
+ pre {
+   @apply text-left;
+ }
 .body-container {
   @apply  h-screen grid;
   grid-template-rows: auto 1fr auto;
