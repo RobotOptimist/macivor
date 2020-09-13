@@ -14,12 +14,14 @@
     "@nuxt/content": "^1.8.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/feed": "^2.0.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "nuxt": "^2.14.4",
     "nuxt-svg-loader": "^1.2.0",
     "remark-bracketed-spans": "^3.0.0",
     "remark-containers": "^1.2.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^1.4.1",
     "cross-env": "^7.0.2",
     "eslint-config-prettier": "^6.11.0",

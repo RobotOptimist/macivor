@@ -2,11 +2,12 @@
 title: Nuxt, Offline First PWA Tutorial
 description: Explains Nuxt and walks through a simple offline first PWA project
 date: 2020-09-12
+tags: nuxtjs, vuejs, pwa, workbox, bootstrap, tutorial
 ---
 
 <page-header title="Nuxt: Offline First PWA Tutorial"></page-header>
 
-::: div container-center mt-8
+::: div container-center
 
 <picture-wrapper file-extension="jpg" file-name="heroes/nuxt_title" alt-text="The Nuxt logo with the text, Nuxt a great case for vue. The quick and easy way to spin up a Vue.js application"></picture-wrapper>
 
@@ -18,10 +19,14 @@ I love Vue.js. It's a fantastic JavaScript framework - easily outclassing in my 
 
 Just to run through them quickly: 
 
+::: div max-w-xs md:max-w-md
+
 1. Vue has a great learning curve.
 2. It encourages incremental adoption into legacy projects.
 3. Development is driven by community needs.
 4. Vue maintainers have friendly relationships with other framework maintainers, allowing for a free exchange of ideas and concepts.
+
+:::
 
 ## Maybe Some Things Could be Better
 
@@ -42,7 +47,7 @@ In fact, you can view the structure of this blog as an example. Here is the [Git
 Nuxt can fill many roles. In the case of this blog, it's a git based CMS and static site generator. But I've also used it to create a single page application, providing a rich experience for the browser. It also can be a universal application, providing prerendered or even server side rendered pages very easily. In fact, to create a server side rendered application instead of a single page application here is the line of configuration from nuxt.config.js: 
 
 ```
-mode: 'universal', // can also be spa
+ssr: true, // will be a spa if set to false
 ```
 
 It's difficult to describe how Nuxt can be used without providing an example - so lets create a Nuxt application together.
@@ -53,11 +58,15 @@ First, lets get some requirements.
 
 Let's make this a survey app. It's for fire hydrant inspectors who are required to periodically inspect fire hydrants (pretty sure this is a fake job). So it has these requirements:
 
+::: div max-w-xs md:max-w-md
+
 1. Requires log in of a user.
 2. Collects data about a fire hydrant as a form. (Hydrant serial number and condition)
 3. Must work offline (fire hydrants aren't always in proximity to cell towers or WIFI).
 4. Must transmit fire hydrant data when connected (or reconnected).
 5. Made to work on mobile or tablet.
+
+:::
 
 Okay great. Lets make some decisions about the app's architecture then.
 
@@ -84,9 +93,7 @@ Now, notice all of the things I'm not needing to specify. I don't need to call u
 We create the project by running this command:
 
 ```
-
 npx create-nuxt-app <project-name>
-
 ```
 
 While this runs it will allow us some options to pull in some of our dependencies. PWA is an option, but an additional npm installation is required for that. We'll also be using Axios so that could make more sense to use for now. We get bootstrap all set up though, which is nice.
@@ -94,23 +101,18 @@ While this runs it will allow us some options to pull in some of our dependencie
 Lets go ahead and pull in the auth module:
 
 ```
-
 npm install @nuxtjs/auth
-
 ```
 
 And, if you haven't already, make sure to install axios:
 
 ```
-
 npm intall @nuxtjs/axios
-
 ```
 
 and then we modify the nuxt.config.js to add to the modules property:
 
 ``` javascript
-
 modules: [
   '@nuxtjs/axios',
   '@nuxtjs/auth'
@@ -119,7 +121,6 @@ modules: [
 auth: {
   // Options
 }
-
 ```
 
 The scaffolding tool also helped us to select a testing tool. I chose Jest. 
@@ -131,22 +132,18 @@ Finally, @nuxtjs/auth reminds us that we need to initialize the vuex store by ad
 Next lets pull in the PWA module:
 
 ```
-
 npm install @nuxtjs/pwa
-
 ```
 
 And lets not forget to set up our manifest!
 
 ``` javascript
-
 manifest: {
     name: 'Fire hydrant surveyor',
     short_name: 'Hydrant Surveyor',
     lang: 'en',
     display: 'standalone',
 },
-
 ```
 
 Nuxt PWA is actually 5 different modules in one, only one of which will need some custom code from us. 
@@ -178,7 +175,6 @@ Lets go for it. Starting with #1.
 In nuxt.config.js you'll need to define the redirect and strategies objects. Note that the callback and login cannot be the same value. The module needs to route to a different page in order to finish processing the user data returned from the login event.
 
 ``` javascript
-
 auth: {
     redirect: {
       login: '/',
@@ -192,19 +188,16 @@ auth: {
       }
     }
   },
-
 ```
 
 The options object is defined in a separate file: auth_config.js. I did this for my project for convenience, but for a real project I would use a .env file so I could inject the correct values for each environment via the CI/CD pipeline.
 
 ``` javascript
-
 export const options = {
         domain: '...',
         client_id: '...',
         redirectUri: '/signed-in' //or whatever you configure in Auth0 Application Settings
 } 
-
 ```
 
 While the values contained therein are not secret it is nonetheless recommended that the file not be checked in to source control. You can later modify this file to have an audience property and to change the values based on build environment.
@@ -212,7 +205,6 @@ While the values contained therein are not secret it is nonetheless recommended 
 Next we'll modify the main route to contain a login button. 
 
 ``` html
-
 <div class="links">
   <button
     class="button--green"
@@ -221,13 +213,11 @@ Next we'll modify the main route to contain a login button.
     Login
   </button>
 </div>
-
 ```
 
 and we'll define a login method in the Vue instance.
 
 ``` javascript
-
 export default {
   methods: {
     login() {
@@ -235,15 +225,12 @@ export default {
     }
   }
 }
-
 ```
 
 _Note: As of this writing there is an [issue](https://github.com/nuxt-community/auth-module/issues/750) that requires the installation of an additional npm package._
 
 ``` bash
-
 npm install nanoid@2.1.11
-
 ```
 
 Now when you test this out you should be redirected to an Auth0 login page. Upon successfully signing up or logging in you will be redirected back to the redirect_uri, which in this example project I set as http://localhost:3000.
@@ -251,7 +238,6 @@ Now when you test this out you should be redirected to an Auth0 login page. Upon
 Now, lets further modify the component template so as to display something different once we're logged in.
 
 ``` html
-
 <div class="links">
   <b-button
     v-if="!$auth.loggedIn"
@@ -270,7 +256,6 @@ Now, lets further modify the component template so as to display something diffe
     Logout
   </b-button>
 </div>
-
 ```
 
 Notice we're starting to switch to using bootstrap-vue components for the buttons. The b-button component accepts a variant and a size prop among other things.
@@ -278,7 +263,6 @@ Notice we're starting to switch to using bootstrap-vue components for the button
 Now lets make sure we get the script piece of the page right:
 
 ``` javascript
-
 import { mapGetters } from 'vuex'
 export default {
   methods: {
@@ -291,7 +275,6 @@ export default {
   },
   computed: mapGetters(['isAuthenticated']),
 }
-
 ```
 
 Great! Now with these simple changes we have an application with authentication. So we've got #1 and part of #2 done now.
@@ -303,7 +286,6 @@ The remainder of #2 is to build the survey form. Lets do that real quick as a co
 Bootstrap-vue makes it all pretty easy. It encompasses the bootstrap classes as components
 
 ``` html
-
 <template>
   <b-container fluid>
     <b-form-row>
@@ -334,13 +316,11 @@ Bootstrap-vue makes it all pretty easy. It encompasses the bootstrap classes as 
     </b-form-row>
   </b-container>
 </template>
-
 ```
 
 A very simple form - we only need a couple of things. We'll be sending the completed result back to the parent by emitting the result. Here is the script portion of the component:
 
 ``` javascript
-
 export default {
   data() {
     return {
@@ -361,13 +341,11 @@ export default {
     },
   },
 };
-
 ```
 
 Now the parent component can handle the result as necessary. Lets take a look at the parent actually. You know what? Lets go ahead and refactor that to use bootstrap-vue as well.
 
 ``` html
-
 <template>
   <b-container class="pt-5">
     <b-row align-h="center" class="mt-5">
@@ -388,13 +366,11 @@ Now the parent component can handle the result as necessary. Lets take a look at
     </b-row>
   </b-container>
 </template>
-
 ```
 
 In the parent we'll also need to import the component and define the handler:
 
 ``` javascript
-
 import surveyForm from '../components/survey-form'
 
 export default {
@@ -408,7 +384,6 @@ export default {
       //do stuff
     }
   }
-
 ```
 
 [Here is the GitHub for this leg of our adventure](https://github.com/RobotOptimist/demo_survey_app/tree/bootstrap-form)
@@ -485,17 +460,17 @@ Lets see this in action.
 
 Here we are sending a successful request.
 
-<picture-wrapper file-extension="png" file-name="screen-shots/successful-send" alt-text="Chrome dev tools showing a succesful send to our api" class="w-1/2"></picture-wrapper>
+<picture-wrapper file-extension="png" file-name="screen-shots/successful-send" alt-text="Chrome dev tools showing a succesful send to our api" class="overflow-scroll max-w-xs md:max-w-sm lg:max-w-full"></picture-wrapper>
 
 But lets change our status to offline from the dev tools and watch a request fail.
 
-<picture-wrapper file-extension="png" file-name="screen-shots/failed-send" alt-text="Chrome dev tools showing a failed send to our api" class="w-1/2"></picture-wrapper>
+<picture-wrapper file-extension="png" file-name="screen-shots/failed-send" alt-text="Chrome dev tools showing a failed send to our api" class="overflow-scroll max-w-xs md:max-w-sm lg:max-w-full"></picture-wrapper>
 
 Now the service worker takes care of re-sending the request. It will use the same information as what was originally sent, so beware if you are using any sort of expiring authentication data. But if we're reasonable sure the authentication token will remain valid until our users can get back online then this solution will work great.
 
 If you cannot count on that, then you may need to go with an alternate solution where you keep the data upon a failed request in an indexdb using [localforage](https://github.com/nuxt-community/localforage-module). Then you would need to create a custom service worker that would need to determine if you are back online and resend the data using the most recent authentication credentials available.
 
-<picture-wrapper file-extension="png" file-name="screen-shots/successful-retry-send" alt-text="Chrome dev tools showing a succesful retry send to our api" class="w-1/2"></picture-wrapper>
+<picture-wrapper file-extension="png" file-name="screen-shots/successful-retry-send" alt-text="Chrome dev tools showing a succesful retry send to our api" class="overflow-scroll max-w-xs md:max-w-sm lg:max-w-full"></picture-wrapper>
 
 For the final result of our code lets take a look [here.](https://github.com/RobotOptimist/demo_survey_app/tree/pwa-config)
 
@@ -509,23 +484,19 @@ I went ahead and did that, first installing cross-env
 
 ```
 npm install cross-env
-
 ```
 
 Then I created .env file and populated it like so:
 
 ```
-
 DOMAIN='dev-iml-5t99.us.auth0.com'
 CLIENTID='7ykFnxTHYpleErWfUtCajI6fr4Tfomtm'
 REDIRECTURI='/signed-in'
-
 ```
 
 I then removed the import of auth.config from nuxt.config and replaced the options with the following:
 
 ``` javascript
-
 auth: {
     redirect: {
       login: '/',
@@ -539,8 +510,6 @@ auth: {
       }
     }
   },
-
-
 ```
 Now I can inject the variables via the CI/CD pipeline.
 
