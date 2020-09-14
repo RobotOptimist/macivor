@@ -13,7 +13,7 @@ date: 2020-09-05
 
 ::: div my-8 flex justify-center
 
-<picture-wrapper file-extension="jpg" file-name="dad-in-the-kitchen-with-us" alt-text="Mom, dad, my wife Becca and me sit on the kitchen floor. Mom holds my son, Gavin. Dad attempts to wrangle my nephew Gino. Becca is holding the puppy Apollo and I'm holding my niece Evie" attribution="From right to left Mom, Dad, Becca (wife), Me, Gavin (son), Gino (nephew), Apollo (puppy), Evie (niece)"></picture-wrapper>
+<picture-wrapper file-extension="jpg" file-name="dad-in-the-kitchen-with-us" alt-text="Mom, dad, my wife Becca and me sit on the kitchen floor. Mom holds my son, Gavin. Dad attempts to wrangle my nephew Gino. Becca is holding the puppy Apollo and I'm holding my niece Evie" attribution="From left to right Mom, Dad, Becca (wife), Me, Gavin (son), Gino (nephew), Apollo (puppy), Evie (niece)"></picture-wrapper>
 
 :::
 
