@@ -107,7 +107,7 @@ npm install @nuxtjs/auth
 And, if you haven't already, make sure to install Axios:
 
 ```
-npm intall @nuxtjs/axios
+npm install @nuxtjs/axios
 ```
 
 and then we modify the nuxt.config.js to add to the modules property:
