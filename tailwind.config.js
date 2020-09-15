@@ -5,9 +5,16 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  purge: [
-    './**/*.vue'    
-  ],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    options: {
+      whitelist: ['line-numbers', 'language-javascript', 'token', 'operator', 'string', 'punctuation', 'my-8', 'w-1/2', 'max-w-sm']
+    }
+  },
   theme: {
     boxShadow: {//(76, 81, 191)
       default: '0 1px 3px 0 rgba(76, 81, 191, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)',

@@ -29,7 +29,6 @@ const createSitemapRoutes = async () => {
 
 const create = async (feed, args) => {
   const [filePath, ext] = args;
-  console.log('in create func');
   const hostname = process.env.NODE_ENV === 'production' ? 'https://www.macivortech.com' : 'http://localhost:3000'
   feed.options = {
     title: "James MacIvor's Blog",
@@ -47,11 +46,10 @@ const create = async (feed, args) => {
   return feed;
 }
 
-export default {
-  mode: 'universal',
+export default {  
   target: 'static',
   head: {
-    title: 'MacIvor Website' || '',
+    title: 'James MacIvor Website' || '',
     htmlAttrs: {
       lang: 'en'
     },

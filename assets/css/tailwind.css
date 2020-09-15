@@ -58,7 +58,7 @@ a:visited.text-white{
   @apply text-indigo-100;
 }
  nav a {
-   @apply no-underline
+   @apply no-underline;
  }
  nav a:visited {
    @apply text-indigo-200;
