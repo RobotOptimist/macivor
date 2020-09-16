@@ -24,3 +24,5 @@ Thank you Dad. You made me who I am in so many ways. I remember when I was young
 Thank you for all of the many things you taught me. Thank you for teaching me about God. Thank you for teaching me to pray. Thank you for teaching me so many little things from tying my shoes, to fishing, to friendship. It's because of you I'm where I am now. It's because you helped me when I needed it the most. Even when I was stupid, even when I was selfish, you were there. Thank you so much. I love you.
 
 ### Mom
+
+Thank you Mom. Thank you for taking care of me, for nurturing and protecting me. Thank you for teaching me to be humble. Thank you for showing me I can talk to anyone regardless of their perceived status. Thank you for helping me with dad. Thank you for helping me and Becca get set up in our life. Thank you for the many practical gifts that enriched us in so many ways. Thank you for 
