@@ -42,9 +42,9 @@ dotnet tool install -g mlnet
 
 This worked really well in wsl bash, but I had some problems running it in Powershell. According to the docs, this will work in MacOS and Linux just fine though.
 
-So for windows you may to use the visual studio installer, where you select the .NET Core cross-platform development option and elect for ML.NET like so:
+So for windows you may need to use the visual studio installer, where you select the .NET Core cross-platform development option and elect for ML.NET like so:
 
-<picture-wrapper file-name="screenshots/vs-installer-model-builder" alt-text="A screenshot of the visual studio installer install screen where ML.NET is selected alongside .NET Core cross-platform development."></picture-wrapper>
+<picture-wrapper file-name="screen-shots/vs-installer-model-builder" alt-text="A screenshot of the visual studio installer install screen where ML.NET is selected alongside .NET Core cross-platform development."></picture-wrapper>
 
 ## ML.NET Is Installed, Now What?
 
@@ -104,7 +104,7 @@ For example, I worked with a company that processed [OARRS](https://www.ohiopmp.
 
 From there, we would need to pull from existing data whether or not a patient was compliant with their prescription instructions. This is something that the medical staff tracks as part of their counseling tasks. We can make a value judgement based on that data. A result of non-compliant would mean that "High Risk" and compliant would be "Low Risk". Using this, we can create a set of training data that more or less looks like this:
 
-| List of current prescriptions | Span of time for continuous prescriptions in days | Number of unique prescription fill locations | Risk |
+| Current prescriptions | Continuous prescriptions in days | Unique fill locations | Risk |
 |---|---|---|---|
 | methadone | 30 | 1 | Low |
 | oxycontin | 100 | 5 | High |
