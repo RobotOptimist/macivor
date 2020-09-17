@@ -75,6 +75,32 @@ a:visited.text-white{
  pre {
    @apply text-left overflow-auto max-w-xs;
  }
+ table {
+   @apply table-auto block border-collapse w-full overflow-x-scroll max-w-xs;
+ }
+ thead tr {
+   @apply rounded-lg text-sm font-medium text-gray-700 text-left;
+   font-size: 0.9674rem;
+ }
+ tr th {
+   @apply px-4 py-2 bg-gray-200;
+   background-color: #f8f8f8;
+ }
+ tbody {
+   @apply text-sm font-normal text-gray-700;
+ }
+ tbody tr {
+   @apply border-b border-gray-200 py-10 text-left;
+ }
+ tbody tr:hover {
+   @apply bg-gray-400;
+ }
+ tr td {
+   @apply px-4 py-4;
+ }
+ td {
+   min-width: 30%;
+ }
 .body-container {
   @apply  h-screen grid;
   grid-template-rows: auto 1fr auto;
@@ -151,6 +177,9 @@ a:visited.text-white{
   .article-container {
     @apply max-w-sm;
   }
+  table {
+    @apply max-w-md;
+  }
 }
 @screen md {
   .article-container {
@@ -164,6 +193,9 @@ a:visited.text-white{
   }
   pre {
     @apply max-w-none;
+  }
+  table {
+    @apply max-w-none overflow-x-auto;
   }
 }
 
