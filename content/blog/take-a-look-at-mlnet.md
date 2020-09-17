@@ -9,7 +9,7 @@ tags: machinelearning, dotnet, mlnet, csharp
 
 ::: div container-center
 
-<picture-wrapper file-extension="jpg" file-name="heroes/MLNET-huh" alt-text="The ML.NET logo with my face next to it. I have a dumb expression on my face."></picture-wrapper>
+<picture-wrapper file-extension="jpg" file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it."></picture-wrapper>
 
 ::: div article-container
 
