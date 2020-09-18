@@ -19,6 +19,8 @@ ML.NET is a service from Microsoft that allows you to add machine learning to yo
 
 Machine learning has different types of predictions it can make based on the data you give it. Here is a list of what ML.NET can do out of the box along with a short description and an example or two.
 
+::: div table-wrapper
+
 | Prediction                           | Description                                                                                               | Example |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------- | -------
 | Classification/Categorization        | Divides records into categories or classifications.                                                       | Can determine if a message is mean or nice. |
@@ -27,6 +29,8 @@ Machine learning has different types of predictions it can make based on the dat
 | Recommendations | Predicts a desired addition to a set based on the set contents. | Suggests additional products a shopper might want to buy. |
 | Time series/sequential data | Makes predictions based on the order of previous data. | Weather forecasts, stock market predictions. |
 | Image classification | Divides images into classifications | Can determine if an image is a hotdog 😂🌭 |
+
+:::
 
 All of these seem to be tremendously useful and ML.NET makes it easy to start using them in your existing application using your existing data.
 
@@ -99,10 +103,16 @@ For me, when I saw this example I immediately started thinking about data I have
 
 For example, I worked with a company that processed [OARRS](https://www.ohiopmp.gov/) data in order to track prescription compliance for a patient. OARRS data is kept for patients who are prescribed controlled substances. Using ML.NET we _could_ classify a patient into high or low risk categories based on prescription history. We could aggregate the prescription history for patients like so:
 
+::: div table-wrapper
+
 | List of current prescriptions | Span of time for continuous prescriptions in days | Number of unique prescription fill locations |
 |---|---|---|
 
+:::
+
 From there, we would need to pull from existing data whether or not a patient was compliant with their prescription instructions. This is something that the medical staff tracks as part of their counseling tasks. We can make a value judgement based on that data. A result of non-compliant would mean that "High Risk" and compliant would be "Low Risk". Using this, we can create a set of training data that more or less looks like this:
+
+::: div table-wrapper
 
 | Current prescriptions | Continuous prescriptions in days | Unique fill locations | Risk |
 |---|---|---|---|
@@ -110,6 +120,8 @@ From there, we would need to pull from existing data whether or not a patient wa
 | oxycontin | 100 | 5 | High |
 | adderall | 1000 | 10 | Low |
 | percocet | 200 | 2 | Low |
+
+:::
 
 Lets say we save this aggregated anonymous data into a csv or tsv file.
 
@@ -125,7 +137,7 @@ Using the command line tool will also show the best machine learning algorithm t
 
 The tool will generate two projects, one will be a library that has a MLModel.zip file attached - the `SampleClassification.Model` project, and the other will be a console app where the model is consumed. The `SampleClassification.ConsoleApp` project.
 
-Lets take a look at some code that would be spit out in the Model project. The tool will have generated two classes here, ModelInput class and a ModelOutput class. The ModelInput will be a representation of the above information sans the field to be predicted. The ModelOutput class has the field to be predicted and a float type value showing the percent certainty the algorthm made the prediction.
+Lets take a look at some code that would be spit out in the Model project. The tool will have generated two classes here, ModelInput class and a ModelOutput class. The ModelInput will be a representation of the above information sans the field to be predicted. The ModelOutput class has the field to be predicted and a float type value showing the percent certainty the algorthim made the prediction.
 
 ``` csharp
 public class ConsumeModel
@@ -248,7 +260,7 @@ _For this example, I did not move forward with generating this service. While I 
 
 :::
 
-## Cool! How Do I Start With This?
+## Cool! What now?
 
 I recommend doing the [ML.NET tutorial from Microsoft](https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro). It will hit on some of the stuff covered here and will get you spun up with your own training data from wikipedia. The code examples in this blog are adapted from that tutorial.
 
