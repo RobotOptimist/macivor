@@ -13,9 +13,13 @@ tags: webdev, developer, Halloween
 
 ::: div article-container
 
+## Intro
+
+_[Wes Bos](https://twitter.com/wesbos/status/1313830816154349568) asked for scary stories on Twitter recently. I emailed him but was inspired to write about it myself._
+
 ## A Warm October
 
-My story takes place in 2016-2017. I was hired by a consulting company to work on an EPiServer (CMS) implementation for a client. My skill level at the time was probably just barely mid-level, but mainly in C# and .NET tech, not so much with JavaScript. I was a pretty fair hand with the internals of the CMS though so I thought I could figure it out, also I reasoned that my tech lead had a decade of experience so I could lean on him a little bit.
+My story takes place many years ago. I was hired by a consulting company to work on an EPiServer (CMS) implementation for a client. My skill level at the time was probably just barely mid-level, but mainly in C# and .NET tech, not so much with JavaScript. I was a pretty fair hand with the internals of the CMS though so I thought I could figure it out, also I reasoned that my tech lead had a decade of experience so I could lean on him a little bit.
 
 Arriving on site, the first thing the client told us was "No frameworks, plain JavaScript / jQuery only". 
 
@@ -92,7 +96,9 @@ Over the weeks he struggles with user stories and I pick up more. Soon, the clie
 
 :::
 
-I, barely a midlevel developer, start to plan the architecture of our little piece of the project. The .NET piece seems fine just following the established patterns I already knew. The JavaScript left a lot to be desired. I read a lot. I made friends with developers on other projects and started asking them lots of questions. I was determined to nail this. I believed I could do it.
+I, barely a midlevel developer, start to plan the architecture of our little piece of the project. The .NET piece seems fine just following the established patterns I already knew. The JavaScript left a lot to be desired. 
+
+I read a lot. I made friends with developers on other projects and started asking them lots of questions. I was determined to nail this. I believed I could do it.
 
 I decided that since we couldn't use frameworks but needed framework like behavior then I would build my own custom framework. A mini-framework. Just enough to get things working. I started writing JavaScript - **a lot of JavaScript!** 
 
