@@ -5,7 +5,7 @@ date: 2020-10-9
 tags: webdev, developer, Halloween
 ---
 
-<page-header title="Tale of Terror - A Scarey Web Dev Story"></page-header>
+<page-header title="Tale of Terror - A Scary Web Dev Story"></page-header>
 
 ::: div container-center
 
