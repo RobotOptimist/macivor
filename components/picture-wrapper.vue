@@ -6,8 +6,11 @@
             <img  :src="`/${fileName}.${fileExtension}`" :alt="altText">
         </picture>      
         <div v-if="attribution != ''" class="attribution flex justify-center max-w-md">
-            <p class="text-xs italic">{{ attribution }}</p>
-        </div>  
+            <p v-if="attributionLink == ''" class="text-xs italic">{{ attribution }}</p>
+            <p v-else class="text-xs italic">
+                <a :href="attributionLink">{{attribution}}</a>
+            </p>
+        </div>
     </div>
 </template>
 
@@ -31,6 +34,10 @@ export default {
             default: ''
         },
         attribution: {
+            type: String,
+            default: '',
+        },
+        attributionLink: {
             type: String,
             default: ''
         }

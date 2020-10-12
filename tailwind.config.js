@@ -12,7 +12,7 @@ module.exports = {
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     options: {
-      whitelist: ['line-numbers', 'language-javascript', 'token', 'operator', 'string', 'punctuation', 'my-8', 'w-1/2', 'max-w-sm']
+      whitelist: ['line-numbers', 'language-javascript', 'token', 'operator', 'string', 'punctuation', 'my-8', 'w-1/2', 'max-w-sm', 'giphy-container', 'dialogue-container']
     }
   },
   theme: {

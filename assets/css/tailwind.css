@@ -150,6 +150,18 @@ a:visited.text-white{
 .article-container p.text-center {
   @apply text-center;
 }
+.dialogue-container {
+  @apply text-left p-4 m-2 bg-gray-200;
+}
+.dialogue-container p {
+  @apply text-lg;
+}
+.giphy-container {
+  @apply w-full;
+}
+.giphy-container p {
+  @apply text-xs italic
+}
 .svg-logo {
   max-width: 100%;
   height: 15rem;
@@ -215,6 +227,9 @@ a:visited.text-white{
   }
   .table-wrapper {
     @apply max-w-none;
+  }
+  .giphy-container {
+    @apply w-1/2;
   }
 }
 
