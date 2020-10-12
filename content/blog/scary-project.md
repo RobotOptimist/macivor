@@ -202,7 +202,17 @@ That project is still there. Years later I saw wanted ads from the company. "EPi
 
 The refactor is still in progress. The old broken JavaScript still scraping by.
 
-Fellow developers, the dungeon I created still exists, seeking new inmates. That JavaScript "framework", a monster that few can slay. When you're out there, scrolling through ads thinking about your next gig, remember this. Be diligent lest you also be imprisoned. 
+Fellow developers, the dungeon I created still exists, seeking new inmates. That JavaScript "framework", a monster that few can slay. When you're out there, scrolling through ads thinking about your next gig, remember this. 
+
+**Be diligent lest you also be imprisoned!**
+
+## But Hey I'm Fine
+
+::: div flex justify-center m-4
+
+<picture-wrapper file-extension="jpg" file-name="bad-dev" alt-text="A guy at a computer desk hoists his mug at the camera. A caption reads 'Writes Unmaintainable Code, Leaves Company'" attribution="Is this me? Am I the monster?"></picture-wrapper>
+
+:::
 
 :::
 
