@@ -1,7 +1,7 @@
 ---
 title: Tale of Terror - A Scary Web Dev Story
 description: The story of a project gone awry.
-date: 2020-10-9
+date: 2020-10-12
 tags: webdev, developer, Halloween
 ---
 
@@ -31,16 +31,6 @@ My tech lead was confident though - "No problem! We can do it!"
 Okay, whew, well at least my tech lead had the goods. Over the next week or so while we familiarized with the project, the client would make some more restrictions around the JavaScript and CSS to use. Like no build steps for JavaScript, no jQuery plugins, etc etc. 
 
 The tech lead would sagely nod his head. "No problem!" He'd say.
-
-::: div flex justify-center my-4
-
-::: div giphy-container
-
-<div style="width:100%;height:0;padding-bottom:81%;position:relative;"><iframe src="https://giphy.com/embed/5xrkJe3IJKSze" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/rad-sooziq-capture-5xrkJe3IJKSze">via GIPHY</a></p>
-
-:::
-
-:::
 
 ## A Cold November 
 
@@ -88,16 +78,6 @@ Cold sweat trickled down my spine. I smiled.
 
 :::
 
-::: div flex justify-center my-4
-
-::: div giphy-container
-
-<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/VfFOx1c03YGkNOUYhj" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/memecandy-VfFOx1c03YGkNOUYhj">via GIPHY</a></p>
-
-:::
-
-:::
-
 Over the weeks he struggles with user stories and I pick up more. Soon, the client was bypassing him and asking me directly to plan and implement the features.
 
 ## The Real Horror Begins
@@ -114,17 +94,9 @@ Over the weeks he struggles with user stories and I pick up more. Soon, the clie
 
 I, barely a midlevel developer, start to plan the architecture of our little piece of the project. The.>NET piece seems fine just following the established patterns I already knew. The JavaScript, though, left a lot to be desired. I read a lot. I made friends with developers on other projects and started asking them lots of questions. I was determined to nail this. I believed I could do it.
 
-::: div flex justify-center my-4
+I decided that since we couldn't use frameworks but needed framework like behavior then I would build my own custom framework. A mini-framework. Just enough to get things working. I started writing JavaScript - **a lot of JavaScript!** 
 
-::: div giphy-container
-
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/3FiU7jBr6PMd9e4zkZ" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/hyperrpg-kidsonbikes-kobrpg-kids-on-bikes-3FiU7jBr6PMd9e4zkZ">via GIPHY</a></p>
-
-:::
-
-:::
-
-I decided that since we couldn't use frameworks but needed framework like behavior then I would build my own custom framework. A mini-framework. Just enough to get things working. I started writing JavaScript - a lot of JavaScript! I had read about something called MutationObserver which is something in JavaScript that allowed me to observe changes to elements and then react to them. I decided that would be the core of my project. I built a central engine around this. I made JavaScript functions representing pieces of functionality I needed and overloaded the prototype to get the functionality I needed. 
+I had read about something called [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) which is something in JavaScript that allowed me to observe changes to elements and then react to them. I decided that would be the core of my project. I built a central engine around this. I made JavaScript functions representing pieces of functionality I needed and overloaded the prototype to get the functionality I needed. 
 
 ::: div flex justify-center my-4
 
@@ -136,17 +108,11 @@ I decided that since we couldn't use frameworks but needed framework like behavi
 
 :::
 
-I created a custom dependency injection setup for my functions. I believed I could create something similar to Angular.js, just a touch simpler. I worked late every night for weeks. Features were getting completed, but I would frequently revisit them. Really, nothing was ever finished because I kept changing it. I worked into a delirium. I worked until I thought I was crazy. 
+I created a custom dependency injection setup for my functions. I believed I could create something similar to Angular.js, just a touch simpler. I worked late every night for weeks. I was marking features as completed but I would frequently revisit them. 
 
-::: div flex justify-center my-4
+**Really, nothing was ever finished because I kept changing it.** 
 
-::: div giphy-container
-
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/ZQbON1Fr2Ada0" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/work-tired-glasses-ZQbON1Fr2Ada0">via GIPHY</a></p>
-
-:::
-
-:::
+I worked into a delirium. I worked until I thought I was crazy. 
 
 I believed, I really believed I was making a fairy tale palace of JavaScript. You read this and you think you know how bad it was.
 
@@ -164,23 +130,13 @@ It was worse.
 
 ## The Dungeon
 
-::: div flex justify-center my-4
-
-::: div giphy-container
-
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/Qw4X3FDDfWem2v2JoGs" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/gameofthrones-game-of-thrones-tyrion-lannister-dungeon-Qw4X3FDDfWem2v2JoGs">via GIPHY</a></p>
-
-:::
-
-:::
-
 Things were getting close to completed, or so I thought. But everything always seemed to be broken. 
 
 Things happened on the site but I had no idea why. Race conditions abounded. The off-by-one errors had off-by-one errors.
 
 Slowly, painfully, I began to realize that this was my fault. My design was flawed. My assumptions, wrong. All the work, the long hours - wasted. I became bitter. 
 
-I was behind schedule but I was not alone. Every project the client had seemed to be struggling. The depth of the issues in the application I was working were lost as other pieces of the project seemed to fly off the rails. One project team eventually admitted they had completely forgot to implement security. Other teams scrambled to offer personnel for a "security task force" to "shore up" the security. One senior level project manager joked "Well it's like we built the car and forgot to put locks on the doors 🤷‍♂️" Oopsies.
+I was behind schedule but I was not alone. Every project the client had seemed to be struggling. The depth of the issues in the application I was working were lost as other pieces of the project seemed to fly off the rails. One project team eventually admitted they had completely forgot to implement security. Other teams scrambled to offer personnel for a "security task force" to "shore up" the security. One senior level project manager joked "Well it's like we built the car and forgot to put locks on the doors 🤷‍♂️ Oopsies!"
 
 ::: div flex justify-center my-4
 
@@ -192,13 +148,19 @@ I was behind schedule but I was not alone. Every project the client had seemed t
 
 :::
 
-I kept sliding more and more fixes in, trying to shore up the app - to make it good even. I started to feel trapped within a prison of my own making. No one could really help me either. My tech lead was still there, but seemed lost and confused. He had been marginalized and now I owned this mess. The consultancy had long ago let me know I was on my own. I had turned this opportunity into an exercise in hubris.
+I kept sliding more and more fixes in, trying to fix my app - to make it good even. A good result seemed so close, yet so far away. I started to feel trapped within a prison of my own making. No one could really help me either. My tech lead was still there, but seemed lost and confused. He had been marginalized and now I owned this mess. The consultancy had long ago let me know that their hands were tied. I had made them aware of the situation with the tech lead and they had confirmed the problem, but could not act without disrupting the project. 
+
+**I had turned this opportunity into an exercise in hubris.**
 
 The client, realizing that there might be some issues maintaining the application after I left, assigned one of their own developers to the team. I went over the project and we laughed at it with typical gallows humor. We were now both imprisoned.
 
 However, things started getting better. Now I had someone to bounce ideas off of. We began to conspire a way out of this mess. We were going to introduce Vue.js.
 
-Vue.js was designed around being able to incrementally refactor. It was small and fast and we didn't need anything except the base functionality. It worked just fine alongside jQuery and we found a way to make it work with Angular.js. It seemed like we were saved.
+**Perhaps I would not be hoisted by my own petard!**
+
+Vue.js was designed around being able to incrementally refactor. It was small and fast and we didn't need anything except the core functionality. It worked just fine alongside jQuery and we found a way to make it work with Angular.js. 
+
+**We were saved!**
 
 Slowly, we started to see bugs disappear. Things were working faster and more reliably. The code started to look less like a mess and more like something we could maintain. 
 
@@ -206,23 +168,23 @@ But the project as a whole was not getting better. Project management wanted mor
 
 ## Escape From New Work
 
-At last I had enough. I'd worked the job for about 8 months and I didn't see anything that made me want to stay.
+At last, I had enough. I'd worked on the project for about 8 months and I didn't see anything that made me want to stay.
 
-The consultancy I worked for had promised a $500 bonus if I stayed another 7 months, but I wasn't interested in peanuts. The client had pulled me into a room with three project managers and let me know it was time to start working 12 hour days. When I refused ( I wasn't getting paid for that time afterall ) the handler from the consultancy emailed me from his tropical vacation letting me know that "You will comply with the overtime request."
+The consultancy I worked for had promised a $500 bonus if I stayed another 7 months, but I wasn't interested in peanuts. The client had pulled me into a room with three project managers and let me know it was time to start working 12 hour days. When I refused ( I wasn't getting paid for that time after all ) the handler from the consultancy emailed me from his tropical vacation letting me know that "You will comply with the overtime request."
 
-It was time to get out.
+**It was time to get out.**
 
 ::: div flex justify-center m-4
 
-<picture-wrapper file-extension="jpeg" file-name="escape-from-ny" alt-text="The box art for the 90s classic film: Escape From New York"></picture-wrapper>
+<picture-wrapper file-extension="jpg" file-name="escape-from-new-work" alt-text="The box art for the 90s classic film: Escape From New York with title changed from New York to New Work"></picture-wrapper>
 
 :::
 
 I did have one person who I owed an explanation though, and that was my co-conspirator developer who helped introduce Vue.js. Thing was, he completely understood - in fact he was already looking too. We were going to abandon this project and let this app fend for itself. The Vue.js refactoring had a long way to go, but neither of us could stomach the other dysfunctional pieces of the project.
 
-I found another job that prioritized work/life balance and left. After a couple of weeks I referred my friend as well. 
+I found another job that prioritized work/life balance and left. After a couple of weeks I referred my new friend and he left as well. 
 
-We ran out like the building was on fire.
+**We ran out like the building was on fire.**
 
 ## Beware
 
@@ -238,9 +200,9 @@ That project is still there. Years later I saw wanted ads from the company. "EPi
 
 :::
 
-It's still there, I think. The refactor still in progress. The old broken JavaScript still scraping by.
+The refactor is still in progress. The old broken JavaScript still scraping by.
 
-Fellow devs, the dungeon I created still exists, seeking new inmates. That JavaScript "framework", a monster that few can slay. When you're out there, scrolling through ads thinking about your next gig, remember this. Be diligent lest you also be imprisoned. 
+Fellow developers, the dungeon I created still exists, seeking new inmates. That JavaScript "framework", a monster that few can slay. When you're out there, scrolling through ads thinking about your next gig, remember this. Be diligent lest you also be imprisoned. 
 
 :::
 

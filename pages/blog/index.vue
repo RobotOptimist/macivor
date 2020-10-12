@@ -3,8 +3,8 @@
     <page-header title="Blog" />
     <div class="container-center mt-8">
       <ul>
-        <li v-for="blog in blogData" :key="blog.title">
-          <nuxt-link :to="`/blog/${blog.slug}`">{{ blog.title }}</nuxt-link>
+        <li v-for="blog in blogs" :key="blog.title">
+          <nuxt-link :to="`/blog/${blog.slug}`">{{ `${blog.date.toLocaleDateString()} - ${blog.title}` }}</nuxt-link>
         </li>
       </ul>
     </div>
@@ -30,9 +30,12 @@ export default {
       }
   },
   async asyncData({ $content }) {
-    const blogData = await $content('blog').only(['title', 'slug']).fetch();
-    console.log(blogData);
-    return { blogData };
+    const blogData = await $content('blog').only(['title', 'slug', 'date']).fetch();        
+    const blogs = blogData.map(b => {
+      b.date = new Date(b.date);
+      return b;
+    }).sort((a,b) => b.date - a.date);
+    return { blogs };
   }
 }
 </script>
