@@ -92,7 +92,7 @@ Over the weeks he struggles with user stories and I pick up more. Soon, the clie
 
 :::
 
-I, barely a midlevel developer, start to plan the architecture of our little piece of the project. The.>NET piece seems fine just following the established patterns I already knew. The JavaScript, though, left a lot to be desired. I read a lot. I made friends with developers on other projects and started asking them lots of questions. I was determined to nail this. I believed I could do it.
+I, barely a midlevel developer, start to plan the architecture of our little piece of the project. The .NET piece seems fine just following the established patterns I already knew. The JavaScript left a lot to be desired. I read a lot. I made friends with developers on other projects and started asking them lots of questions. I was determined to nail this. I believed I could do it.
 
 I decided that since we couldn't use frameworks but needed framework like behavior then I would build my own custom framework. A mini-framework. Just enough to get things working. I started writing JavaScript - **a lot of JavaScript!** 
 
