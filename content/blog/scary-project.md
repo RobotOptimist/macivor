@@ -71,7 +71,7 @@ He showed me how he worked through JavaScript using an elaborate system of alert
 
 :::
 
-I soon learned that he also didn't know MVC. He elected to keep the demo project originally because he didn't know how to start with a clean project. He also didn't know JavaScript too well, he asked me if I had ever used Moo Tools. This was the first time I had ever heard of Moo Tools. 
+I soon learned that he also didn't know MVC. He also didn't know JavaScript too well. He asked me if I had ever used Moo Tools. This was the first time I had ever heard of Moo Tools. (It was a competitor for jQuery in like 2006 FYI.)
 
 ::: div dialogue-container
 
