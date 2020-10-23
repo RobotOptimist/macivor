@@ -189,6 +189,10 @@ a:visited.text-white{
   width: 100%
 }
 
+.hero-height-128 img{
+  @apply max-h-128;
+}
+
 @screen sm {
   p {
     @apply max-w-sm;
