@@ -9,13 +9,14 @@ tags: webdev, developer, Halloween
 
 ::: div container-center
 
-<picture-wrapper file-extension="jpg" file-name="heroes/jackolanterns" alt-text="A collection of lit jackolanterns with a dark background." attribution="Mark Menzies" attribution-link="https://www.flickr.com/photos/markybon/1813406901"></picture-wrapper>
+<picture-wrapper file-extension="jpg" file-name="heroes/jackolanterns" alt-text="A collection of lit jackolanterns with a dark background." attribution="Mark Menzies" attribution-link="https://www.flickr.com/photos/markybon/1813406901" classes="hero-height-128" ></picture-wrapper>
 
 ::: div article-container
 
 ## Intro
 
 _[Wes Bos](https://twitter.com/wesbos/status/1313830816154349568) asked for scary stories on Twitter recently. I emailed him but was inspired to write about it myself._
+_Update! My story was read on [SyntaxFM ep. 294](https://syntax.fm/) starting on 40:19! Thank you Wes Bos and Scott Tolinski!_
 
 ## A Warm October
 
@@ -70,7 +71,7 @@ He showed me how he worked through JavaScript using an elaborate system of alert
 
 :::
 
-I soon learned that he also didn't know MVC. He elected to keep the demo project originally because he didn't know how to start with a clean project. He also didn't know JavaScript too well, he asked me if I had ever used Moo Tools. This was the first time I had ever heard of Moo Tools. 
+I soon learned that he also didn't know MVC. He also didn't know JavaScript too well. He asked me if I had ever used Moo Tools. This was the first time I had ever heard of Moo Tools. (It was a competitor for jQuery in like 2006 FYI.)
 
 ::: div dialogue-container
 
