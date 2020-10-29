@@ -27,7 +27,9 @@ Lets take a look at the questions and criticisms leveled toward ML.NET. I'll do 
 
 Natural language processing is how computers can analyze and understand normal human text, or ordinary language. So a normal human can provide a computer with normal chat messages, for example, and the computer can provide appropriate responses according to how it's trained.
 
-There are two approaches to NLP in machine learning. The first is what's called the statistical approach where a large body of data is used to train a model. The other approach uses neural networks that 
+There are two approaches to NLP in machine learning. The first is what's called the statistical approach where a large body of data is used to train a model. The newest approach is to use deep neural networks which use a variety of techniques to get good results. 
+
+Lets talk about one such approach called "word embeddings". Word embeddings refers to a process where words and phrases are mapped to vectors of real numbers. It's basically judging a word by the surrounding words. So it tries to capture the meaning of a word by examining the context, but all of the words have been reduced to numbers and the context is a vector of those numbers together from which a machine can derive some understanding, or at least determine an action. 
 
 ### How to do
 
