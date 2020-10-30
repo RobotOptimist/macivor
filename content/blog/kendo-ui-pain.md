@@ -17,7 +17,7 @@ You may not have heard of Kendo UI and that's okay. They're yet another one of [
 
 Perhaps one of the most useful Kendo features is the Grid. The grid is a table with sorting, paging and filtering all built in. It can also hook into your MVC endpoints to read, update and delete that data. Kendo in .NET Core uses jQuery Ajax methods to talk to those endpoints. (Telerik loves jQuery dependencies.)
 
-Grids are strongly typed from your Model as well. They can easily create columns based on your model properties and it's also easy to create additional properties. In fact, Grids are pretty damn awesome as long as you adhere to the strict method of creating them.
+Grids are strongly typed from your Model as well. They can easily create columns based on your model properties and it's also easy to create additional columns. In fact, Grids are pretty damn awesome as long as you adhere to the strict method of creating them.
 
 Here is some code to get an example grid up and running (This would go inside of a div element on a cshtml page.): 
 
