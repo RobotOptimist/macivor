@@ -13,13 +13,13 @@ tags: kendo, kendoui, aspnetcore, aspnet
 
 ::: div article-container
 
-You may not have heard of Kendo UI and that's okay. They're yet another one of [Telerik's](https://www.telerik.com/) problem children products, right up there with Sitefinity. The main thing you need to know is that Kendo UI works great as long as you stay strictly within Telerik's suggested use cases. It becomes a nightmare as soon as you attempt something outside of that. 
+You may not have heard of Kendo UI and that's okay. They're yet another one of [Telerik's](https://www.telerik.com/) products, right up there with Sitefinity. The main thing you need to know is that Kendo UI works great as long as you stay strictly within Telerik's suggested use cases. It becomes a nightmare as soon as you attempt something outside of that. I'm speaking directly about the ASP.NET Core HtmlHelpers. The jQuery, Vue and other versions may work differently.
 
 Perhaps one of the most useful Kendo features is the Grid. The grid is a table with sorting, paging and filtering all built in. It can also hook into your MVC endpoints to read, update and delete that data. Kendo in .NET Core uses jQuery Ajax methods to talk to those endpoints. (Telerik loves jQuery dependencies.)
 
 Grids are strongly typed from your Model as well. They can easily create columns based on your model properties and it's also easy to create additional columns. In fact, Grids are pretty damn awesome as long as you adhere to the strict method of creating them.
 
-Here is some code to get an example grid up and running (This would go inside of a div element on a cshtml page.): 
+Here is some code to get an example grid up and running (This would go inside of an element on a cshtml page.): 
 
 ``` csharp
 
@@ -64,7 +64,7 @@ Here is some code to get an example grid up and running (This would go inside of
 
 ```
 
-Lets talk through all of this. First notice that you have to give the grid a model. This is not optional. There is no dynamic option. You must define a class and provide it to the Grid<> method. You must also give your grid a name. This will become the html id of the grid later. It will allow you to select the grid using jQuery and do ... stuff.
+Lets talk through all of this. First notice that you have to give the grid a model. This is not optional. There is no dynamic option. You must define a class and provide it to the Grid<> method. You must also give your grid a name. This will become the html id of the grid later. It will allow you to select the grid using jQuery so you can create JavaScript methods to tie into the grid behavior.
 
 Next we have columns. As stated, columns can be quickly defined using Model properties, but notice that you can also define their width and resize attributes. You can provide them a title as well. You can also, in place of a property, define a Template `column.Template("<div>My Cool Custom Thing</div>")` from here you can also still access a property by using kendo expression syntax: `#=MyModelProperty#` Sometimes you can also use JavaScript expressions between the #= and the #, but that's not always the case. It requires experimentation.
 
@@ -172,15 +172,13 @@ Now we have another template wrapped in a script tag. The script tag has an id w
 
 The detail grid is pretty much the same, but keep in mind you'll have to escape the # in any `#=kendo-expression#` in the Columns area. They still work okay everywhere else, probably. You might have JSON with a sub collection and you might wish to pass the sub collection to the Kendo client template. 
 
-Sorry this is impossible. You cannot pass a collection from the parent to the child and expect it to be used in the grid columns. Instead, you have to define yet another endpoint and Kendo will perform an ajax call to retrieve detail information every time detail information is selected by a user. This is suboptimal but that's what Telerik wants and who are we to disagree?
+Sorry this is impossible. You cannot pass a collection from the parent to the child and expect it to be used in the grid columns. Instead, you have to define yet another endpoint and Kendo will perform an AJAX call to retrieve detail information every time detail information is selected by a user. This is suboptimal but that's what Telerik wants and who are we to disagree?
 
 Finally, and maybe  most importantly, you must call `ToClientTemplate()` at the end of the child grid definition. 
 
 Oh, just in case you're like me and you like to use constructors in your models, you must define a parameter-less constructor or the Kendo UI grid will fail silently. Not only will it fail silently, but any HTML defined in your `csthml` file below the grid will fail to be added to the page. The lack of error messages will have you laughing for hours, so sorry to steal the joy of this problem. Define parameter-less constructors and you'll be good to go.
 
 So, Kendo UI is nice when it works and you stay within the defined edge cases. It's a nightmare when you dare to set foot without, so just don't. 
-
-Good luck oh hapless developer. I pray for you.
 
 :::
 
