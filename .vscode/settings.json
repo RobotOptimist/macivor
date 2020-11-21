@@ -1,5 +1,6 @@
 {
     "files.associations": {
         "*.css": "postcss"
-    }
+    },
+    "python.pythonPath": "C:\\Users\\jmaclvor\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
 }

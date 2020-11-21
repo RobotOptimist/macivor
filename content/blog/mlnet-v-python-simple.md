@@ -25,6 +25,32 @@ First things first, get set up with Jupyter Notebooks and the .NET runtime. [Set
 
 Once you're all set up, lets take a look at the data.
 
+## The Data
+
+::: aside p-8 bg-indigo-100
+
+### Thank you
+
+First this dataset and the Python information comes from is from [Kirill Eremenko](https://www.linkedin.com/in/keremenko/) and [Hadelin de Ponteves](https://www.linkedin.com/in/hadelin-de-ponteves-1425ba5b/) along with the [Super Data Science Team.](https://www.superdatascience.com/). They provide an excellent quality [data science course](https://www.udemy.com/course/machinelearning/learn/lecture/19229340) on Udemy.
+
+::: 
+
+Here is the <a href="/data_files/Salary_Data.csv" download="/data_files/Salary_Data.csv">data:</a>
+
+<display-csv file-Name="Salary_Data.csv"></display-csv>
+
+This data has two columns, years of experience and salary. The data suggests that there is a relationship between these two things - so we should be able to do a simple regression to predict a salary based on the years of experience. 
+
+## Simple Regression in Python
+
+First - how do we do this in Python?
+
+[Try it for yourself on Binder](https://mybinder.org/v2/gist/RobotOptimist/4186084f5fbd698c7ba5358e74d5a30e/master?filepath=simple_linear_regression.ipynb)
+
+
+
+## Simple Regression in ML.NET
+
 
 
 
