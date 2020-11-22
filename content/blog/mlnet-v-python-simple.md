@@ -17,7 +17,7 @@ tags: machine-learning, dotnet, python, ml
 
 ML.NET has been around for a few years now, and yet the community excitement has been muted. Don't get me wrong, it definitely exists - but on the whole the sentiment is that this has been solved in other languages so why bother with ML.NET.
 
-This is valid, but it ignores the many companies where the outcomes that can be achieved from machine learning are a goal, but they don't necessarily want to start creating and maintaining a bunch of python projects. Companies that have invested in the .NET stack should look to ML.NET for as an alternative - but how close is it? 
+This is valid, but it ignores the many companies where the outcomes that can be achieved from machine learning are a goal, but they don't necessarily want to start creating and maintaining a bunch of Python projects. Companies that have invested in the .NET stack should look to ML.NET for as an alternative - but how close is it? 
 
 I'll be examining that in a series of blogs. 
 
@@ -132,12 +132,12 @@ plt.show()
 
 And now how do we do the same simple regression in ML.NET.
 
-You will notice some major differences here. ML.NET throws us a little further into the deep end. There are tools and support, but it's still a steeper learning curve than python.
+You will notice some major differences here. ML.NET throws us a little further into the deep end. There are tools and support, but it's still a steeper learning curve than Python.
 
 [Try it for yourself on Binder](https://mybinder.org/v2/gist/RobotOptimist/1bfd719dc621af45a0e633ffa7ecb9ec/master?filepath=ml_net_simple_regression.ipynb)
 
 
-First things first, you have to install the nuget packages and set up the using statements. From a practical standpoint this is almost identical to python. Jupyter Notebook has a special way to get a nuget package to download in a code block. All that has to be done is setting up a `#r` followed by `nuget:` and then the full name of the nuget package followed by a comma and the version desired. See below to see an example.
+First things first, you have to install the nuget packages and set up the using statements. From a practical standpoint this is almost identical to Python. Jupyter Notebook has a special way to get a nuget package to download in a code block. All that has to be done is setting up a `#r` followed by `nuget:` and then the full name of the nuget package followed by a comma and the version desired. See below to see an example.
 
 ``` csharp
 // ML.NET Nuget packages installation
@@ -152,7 +152,7 @@ using System;
 using System.Linq;
 ```
 
-Now, unlike python where we could immediately pull in the data we have to setup some classes. As C# is a strongly typed language we will have classes to model the data we'll be working with. This is a bit more effort to setup, but much easier to work.
+Now, unlike Python where we could immediately pull in the data we have to setup some classes. As C# is a strongly typed language we will have classes to model the data we'll be working with. This is a bit more effort to setup, but much easier to work.
 
 ``` csharp
 
@@ -174,7 +174,7 @@ public class ModelOutput
 
 ```
 
-Now that we've defined our classes we can move forward with loading in the data. ML.NET uses a class called MLContext in order to load in data and perform operations on it. This class is a sort of combination of pandas and sklearn from python. MLContext has a property called Data that can load the data from the csv file. It can also split the data up for us into training and test sets.
+Now that we've defined our classes we can move forward with loading in the data. ML.NET uses a class called MLContext in order to load in data and perform operations on it. This class is a sort of combination of pandas and sklearn from Python. MLContext has a property called Data that can load the data from the csv file. It can also split the data up for us into training and test sets.
 
 ``` csharp
 
