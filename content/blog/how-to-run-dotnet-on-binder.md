@@ -19,11 +19,13 @@ tags: binder, dotnet, jupyter-notebooks, notebooks
 
 It's a wonderful service and supports many languages right out of the box. To spin up a Python notebook you only need a simple `requirements.txt` file. If you intend to use R or Julia then an `environment.yml` file will do. You can follow Binder's guides to get this up and running.
 
-Sadly, this does not extend to .NET. In order to get a .NET notebook up and running you will need to use a Dockerfile in your repository. The binder service will automatically pick up and build the Dockerfile. There are additional misfortunes for users of .NET notebooks. There are no readily available base Docker images that contain all of the requirements for both .NET and Binder... until now.
+Setup can be a little more difficult in .NET. 
 
-I'm happy to provide you with this base docker image: jmacivor/dotnet-binder:0.1.1 which will provide you with the .NET SDK as well as everything necessary to work on Binder. You can then copy in your notebooks and related files and run them easily.
+So, I'm happy to provide you with this base docker image: [jmacivor/dotnet-binder:0.1.1](https://hub.docker.com/layers/127236981/jmacivor/dotnet-binder/0.1.1/images/sha256-095b5f0245b905d1e9fcce399510198fd98f5b3445d362126453cf3ac526f908?context=explore&tab=layers) which will provide you with the .NET SDK as well as everything necessary to work on Binder. You can then copy in your notebooks and related files and run them easily.
 
-Here is an example of what a working Dockerfile looks like to get you up and running in Binder. Again, you just need something like this in the root of the repository containing your `*.ipynb`. 
+If you are new to Docker you can set up a file similar to what I've created below. Again, you just need something like this in the root of the repository containing your `*.ipynb`. 
+
+Binder allows you to create shared notebooks from all kinds of repositories, notably from gists and github. You can setup a new github or gist. As long as you have a Dockerfile where you copy in a notebook then you're good to go!
 
 ``` docker
 FROM jmacivor/dotnet-binder:0.1.1
@@ -40,10 +42,17 @@ WORKDIR $HOME
 COPY ml_net_simple_regression.ipynb $HOME/ml_net_simple_regression.ipynb
 COPY Salary_Data.csv $HOME/Salary_Data.csv
 ```
-
 Checkout the [gist](https://gist.github.com/RobotOptimist/1bfd719dc621af45a0e633ffa7ecb9ec).
 
-If you're curious about creating your own base image Dockerfile here is mine to use as an example. I hope it helps. 
+If you would like to design and test your notebook locally then follow [my guide for getting setup with Jupyter Notebooks.](/blog/get-set-up-with-dotnet-and-jupyter-notebooks)
+
+It took a bit of effort to create the base image used in the above Dockerfile. If you're curious about what all went into it then check it out below. There is definitely room for improvement. 
+
+This base image would benefit from the following changes:
+
+1. Switch to dotnet alpine SDK in order to reduce the size of the overall image.
+2. Find a way to download and cache the nuget packages for ML.NET so that users are not forced to download them from the notebook.
+3. Upgrade the .NET base image to .NET 5 as soon as the dotnet-interactive tool is ready for .NET 5. 
 
 Here is the [gist](https://gist.github.com/RobotOptimist/818873bd61e03a3c934d79d7612e4107).
 
@@ -89,6 +98,8 @@ RUN dotnet tool install -g --add-source "https://dotnet.myget.org/F/dotnet-try/a
 RUN dotnet-interactive jupyter install
 
 ```
+
+By the way, dotnet-interactive has their own [Dockerfile for Binder.](https://github.com/dotnet/interactive/blob/main/Dockerfile) They go a completely different direction where they start from a base image made for Binder and then install the .NET dependencies and .NET from there. I did try this approach, but found a bunch of problems along the way. Still, you might enjoy trying it this way. The time to start up the Binder server appears to be about the same regardless of which approach you use.
 
 :::
 

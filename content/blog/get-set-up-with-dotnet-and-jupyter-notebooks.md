@@ -35,8 +35,8 @@ Test to see if you have the .NET SKD installed by typing `dotnet` and pressing e
 
 <picture-wrapper file-name="screen-shots/dotnet-installed" alt-text="A screenshot of the anaconda prompt where dotnet SDK is shown to be installed."></picture-wrapper>
 
-If you don't then you'll need to install that.
-You can do that here: [Install .NET SDK](https://dotnet.microsoft.com/download)
+If you don't then you'll need to install that. Please note that the dotnet-interactive tool still only supports .NET 3.1 FYI.
+You can get the SDK here: [Install .NET SDK](https://dotnet.microsoft.com/download)
 
 Next you'll need to install the dotnet-interactive tool. From the Anaconda prompt type this command: `dotnet tool install -g --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json" Microsoft.dotnet-interactive`
 

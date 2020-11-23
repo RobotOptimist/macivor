@@ -130,7 +130,7 @@ plt.show()
 
 ## Simple Regression in ML.NET
 
-And now how do we do the same simple regression in ML.NET.
+And now how do we do the same simple regression in ML.NET?
 
 You will notice some major differences here. ML.NET throws us a little further into the deep end. There are tools and support, but it's still a steeper learning curve than Python.
 
@@ -152,7 +152,9 @@ using System;
 using System.Linq;
 ```
 
-Now, unlike Python where we could immediately pull in the data we have to setup some classes. As C# is a strongly typed language we will have classes to model the data we'll be working with. This is a bit more effort to setup, but much easier to work.
+This works just fine when running from a local Jupyter Notebook, but on Binder the nuget download has to be attempted twice and always works on the second time.
+
+Now, unlike Python where we could immediately pull in the data we have to setup some classes. As C# is a strongly typed language we will have classes to model the data we'll be working with. This is a bit more effort for setup, but placed me squarely in my comfort zone.
 
 ``` csharp
 
@@ -218,7 +220,9 @@ display(yearsChart);
 
 <picture-wrapper file-name="screen-shots/ml_net_simple_regression_scatter_plot" alt-text="A chart showing a scatter plot of the training data."></picture-wrapper>
 
-Now at last we can create the pipeline which will allow us to train the model. A big difference here is the algorithm used to train the model. Where Python had the aptly named LinearRegression() class to handle this detail, we have a different experience with ML.NET. We are confronted with a bunch of confusingly named choices. For this, I chose to use the mlnet command line tool to analyze the dataset and and select the appropriate algorithm for me. This time it chose the `Ols()` algorithm. The command line tool does print comparitive metrics for each algorithm tested so you can view for yourself why it selected whichever algorithm it did. 
+Now at last we can create the pipeline which will allow us to train the model. A big difference here is the algorithm used. Where Python had the aptly named LinearRegression() class to handle this, we have a different experience with ML.NET. We are confronted with a bunch of confusingly named choices. For this, I chose to use the mlnet command line tool to analyze the dataset and and select the appropriate algorithm for me. This time it chose the `Ols()` algorithm. The command line tool does print comparitive metrics for each algorithm tested so you can view for yourself why it selected whichever algorithm it did. 
+
+I go over the command line tool a bit more in [this post.](/blog/take-a-look-at-mlnet)
 
 Also, unlike Python, you still have to define features even for this simple case in ML.NET.
 
@@ -318,7 +322,7 @@ display(chart);
 
 This was an interesting exercise to see the two languages / libraries side by side and evaluate each approach. However, this exercise was too simple to really draw any solid conclusions. I'll be looking at a multiple linear regression next to see if a more complex example can reveal more about these different implementations.
 
-C# is my comfort zone. I felt more secure working with the language. However, in the context of Jupyter Notebooks, C# is pretty rough, and oddly enough, based on the discussion and blog posts I read to set up Juptyer Notebooks with .NET and on Binder, it rides in on the coattails on F#. 
+C# is my comfort zone. I felt more secure working with the language. However, in the context of Jupyter Notebooks, C# is pretty rough, and oddly enough, based on the discussion and blog posts I read while researching, it rides in on the coattails on F#. I did a little extra to help out anyone who comes after me who wants to use Binder. [Here's my How To Guide for .NET with Binder](/blog/how-to-run-dotnet-on-binder)
 
 That said there are features of both implementations that I like. Python requires a lot less code to accomplish the same tasks. However the mlnet command line tool is amazing and makes it all so easy to spin up a project. We'll see where a more complicated task takes us in my next post.
 
