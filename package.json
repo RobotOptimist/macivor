@@ -21,7 +21,8 @@
     "nuxt": "^2.14.7",
     "nuxt-svg-loader": "^1.2.0",
     "remark-bracketed-spans": "^3.0.0",
-    "remark-containers": "^1.2.0"
+    "remark-containers": "^1.2.0",
+    "vue-embed-gist": "^1.1.0"
   },
   "devDependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",

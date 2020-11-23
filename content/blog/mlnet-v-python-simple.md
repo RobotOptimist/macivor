@@ -35,9 +35,9 @@ First this dataset and the Python information comes from is from [Kirill Eremenk
 
 ::: 
 
-Here is the <a href="/data_files/Salary_Data.csv" download="/data_files/Salary_Data.csv">data:</a>
+Here is the data:
 
-<display-csv file-Name="Salary_Data.csv"></display-csv>
+<vue-embed-gist gist-id="4186084f5fbd698c7ba5358e74d5a30e" file="Salary_Data.csv"></vue-embed-gist>
 
 This data has two columns, years of experience and salary. The data suggests that there is a relationship between these two things - so we should be able to do a simple regression to predict a salary based on the years of experience. 
 

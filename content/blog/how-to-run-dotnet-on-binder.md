@@ -56,7 +56,7 @@ This base image would benefit from the following changes:
 
 Here is the [gist](https://gist.github.com/RobotOptimist/818873bd61e03a3c934d79d7612e4107).
 
-```
+``` docker
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-focal
 
 USER root

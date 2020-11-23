@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import pageHeader from '~/components/page-header'
 import pictureWrapper from '~/components/picture-wrapper.vue'
-import displayCsv from '~/components/display-csv';
+import VueEmbedGist from "vue-embed-gist";
+
 
 Vue.component('pageHeader', pageHeader);
 Vue.component('pictureWrapper', pictureWrapper);
-Vue.component('displayCsv', displayCsv);
+Vue.component('VueEmbedGist', VueEmbedGist);
 
