@@ -13,7 +13,7 @@ tags: machine-learning, dotnet, jupyter-notebooks, notebooks
 
 ::: div article-container
 
-## X Easy Steps
+## 3 Easy Steps
 
 ### 1. Download Juptyer Notebooks
 
@@ -46,7 +46,7 @@ Following the successful installation of dotnet-try run this command: `dotnet in
 
 <picture-wrapper file-name="screen-shots/install-kernels-and-check" alt-text="A screenshot of the the .net kernels being installed"></picture-wrapper>
 
-### Test the .NET Installation in Jupyter Lab
+### 3. Test the .NET Installation in Jupyter Lab
 
 Finally we can run `jupyter lab` from the Anaconda prompt and see the launcher which will allow us to easily create a new notebook using the runtime of our choice, Python, C#, F#, and PowerShell.
 
