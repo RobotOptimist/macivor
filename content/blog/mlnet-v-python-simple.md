@@ -21,7 +21,7 @@ This is valid, but it ignores the many companies where the outcomes that can be 
 
 I'll be examining that in a series of blogs. 
 
-First things first, get set up with Jupyter Notebooks and the .NET runtime. [Setup Jupyter Notebooks and .NET](/content/blog/get-set-up-with-dotnet-and-jupyter-notebooks)
+First things first, get set up with Jupyter Notebooks and the .NET runtime. [Setup Jupyter Notebooks and .NET](/blog/get-set-up-with-dotnet-and-jupyter-notebooks)
 
 Once you're all set up, lets take a look at the data.
 
