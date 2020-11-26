@@ -2,14 +2,14 @@
 title: Setup Jupyter Notebooks With .NET
 description: Setup Jupyter Notebooks with the .NET Runtime so you can run .NET code in Jupyter
 date: 2020-11-13
-tags: machine-learning, dotnet, jupyter-notebooks, notebooks
+tags: machinelearning, dotnet, jupyter-notebooks, notebooks
 ---
 
 <page-header title="Setup Jupyter Notebooks With .NET"></page-header>
 
 ::: div container-center
 
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it."></picture-wrapper>
+<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
 
 ::: div article-container
 
@@ -31,11 +31,11 @@ After the installation is completed find the Anaconda prompt from the start menu
 
 <picture-wrapper file-name="screen-shots/anaconda_prompt" alt-text="A screenshot of the anaconda prompt shortcut from the windows start menu."></picture-wrapper>
 
-Test to see if you have the .NET SKD installed by typing `dotnet` and pressing enter in the Anaconda prompt. You should see the .NET help options in the prompt: 
+Test to see if you have the .NET SDK installed by typing `dotnet` and pressing enter in the Anaconda prompt. You should see the .NET help options in the prompt: 
 
 <picture-wrapper file-name="screen-shots/dotnet-installed" alt-text="A screenshot of the anaconda prompt where dotnet SDK is shown to be installed."></picture-wrapper>
 
-If you don't then you'll need to install that. Please note that the dotnet-interactive tool still only supports .NET 3.1 FYI.
+If you don't then you'll need to install that. Please note that the dotnet-interactive tool still only supports .NET 5.0 FYI.
 You can get the SDK here: [Install .NET SDK](https://dotnet.microsoft.com/download)
 
 Next you'll need to install the dotnet-interactive tool. From the Anaconda prompt type this command: `dotnet tool install -g --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json" Microsoft.dotnet-interactive`

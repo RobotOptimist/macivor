@@ -2,7 +2,7 @@
 title: Share Your Dotnet Notebooks on Binder
 description: How to share your dotnet jupyter notebooks on binder
 date: 2020-11-22
-tags: binder, dotnet, jupyter-notebooks, notebooks
+tags: binder, dotnet, jupyternotebooks, notebooks
 ---
 
 <page-header title="Share Your .NET Notebooks on Binder"></page-header>
@@ -18,6 +18,65 @@ tags: binder, dotnet, jupyter-notebooks, notebooks
 [Binder](https://mybinder.org/) is a free online service that allows you to run your jupyter notebooks with other people. It's similar to [Google Colab](https://colab.research.google.com) but does not require a Google login. In fact, all it requires is a public repository with a `.ipynb` file. 
 
 It's a wonderful service and supports many languages right out of the box. To spin up a Python notebook you only need a simple `requirements.txt` file. If you intend to use R or Julia then an `environment.yml` file will do. You can follow Binder's guides to get this up and running.
+
+::: aside p-8 bg-indigo-100 p-4
+
+_Edit 11-25-2020:_ Someone reached out to me about this solution and pointed out that the Binder `environment.yml` file is perfectly capable of running .NET. I'm actually really happy that this is the case! It feels like .NET is a little close to the forefront there. However, here is a special thank you to [Dariel Dato-on](https://github.com/oddrationale)
+
+He builds on the [conda-forge repository for dotnet.](https://anaconda.org/conda-forge/dotnet)
+
+Dariel points out that you can create `.binder` directory with three files in it within your repository to make binder work. From his [repository](https://github.com/oddrationale/AdventOfCode2020CSharp/tree/main/.binder) we see these files.
+
+environment.yml
+
+``` yml
+name: dotnet5.0
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - dotnet=5.0
+```
+
+start
+
+``` bash
+#!/bin/bash
+set -ex
+
+export DOTNET_ROOT="/srv/conda/envs/notebook/lib/dotnet"
+export PATH=$PATH:$DOTNET_ROOT:~/.dotnet/tools
+
+exec "$@"
+```
+
+postBuild
+
+``` bash
+#!/bin/bash
+set -ex
+
+export DOTNET_ROOT="/srv/conda/envs/notebook/lib/dotnet"
+export PATH=$PATH:$DOTNET_ROOT:~/.dotnet/tools
+dotnet tool install -g Microsoft.dotnet-interactive \
+    --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json"
+dotnet interactive jupyter install
+```
+
+Also this does seem to solve the problem of the NuGet packages not installing the first time. When I ran the installation they did not time out on the first try:
+
+``` csharp
+// ML.NET Nuget packages installation
+#r "nuget:Microsoft.ML,1.5.0"
+#r "nuget:Microsoft.ML.Mkl.Components,1.5.0"
+using Microsoft.ML;    
+using Microsoft.ML.Data;
+//worked on the first try!
+```
+
+That could also be because we upgraded to .NET 5 in this process as well!
+
+:::
 
 Setup can be a little more difficult in .NET. 
 
@@ -52,7 +111,7 @@ This base image would benefit from the following changes:
 
 1. Switch to dotnet alpine SDK in order to reduce the size of the overall image.
 2. Find a way to download and cache the nuget packages for ML.NET so that users are not forced to download them from the notebook.
-3. Upgrade the .NET base image to .NET 5 as soon as the dotnet-interactive tool is ready for .NET 5. 
+3. Upgrade the .NET base image to .NET 5 as soon as the dotnet-interactive tool is ready for .NET 5. (_edit 2020-11-25: It's now ready. The image is not upgraded yet._)
 
 Here is the [gist](https://gist.github.com/RobotOptimist/818873bd61e03a3c934d79d7612e4107).
 
