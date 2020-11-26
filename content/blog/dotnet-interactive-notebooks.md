@@ -1,7 +1,7 @@
 ---
 title: VSCode .NET Interactive Notebooks
 description: A .NET friendly alterative to Jupyter Notebooks that runs in VS Code
-date: 2020-11-13
+date: 2020-11-25
 tags: machinelearning, dotnet, vscode, notebooks
 ---
 
