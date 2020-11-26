@@ -188,6 +188,9 @@ a:visited.text-white{
   max-height: 24rem;
   width: 100%
 }
+.margin-top-nudge {
+  margin-top: 2px;
+}
 
 .hero-height-128 img{
   @apply max-h-128;
