@@ -2,14 +2,14 @@
 title: ML.NET and Python Simple Regression
 description: Examine differences when doing simple regression in ML.NET and Python
 date: 2020-11-13
-tags: machine-learning, dotnet, python, ml
+tags: machinelearning, dotnet, python, ml
 ---
 
 <page-header title="ML.NET and Python Simple Regression"></page-header>
 
 ::: div container-center
 
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it."></picture-wrapper>
+<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
 
 ::: div article-container
 
@@ -270,7 +270,7 @@ Console.WriteLine($"************************************************************
 
 <picture-wrapper file-name="screen-shots/ml_net_simple_regression_evaluation" alt-text="A chart showing a scatter plot of the training data."></picture-wrapper>
 
-And now at last we can test our model and try some predictions. I believe there are more efficient ways to perform predictions over a bulk dataset than what I have done - but I'm familiar with Linq so I chose to use that to perform my predictions.
+And now we test our model and try some predictions. I believe there are more efficient ways to perform predictions over a bulk dataset than what I have done - but I'm familiar with Linq so I chose to use that to perform my predictions.
 
 ``` csharp
 var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
@@ -284,7 +284,7 @@ foreach (var predictionResult in preductionResults)
 }
 ```
 
-And at last, lets put all of this into a chart next to the actual data. (At last, a regression line!)
+Finally, lets put all of this into a chart next to the actual data. (At last, a regression line!)
 
 ``` csharp
 var testYears = enumerableTestSet.Select(ts => ts.YearsExperience).ToArray();
