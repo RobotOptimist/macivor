@@ -19,6 +19,12 @@ tags: machinelearning, dotnet, jupyter-notebooks, notebooks
 
 Jupyter Notebooks is a product from Anaconda which allows you to run blocks of code in a notebook session. If you haven't seen it before, prepare to be impressed. Jupyter Notebooks is a great way to write code and explain that code along the way. 
 
+::: aside p-8 bg-indigo-100 p-4
+
+_Edit 2020-11-25: Good news! If you would prefer to work from VSCode with intellisense enabled that is now possible. I explain how to set that up [here.](/blog/dotnet-interactive-notebooks)_
+
+:::
+
 To download it, go here: [Anaconda Downloads](https://www.anaconda.com/products/individual#download-section)
 
 Then click the link for the platform you use (I'm using Windows) and download the installer.

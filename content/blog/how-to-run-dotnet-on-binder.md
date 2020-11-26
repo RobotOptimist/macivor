@@ -25,7 +25,7 @@ _Edit 11-25-2020:_ Someone reached out to me about this solution and pointed out
 
 He builds on the [conda-forge repository for dotnet.](https://anaconda.org/conda-forge/dotnet)
 
-Dariel points out that you can create `.binder` directory with three files in it within your repository to make binder work. From his [repository](https://github.com/oddrationale/AdventOfCode2020CSharp/tree/main/.binder) we see these files.
+Dariel points out that you can create `.binder` directory with three files in it within your repository to make Binder work. From his [repository](https://github.com/oddrationale/AdventOfCode2020CSharp/tree/main/.binder) we see these files.
 
 environment.yml
 
@@ -78,9 +78,8 @@ That could also be because we upgraded to .NET 5 in this process as well!
 
 :::
 
-Setup can be a little more difficult in .NET. 
 
-So, I'm happy to provide you with this base docker image: [jmacivor/dotnet-binder:0.1.1](https://hub.docker.com/layers/127236981/jmacivor/dotnet-binder/0.1.1/images/sha256-095b5f0245b905d1e9fcce399510198fd98f5b3445d362126453cf3ac526f908?context=explore&tab=layers) which will provide you with the .NET SDK as well as everything necessary to work on Binder. You can then copy in your notebooks and related files and run them easily.
+Here also, if you prefer to work with a Dockerfile, is this base docker image: [jmacivor/dotnet-binder:0.1.1](https://hub.docker.com/layers/127236981/jmacivor/dotnet-binder/0.1.1/images/sha256-095b5f0245b905d1e9fcce399510198fd98f5b3445d362126453cf3ac526f908?context=explore&tab=layers) which will provide you with the .NET SDK as well as everything necessary to work on Binder. You can then copy in your notebooks and related files and run them easily.
 
 If you are new to Docker you can set up a file similar to what I've created below. Again, you just need something like this in the root of the repository containing your `*.ipynb`. 
 
