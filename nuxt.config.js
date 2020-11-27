@@ -95,6 +95,8 @@ export default {
     '~plugins/globalComponents'
   ],
 
+  components: true,
+
   content: {
     markdown: {
       remarkPlugins: [
@@ -123,8 +125,13 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxt/content',
     '@nuxtjs/feed',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/cloudinary'
   ],
+
+  cloudinary: {
+    cloudName: 'macivortech'
+  },
 
   sitemap: {
     hostname: 'https://www.macivortech.com',
