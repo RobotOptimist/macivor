@@ -9,7 +9,7 @@ tags: mentoring, career, advice, learning
 
 ::: div container-center
 
-<picture-wrapper file-extension="jpg" file-name="heroes/mentor-hero" alt-text="A sign post with Advice, Support, Guidance and Help shown as directions." classes="hero-height-128"></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="heroes/mentor-hero_dctiux" alt-text="A sign post with Advice, Support, Guidance and Help shown as directions." classes="hero-height-128"></picture-wrapper>
 
 ::: div article-container
 
