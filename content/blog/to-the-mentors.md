@@ -231,7 +231,7 @@ As a technical lead I was put in with a team over a technology with which I had 
 
 Then things started going wrong. We had a critical bug in a vendor product that set back development multiple times. We had a developer walk out of the project. And that deadline seemed as strict as ever. I felt as though I had failed.
 
-I was working with a project manager (Arron Heinselman), a sales rep (Teran Shaffer), and a senior engineer (Brett Whittington). All of them came together to boost the project. We onboarded a new engineer who worked out fantastically well and we got it done. 
+I was working with a project manager (Arin Heinselman), a sales rep (Teran Shaffer), and a senior engineer (Brett Whittington). All of them came together to boost the project. We onboarded a new engineer who worked out fantastically well and we got it done. 
 
 Venting to a director, Russell Patterson, later I tried to take responsibility for everything that went wrong. He stopped me. 
 
