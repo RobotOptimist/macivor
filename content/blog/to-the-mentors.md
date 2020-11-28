@@ -26,9 +26,9 @@ These are my mentors and the advice they gave me.
 ### Be affable. 
 Be someone that other people want as a teammate. Be friendly, helpful, considerate and kind.
 
-I remember my first manager upon joining Nationwide Insurance as a contractor. I was a lumpy awkward twenty-something guy. I could speak and write well, but I dressed poorly and lacked professionalism. This manager had to pull me aside and have the "these clothes are not appropriate" conversation. (Turns out you can't show up to an office job wearing torn clothes.) I accepted the feedback with as much grace as I could and he chose to start helping me. He gave me the single greatest piece of advice a young person could receive. It was the advice that colored the rest of my career. I excelled when I followed it and failed when I didn't.
+I remember my first manager, Doug Dunlope, when I joined Nationwide Financial as a contractor. I was a lumpy awkward twenty-something guy. I could speak and write well, but I dressed poorly and lacked professionalism. This manager had to pull me aside and have the "these clothes are not appropriate" conversation. (Turns out you can't show up to an office job wearing torn clothes.) I accepted the feedback with as much grace as I could and he chose to start helping me. He gave me the single greatest piece of advice a young person could receive. It was the advice that colored the rest of my career. I excelled when I followed it and failed when I didn't.
 
-He said, 
+He said
 
 > "Be affable."
 
@@ -36,38 +36,59 @@ He said,
 
 It was simple advice, but exactly what I needed to hear as I had a tendency to be callous at times. So yes, swallow my proud words and behave kindly towards the people around me. Don't act out of frustration, irritation, or anger.
 
-I was not an angry person to begin, but even so I recognized that I could do better. 
+Doug impacted my life a number of ways in those years and I think about him often. I think it's fair to say he was my first professional mentor whether he knew it or not.
 
 ### Care about what you're doing.
 
-Sometime later I was hired as a full time Nationwide employee. My first year was rough. I had been customer facing, something I excelled at, but was moved to a data entry job. I did not do well there. I wanted to do well - I understood that I needed to learn what I could from this position in order to do well elsewhere, and yet I failed. There was another member of that team who did a great job everyday. I went to him and asked "Can you teach me?" And he did.
+Nationwide eventually hired me full time. My first year was rough. I had been customer facing, something I excelled at, but was moved to a data entry job. 
+
+I wanted to do well. 
+
+I had a manager and a team lead who invested me and wanted me to do well. 
+
+And yet I failed.
+
+There was another member of that team who did a great job everyday. He was friendly and funny. His name was Joe Karsko. I went to him and asked "Can you teach me?" And he did.
 
 He had developed a personal routine that regularly produced superior quality and output. He showed me how to regulate my time better, how to keep better personal records, how to make better use of my tools. Most of all, he said - if you want to do your best work you have to give a damn. 
 
 **You have to care.**
 
-Care was the thing that I lacked in that job. I didn't care about it because I didn't like it. It was an epiphany that led me to requesting a different role. "Hey can I get back on the phones?" A month later I was leading my team in resolved issues and happy customers - and I was still picking up that valuable knowledge. 
+Care was the thing that I lacked in that job. I didn't care about it because I didn't like it. It was an epiphany that led me to requesting a different role. 
+
+> "Hey can I get back on the phones?" 
+
+A month later I was leading my team in resolved issues and happy customers - and I was still picking up that valuable knowledge. 
 
 ### Find your own answers.
 Also - help people learn to find their own answers.
 
-I got promoted and added to a new team. We had to call advisors about errors with paperwork, explain the error, and then work to resolve it. It was very difficult - maybe the hardest job I've ever had. Some advisors build credibility with their staff and their customers by appearing infallible. Poking holes in that image led to some extremely tough situations. 
+I got promoted and added to a new team. We had to call financial advisors about errors with paperwork, explain the error, and then work to resolve it. It was very difficult - maybe the hardest job I've ever had. Some financial advisors build credibility with their staff and their customers by appearing infallible. Poking holes in that image led to some extremely tough situations. 
 
-We had to know our stuff very well. We had to be the experts over whatever narrow field the paperwork involved. Needless to say, I often fell short of that standard. I had a team lead who was extremely knowledgeable. He had years of experience and our respect. He would answer my questions, but eventually as I became more knowledgeable he started pointing me at resources. He'd frustrate me, but I started figuring things out for myself. 
+We had to know our stuff very well. We had to be the experts over whatever narrow field the paperwork involved. Needless to say, I often fell short of that standard. 
 
-As I became more knowledgeable other people began asking me questions. I realized my team lead had done something very clever. I was finding my own answers. I was learning _how_ to find my own answers.
+I had a team lead who was extremely knowledgeable. He had years of experience and our respect his name was Dennis Tubbs. He would answer my questions, but eventually as I became more knowledgeable he started pointing me at resources. He'd frustrate me, but I started figuring things out for myself. 
+
+As I became more knowledgeable other people began asking me questions. I realized my team lead had done something very clever. I was not just finding my own answers. I was learning _how_ to find my own answers.
 
 ### Support your people through adversity.
 
-I learned to code. Over a few months I created a bunch of programs for my teammates. I received the support of my manager and I felt excited about what I was doing. 
+I learned to code. Over a few months I created a bunch of programs for my teammates. 
+
+I received the support of my manager, Bill Gibson. He got excited for me and encouraged me. I would enthusiastically describe what I believed the possibilities were and he believed me. 
 
 And then I get in trouble. I had meetings with HR and some sort of technical governance group. It felt scary, like I could get fired. (I wrote about the whole story of how I became a developer [here.](/blog/how-i-got-started)) 
 
 My manager was not invited to this meeting. And yet, he showed up. 
 
-He said "Hey, just want to let you know I think what James is doing is great! Anyway, just popping in between meetings." And he left.
+He said 
+> "Hey, just want to let you know I think what James is doing is great! Anyway, just popping in between meetings." 
 
-Then one of his colleagues walked in "We love what James has been doing! Thanks, I've got to go - have a great day." 
+And he left.
+
+Then Jeff Heyer-Jones, my former manager (and also not invited), walked in 
+
+> "We love what James has been doing! Thanks, I've got to go - have a great day." 
 
 And so it went.
 
@@ -75,23 +96,23 @@ And so it went.
 
 Never, in my contentious history with authority did I imagine that I would ever be the beneficiary of that level of support. That manager had stuck by me through rough moments previously - but here he stuck his neck out _for me_. I thanked him later but I don't think he ever knew how much that event changed me. I reflect on this moment all the time. I tell this story to my friends and coworkers to this day. 
 
-He supported me through even though he did not have to, even though it could have cost him. 
+He supported me through that even though he did not have to, even though it could have cost him. 
 
 ### Keep yourself interested.
 
-I finally became a developer officially a few short years later. 
+I finally became a software developer officially a few short years later. 
 
 It's hard to describe what it feels like to hit a long term goal like that. I felt like I was walking on air. 
 
-Unfortunately, the programming work was slow, buried in process, and tedious. I felt dismayed - and even wondered at my choices to that point.
+Unfortunately, I soon learned that the programming work was slow, buried in process, and tedious. I felt dismayed - and even wondered at my choices to that point.
 
-My first technical lead taught me and encouraged me. He code reviewed my work with empathy. He focused on teaching me best practices and code smells. He suggested books to read and I read them. He also encouraged personal projects. 
+My first technical lead, Jeffrey Linholme taught me and encouraged me. He code reviewed my work with empathy. He focused on teaching me best practices and code smells. He suggested books to read and I read them. He also encouraged personal projects. 
 
 Those projects saved me. I was able to power through the boring work by getting excited about my projects. Eventually I was even able to get one of my projects adopted by the business where it could continue making a difference for years to come. It was a feeling of accomplishment that I needed.
 
 ### Relationships > Process.
 
-Eventually that technical lead left and one of the senior developers took his place. 
+Eventually that technical lead left and one of the senior developers, Anthony Padgett, took his place. 
 
 He had a different approach and focused on building bridges with other teams and working within the process to create better results. 
 
@@ -103,39 +124,46 @@ I was never much of a believer in Six Sigma or Lean. I had attended the talks an
 
 He imprinted on me that if people don't want to help you then all of the efficiency methodology in the world _will not_ help you. 
 
+Anthony was also a kind person who frequently went out of his way to help me. He also helped mentor me as a software developer and taught me many things. But the thing I remember best was his achievement on that team.
+
 **Change starts with people finding common ground and common goals.**
 
 ### Shake things up to grow. 
 Don't allow yourself to be stagnant.
 
-I grew into the developer job and found after a time that most of the tasks had become relatively easy. 
+I grew into that developer job and found after a time that most of the tasks had become relatively easy. 
 
 The manager for the team told me I was on track to be promoted and recognized as a mid level developer. 
 
-I had made friends with a number of developers, some of whom were well traveled and had done consulting. I grew to trust them and confide in them. They taught me a lot about various topics and technologies and we were close. 
+I had made friends with a number of developers, Bhisham Padha and Ramkrishna Thevendhriya in particular.
+They were well traveled, spoke many languages (and coded in many more) and had done consulting. I grew to trust them and confide in them. They taught me a lot about various topics and technologies and we were close. 
 
-Eventually though, they told me 
+One day we were talking to Alok Sharma. I spoke about becoming a better developer and pondered openly what it would take. Alok told me
 
 > "You will never realize your potential if you stay here." 
 
-Meaning that the challenges of this job would never force me to grow, and I needed to grow. As I had started this career in my mid thirties I could not allow myself to waste any time. 
+Meaning that the challenges of this job would never allow me to grow past a certain point. As I had started this career in my mid thirties I could not allow myself to waste any time. I needed growth. I wanted to be one of the best.
 
-I took their advice to heart and left Nationwide in October of 2016. 
+Ram and Bhisham both spoke to me and encouraged me. 
 
-Immediately I was thrown into a situation where I was out of my depth. I had to work and learn at an accelerated rate to meet those demands. I grew in ways I had not imagined I could at a pace I had not thought I could. It was challenging, troubling and also exhilarating. 
+I took their advice to heart and left Nationwide in October of 2016. It was bitter sweet as I loved Nationwide and had many friends there.
 
-My friends were right.
+Immediately after leaving I was thrown into a situation where I was out of my depth. I had to work and learn at an accelerated rate to meet those demands. I grew in ways I had not imagined I could at a pace I had not thought I could. It was challenging, troubling and also exhilarating. 
+
+My friends were right, but I still miss them. 
 
 ### Enthusiasm creates opportunities.
 Foster it within yourself and encourage it in the people around you.
 
-In that role, while I was running to catch up I also felt bitterness at the problems I was facing. 
+In my new role, while I was running to catch up I also felt bitterness at the problems I was facing. I felt overwhelmed.
 
 How could I possibly meet these all of these challenges? 
 
-Luckily, I made a friend there who made a point to focus and talk about the things he loved to do, whether it was JavaScript, or D&D, or whatever he was working on at that moment. 
+Luckily, I made a friend there, Bill Wood, who made a point to focus and talk about the things he loved to do, whether it was JavaScript, or D&D, or whatever he was working on at that moment. Bill did everything with his whole heart. 
 
 His enthusiasm infected me and I also started talking about the things that I loved about the project. Soon we were collaborating on ideas and putting forward novel solutions to the challenges. 
+
+Bill and I had many conversations over that year. He taught me a lot simply by loving what he did and loving the people around him. 
 
 Not everything worked out, but the enthusiasm we put into the project energized our team and made us better able to weather the difficult circumstances. Embracing an enthusiastic attitude for the technologies helped me brand myself as a problem solver and expert resource. 
 
@@ -147,13 +175,13 @@ I got a new job as a consultant. I was to be part of a team maintaining large mi
 
 I resolved myself to do what it took to make a difference and create good relationships. 
 
-However, this team completely overwhelmed me with the positive support they gave each other and me. Each member of the team held themselves to a standard where educating and supporting each other were expected. 
+However, this team (Tony Riddle, Dave Estes, James Nelli) completely overwhelmed me with the positive support they gave each other and me. Each member of the team held themselves to a standard where educating and supporting each other were expected. 
 
-Our manager, who I consider to be one of the best managers with whom I have had the privilege to work with, encouraged and expected this. 
+Our manager, Joe Dougherty, who I consider to be one of the best managers with whom I have had the privilege to work with, encouraged and expected this. 
 
 Not only that, but when a release went sideways or mistakes were made we stood together. Our manager often led from the front - staying up with us through the night on long deployments. 
 
-He handled client issues and delivered the facts we needed to make things work. 
+He also handled client issues and delivered the facts we needed to make things work. 
 
 These people became my friends and I was proud to be with them. 
 
@@ -167,7 +195,7 @@ Eventually I felt I needed to shake things up again so I left, but we are all st
 
 I moved to help an insurance company with a project that was behind schedule and over budget. 
 
-I worked with an extremely talented and personable engineer and together we nailed that project down and got things under control. 
+I worked with an extremely talented and personable engineer, Chris Berry, and together we nailed that project down and got things under control. 
 
 However, while there I was confronted with an opportunity. I had an invitation to join a startup in a leadership role. I was to build their application infrastructure and create the vision for their technology needs going forward. It seemed like they had an unlimited potential for growth. 
 
@@ -199,11 +227,13 @@ I was welcomed back and almost immediately placed as a technical lead at a new c
 
 ### Trust your team.
 
-As a technical lead I was put in with a team over a technology with which I had a passing familiarity. We had a strict deadline and after about a week of familiarizing myself with the details of the project I had doubts about whether I could deliver. I communicated all of my concerns upfront and my leadership team promised I'd get additional support. Then things started going wrong. We had a critical bug in a vendor product that set back development multiple times. We had a developer walk out of the project. And that deadline seemed as strict as ever. I felt as though I had failed.
+As a technical lead I was put in with a team over a technology with which I had a passing familiarity. We had a strict deadline and after about a week of familiarizing myself with the details of the project I had doubts about whether I could deliver. I communicated all of my concerns upfront to the project manager. He arranged for us to get additional support. 
 
-I was working with a project manager, a sales rep, and a senior engineer. All of them came together to boost the project. We onboarded a new engineer who worked out fantastically well and we got it done. 
+Then things started going wrong. We had a critical bug in a vendor product that set back development multiple times. We had a developer walk out of the project. And that deadline seemed as strict as ever. I felt as though I had failed.
 
-Venting to a director later I tried to take responsibility for everything that went wrong. He stopped me. 
+I was working with a project manager (Arron Heinselman), a sales rep (Teran Shaffer), and a senior engineer (Brett Whittington). All of them came together to boost the project. We onboarded a new engineer who worked out fantastically well and we got it done. 
+
+Venting to a director, Russell Patterson, later I tried to take responsibility for everything that went wrong. He stopped me. 
 
 > "Listen, you did what you could, you communicated when you knew things weren't going well, and ultimately you were successful. You need to trust your team."
 
