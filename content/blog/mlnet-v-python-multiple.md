@@ -13,6 +13,14 @@ tags: machinelearning, dotnet, python, ml
 
 ::: div article-container
 
+This is the third in a series talking about the differences in implementation to accomplish machine learning tasks between ML.NET and Python. Don't worry though, you should be able to jump right in to read this post. However here are the previous posts if you'd like to satisfy your curiosity.
+
+[Take A Look A ML.NET](blog/take-a-look-at-mlnet)
+
+[ML.NET and Python Simple Regression](blog/mlnet-v-python/simple)
+
+## What is Multiple Regression
+
 ::: aside p-8 bg-indigo-100 m-4
 
 ## Thank you Super Data Science Team
