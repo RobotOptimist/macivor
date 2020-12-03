@@ -70,7 +70,7 @@ We can see as independent variables we have R&D Spend, Administration, Marketing
 
 ## Multiple Linear Regression in Python
 
-[Try it for yourself on Binder](https://hub.gke2.mybinder.org/user/robotoptimist-7-6c521729581eff8-tehoo0my/notebooks/multiple_linear_regression.ipynb)
+[Try it for yourself on Binder](https://mybinder.org/v2/gist/RobotOptimist/7003f85731e1fa3916c521729581eff8/HEAD?filepath=multiple_linear_regression.ipynb)
 
 As usual, we start by importing our libraries and reading in the data.
 
@@ -84,7 +84,16 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 ```
 
-Now, however, we need to do a data transformation. The State column cannot be represented as a string. Instead we're going to use a tool called OneHotEncoder to transform it into three columns, a column for each state. 
+Now, however, we need to do a data transformation. The State column cannot be represented as a string. Instead we're going to use tools called OneHotEncoder and ColumnTransformer (both of which are functions imported from classes within the sklearn library) to transform it into three columns, a column for each state. Now we can represent this data numerically. 
+
+You might wonder why a single column with values of 1, 2, and 3 are not used. The answer is that the ML algorithm will then seek to order those values even though there is no real ordering of States in that way. This could result in less accurate prediction results.
+
+``` python
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remainder='passthrough')
+X = np.array(ct.fit_transform(X))
+```
 
 :::
 
