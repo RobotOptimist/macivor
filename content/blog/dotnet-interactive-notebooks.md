@@ -42,7 +42,7 @@ You'll be prompted to install the Python extension. Also, if you had the .ipynb 
 
 Once everything is setup you should see the notebook render properly:
 
-<picture-wrapper file-name="screen-shots/ipynb-in-vscode" alt-text="A screenshot of an interactive notebook." classes="hero-height-128"></picture-wrapper>
+<picture-wrapper file-name="screen-shots/ipynb_in_vscode" alt-text="A screenshot of an interactive notebook." classes="hero-height-128"></picture-wrapper>
 
 So, that's a fairly friendlier experience than Jupyter Notebooks - but do I get my intellisense?!
 
