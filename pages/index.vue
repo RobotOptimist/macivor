@@ -2,7 +2,7 @@
   <div>    
     <page-header title="Hi, I'm James MacIvor" />
     <div class="container-center mt-8">      
-      <portrait />
+      <picture-wrapper :legacy="false" classes="w w-3/4 md:w-56 rounded-lg" fileName="selfportrait05_wlhkie" altText="a picture of james macivor"/>
       <h2 class="subtitle font-medium text-3xl mb-5 p-2">
         Welcome to My Website
       </h2>
@@ -22,7 +22,7 @@ import pageHeader from "~/components/page-header"
 export default {
   components: {
     portrait,
-    pageHeader
+    pageHeader    
   }
 }
 </script>

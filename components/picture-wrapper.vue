@@ -5,7 +5,7 @@
             <source :srcset="`/${fileName}.${fileExtension}`" :type="`image/${fileExtension}`">
             <img  :src="`/${fileName}.${fileExtension}`" :alt="altText">
         </picture>      
-        <img v-else :src="cloudUrl" :alt="altText"/>
+        <img :class="classes" v-else :src="cloudUrl" :alt="altText"/>
         <div v-if="attribution != ''" class="attribution flex justify-center max-w-md">
             <p v-if="attributionLink == ''" class="text-xs italic">{{ attribution }}</p>
             <p v-else class="text-xs italic">

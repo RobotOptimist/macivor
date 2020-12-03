@@ -9,7 +9,7 @@ tags: machinelearning, dotnet, python, ml
 
 ::: div container-center
 
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="heroes/robotmlnet-yes_tfryby.png" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
 
 ::: div article-container mt-4
 
@@ -94,6 +94,12 @@ from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remainder='passthrough')
 X = np.array(ct.fit_transform(X))
 ```
+
+::: div flex justify-center
+
+<picture-wrapper :legacy="false" file-name="screen-shots/multiple_regression_transformed_data_hvytif" alt-text="An image depicting the transformed data resulting from the OneHotEncoder function." classes="hero-height-128"></picture-wrapper>
+
+:::
 
 :::
 
