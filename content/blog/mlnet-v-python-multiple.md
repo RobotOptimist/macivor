@@ -84,9 +84,9 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 ```
 
-Now, however, we need to do a data transformation. The State column cannot be represented as a string. Instead we're going to use tools called OneHotEncoder and ColumnTransformer (both of which are functions imported from classes within the sklearn library) to transform it into three columns, a column for each state. Now we can represent this data numerically. 
+Now, however, we need to do a data transformation. The State column cannot be represented as a string. Instead we're going to use tools called OneHotEncoder and ColumnTransformer (both of which are functions imported from classes within the sklearn library) to transform it into three columns, a column for each State. Now we can represent this data numerically. 
 
-You might wonder why a single column with values of 1, 2, and 3 are not used. The answer is that the ML algorithm will then seek to order those values even though there is no real ordering of States in that way. This could result in less accurate prediction results.
+You might wonder why a single column with values of 1, 2, and 3 are not used. The answer is that the ML algorithm will then seek to order those values even though there is no real ordering of States in that way. Making each State it's own column eliminates that bias.
 
 ``` python
 from sklearn.compose import ColumnTransformer
@@ -100,6 +100,72 @@ X = np.array(ct.fit_transform(X))
 <picture-wrapper :legacy="false" file-name="screen-shots/multiple_regression_transformed_data_hvytif" alt-text="An image depicting the transformed data resulting from the OneHotEncoder function." classes="hero-height-128"></picture-wrapper>
 
 :::
+
+Aside from that small change the steps are now almost identical to simple linear regression.
+
+We now split into training and test sets.
+
+``` python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+```
+
+We train the model using the exact same function as we used for simple regression. The `LinearRegression` function is capable of training models for simple and multiple regression. 
+
+``` python
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+```
+
+And we can predict the results as normal.
+
+``` python
+y_pred = regressor.predict(X_test)
+```
+
+Lets see what the results were. Rather than chart the data we will transform it into two columns. The first column will be the predicted profits and the second will be actual profits.
+
+``` python
+np.set_printoptions(precision=2)
+print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+```
+<picture-wrapper :legacy="false" file-name="screen-shots/python-multiple-regression_zttgcs" alt-text="An image depicting the predicted and actual data side by side."></picture-wrapper>
+
+Some of the predictions are pretty good while others are just sort of okay. Nevertheless, given the small sample this is a pretty good result for a multiple linear regression model. It's nice that there are few extra steps to train this model inspite of the fact that the data is much more complex relative to simple linear regression.
+
+In fact, lets calculate the RSquared value as this will be relevant when we look at ML.NET. The RSquared value is a metric we can use to calculate the accuracy of a trainer algorithm.
+
+``` python
+from sklearn.metrics import r2_score
+print(r2_score(y_test, y_pred))
+```
+<picture-wrapper :legacy="false" file-name="screen-shots/python-multiple-regression-r2score_dsyro3" alt-text="An image depicting generated R2Score for the model output."></picture-wrapper>
+
+The score for this regression is 0.9347068473282515, which is quite good given that we have a small data set. The goal for an R2 score should be to get as close to 1 as possible. Scores at .5 or below means the model is more or less guessing for the prediction.
+
+## Multiple Linear Regression in ML.NET
+
+Right away we start to see some major differences. First off, the algorithm detection experiment from the commandline tool shows some less than encouraging results for the proposed model. 
+
+We can get this output by running the commandline tool against our dataset with this command.
+
+`mlnet regression --dataset .\50_Startups.csv --label-col Profit`
+
+You can read more about the commandline tool [here.](/blog/take-a-look-at-mlnet)
+
+<picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output_n1uacy" alt-text="An image showing the commandline mlnet tool output">
+
+The columns are not labeled at this stage of the output, but they are AlgorithmName, RSquared, Absolute-loss, Squared-loss, RMS-loss, Duration, Iteration. You can read about how to interpret these results from [Microsoft's guide.](https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/metrics#evaluation-metrics-for-regression-and-recommendation)
+
+But here we are getting negative values for our R2 values and our other metrics are equally bad. So already things are not equivalent to Python. However, the commandline experiment still did narrow down to the top two training algorithms used for regression. 
+
+1. SdcaRegression
+2. FastTreeRegression
+
+Also, recall that in Python we used OneHotEncoder to transform the State column such that it could be more easily used by the training algorithm. At this stage, it's unclear if ML.NET has done the same transformation - although judging by the analysis output it would appear it has not. 
+
+Lets run a quick and dirty test to see if that column is the cause of our bad data by deleting the state column and running the commandline test again.
 
 :::
 
