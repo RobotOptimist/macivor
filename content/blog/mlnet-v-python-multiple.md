@@ -1,7 +1,7 @@
 ---
 title: ML.NET and Python Multiple Linear Regression
 description: Examine differences when doing simple regression in ML.NET and Python
-date: 2020-11-28
+date: 2020-12-6
 tags: machinelearning, dotnet, python, ml
 ---
 
@@ -13,15 +13,21 @@ tags: machinelearning, dotnet, python, ml
 
 ::: div article-container mt-4
 
-_This is the third in a series talking about the differences in implementation to accomplish machine learning tasks between ML.NET and Python. Don't worry though, you should be able to jump right in to read this post._
+_This is the third in a series talking about the differences in implementation between ML.NET and Python for machine learning tasks. Don't worry though, you should be able to jump right in to read this post._
 
 ::: aside p-8 bg-indigo-100 m-4
 
 However, here are the previous posts if you'd like to take a look.
 
-[Take A Look A ML.NET](/blog/take-a-look-at-mlnet)
+* [Take A Look A ML.NET](/blog/take-a-look-at-mlnet)
+* [ML.NET and Python Simple Linear Regression](/blog/mlnet-v-python-simple)
 
-[ML.NET and Python Simple Linear Regression](/blog/mlnet-v-python/simple)
+If you want to install ML.NET and setup a .NET notebook environment then I explain how to do that in these posts.
+
+* [Take A Look A ML.NET](/blog/take-a-look-at-mlnet)
+* [.NET Interactive Notebooks](/blog/dotnet-interactive-notebooks)
+* [Run .NET on Binder](/blog/how-to-run-dotnet-on-binder)
+* [.NET and Jupyter Notebooks](/blog/get-set-up-with-dotnet-and-jupyter-notebooks)
 
 :::
 
@@ -31,23 +37,7 @@ It is the same thing as simple linear regression but with many more variables.
 
 Also, data for a successful linear regression must adhere to some core assumptions. 
 
-I list these assumptions out here to potentially satisfy your curiosity. However, understanding these will not be necessary for the ML.NET vs Python implementation comparison. Our data can be assumed to meet the requirements _this time_. 
-
-1. **Linear relationship (Linearity)**: This is an expectation that as your independent variables change the dependent variable also changes in a linear fashion. This is typically tested using scatter plots.
-2. **Multivariate normality**: This is about the distribution of the data. So if normal distribution means that the data can be expressed as a bell curve, then multivariate normality means that all of the the independent variables can also be understood as a bell curve. This is not exactly the same as shoving a bunch of variables with normal distribution together. (Although it's possible to do that using a process called [Copulae](https://en.wikipedia.org/wiki/Copula_(probability_theory))) This can be tested by looking at a histogram for each variable and looking for the bell curve.
-3. **Low or no multi-collinearity**: This means that the data should not be highly correlated with each other. My reading on this issue is that it is can be detected and remedied the same way as auto-correlation.
-4. **No auto-correlation in the data**: This means that the independent variables should not have any sort of hidden dependency on each other. This can be discovered by examining a scatter plot between variable pairs to see if a linear relationship exists. It's okay if you discover hidden dependency as the method to remedy is usually to remove the dependent variable from the regression pipeline.
-5. **Homoscedasticity**: This means that as the data progresses on a linear chart that the data points remain compact not a broad cone as the dependent variable progresses. This can be illustrated with the following example. Lets say we have family income as the independent variable and luxury spending as the dependent variable. When income is low luxury spending is low - this is expected. As income grows so does luxury spending - until we get to high levels of income and then luxury spending is highly variable. Some families spend extravagantly while others are more moderate or may never increase luxury spending at all. This can create a wide cone of results which will negatively impact a regression machine learning model.
-
-If you're like me and find these confusing at first then you'll appreciate these links. These really helped me understand these requirements better.
-
-[Assumptions of Linear Regression](https://www.statisticssolutions.com/assumptions-of-linear-regression/)
-
-[What is Multicollinearity](https://www.statisticshowto.com/multicollinearity/)
-
-[Multivariate Normal Distribution](https://brilliant.org/wiki/multivariate-normal-distribution/#:~:text=A%20multivariate%20normal%20distribution%20is,variables%20is%20also%20normally%20distributed.)
-
-[Homescedasticity](https://www.statisticssolutions.com/homoscedasticity/)
+I list these assumptions out in another [article](/blog/assumptions-of-linear-regression). However, understanding these will not be necessary for the ML.NET vs Python implementation comparison. Our data can be assumed to meet the requirements _this time_. 
 
 ## The Data
 
@@ -84,7 +74,7 @@ X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 ```
 
-Now, however, we need to do a data transformation. The State column cannot be represented as a string. Instead we're going to use tools called OneHotEncoder and ColumnTransformer (both of which are functions imported from classes within the sklearn library) to transform it into three columns, a column for each State. Now we can represent this data numerically. 
+Now, however, we need to do a data transformation. The State column cannot be represented as a string. Instead we're going to use methods imported from the sklearn library to transform it into three columns, a column for each State. The method that does the majority of the work here is `OneHotEncoder`. Now we can represent this data numerically. 
 
 You might wonder why a single column with values of 1, 2, and 3 are not used. The answer is that the ML algorithm will then seek to order those values even though there is no real ordering of States in that way. Making each State it's own column eliminates that bias.
 
@@ -95,9 +85,9 @@ ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remaind
 X = np.array(ct.fit_transform(X))
 ```
 
-::: div flex justify-center
+::: div flex justify-center my-4
 
-<picture-wrapper :legacy="false" file-name="screen-shots/multiple_regression_transformed_data_hvytif" alt-text="An image depicting the transformed data resulting from the OneHotEncoder function." classes="hero-height-128"></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="screen-shots/multiple_regression_transformed_data_hvytif" alt-text="The transformed data resulting from the OneHotEncoder function." classes="hero-height-128"></picture-wrapper>
 
 :::
 
@@ -110,7 +100,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 ```
 
-We train the model using the exact same function as we used for simple regression. The `LinearRegression` function is capable of training models for simple and multiple regression. 
+We train the model using the exact same function as we used for simple linear regression. The `LinearRegression` function is capable of training models for simple and multiple regression. 
 
 ``` python
 from sklearn.linear_model import LinearRegression
@@ -130,7 +120,12 @@ Lets see what the results were. Rather than chart the data we will transform it 
 np.set_printoptions(precision=2)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 ```
+
+::: div flex justify-center my-4
+
 <picture-wrapper :legacy="false" file-name="screen-shots/python-multiple-regression_zttgcs" alt-text="An image depicting the predicted and actual data side by side."></picture-wrapper>
+
+:::
 
 Some of the predictions are pretty good while others are just sort of okay. Nevertheless, given the small sample this is a pretty good result for a multiple linear regression model. It's nice that there are few extra steps to train this model inspite of the fact that the data is much more complex relative to simple linear regression.
 
@@ -140,11 +135,13 @@ In fact, lets calculate the RSquared value as this will be relevant when we look
 from sklearn.metrics import r2_score
 print(r2_score(y_test, y_pred))
 ```
-<picture-wrapper :legacy="false" file-name="screen-shots/python-multiple-regression-r2score_dsyro3" alt-text="An image depicting generated R2Score for the model output."></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="screen-shots/python-multiple-regression-r2score_dsyro3" alt-text="An image depicting generated RSquared score for the model output."></picture-wrapper>
 
-The score for this regression is 0.9347068473282515, which is quite good given that we have a small data set. The goal for an R2 score should be to get as close to 1 as possible. Scores at .5 or below means the model is more or less guessing for the prediction.
+The score for this regression is 0.9347068473282515, which is quite good given that we have a small data set. The goal for an RSquared score should be to get as close to 1 as possible. Scores at .5 or below means the model is more or less guessing for the prediction.
 
 ## Multiple Linear Regression in ML.NET
+
+[Try it for yourself on Binder](https://mybinder.org/v2/gist/RobotOptimist/1adeb410287b0dde2a8bbfd77d38b228/HEAD?filepath=multiple_linear_regression.ipynb)
 
 Right away we start to see some major differences. First off, the algorithm detection experiment from the commandline tool shows some less than encouraging results for the proposed model. 
 
@@ -154,11 +151,11 @@ We can get this output by running the commandline tool against our dataset with 
 
 You can read more about the commandline tool [here.](/blog/take-a-look-at-mlnet)
 
-<picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output_n1uacy" alt-text="Truly terrible metrics shown for the trainer algorithms in ML.NET">
+<picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output_n1uacy" alt-text="Truly terrible metrics shown for the trainer algorithms in ML.NET"></picture-wrapper>
 
 The columns are not labeled at this stage of the output, but they are AlgorithmName, RSquared, Absolute-loss, Squared-loss, RMS-loss, Duration, Iteration. You can read about how to interpret these results from [Microsoft's guide.](https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/metrics#evaluation-metrics-for-regression-and-recommendation)
 
-But here we are getting negative values for our R2 values and our other metrics are equally bad. So already things are not equivalent to Python. However, the commandline experiment still did narrow down to the top two training algorithms used for regression. 
+But here we are getting negative values for our RSquared values and our other metrics are equally bad. So already things are not equivalent to Python. However, the commandline experiment still did narrow down to the top two training algorithms used for regression. 
 
 1. SdcaRegression
 2. FastTreeRegression
@@ -167,13 +164,13 @@ Also, recall that in Python we used OneHotEncoder to transform the State column 
 
 Lets run a quick and dirty test to see if that column is the cause of our bad data by deleting the state column and running the commandline test again.
 
-<picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output-nostate_ft08dt" alt-text="I cannot fool you, the metrics shown for these trainers are just awful.">
+<picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output-nostate_ft08dt" alt-text="I cannot fool you, the metrics shown for these trainers are just awful."></picture-wrapper>
 
 We see an improvement in that the negative numbers are smaller - but still not the kind of output we would like. 
 
 This indicates that the dataset is either too small for the mlnet commandline tool to create or that there is some other issue with the data that causes the mlnet commandline experiment to be no better than a guess as it regards making predictions based on this data.
 
-But lets forgive the commandline tool and move on to see if the actual implementation does better. After all, we took our R2 score for Python after we had completed a full implementation.  I'd like to see parity with they Python sklearn `LinearRegression` trainer function.
+But lets forgive the commandline tool and move on to see if the actual implementation does better. After all, we took our RSquared score for Python after we had completed a full implementation.  I'd like to see parity with they Python sklearn `LinearRegression` trainer function.
 
 Some of these steps are exactly the same as simple linear regression covered in the previous blog post.
 
@@ -249,13 +246,13 @@ var dataProcessPipeline = mlContext.Transforms.Categorical.OneHotEncoding(new[] 
                                       .Append(mlContext.Transforms.Concatenate("Features", new[] { "State", "R&D Spend", "Administration", "Marketing Spend" }));
 ```
 
-Ah! Just as Python, we're using a tool called `OneHotEncoding`. Just as Python it transform the encoded columns into multiple columns. However, unlike Python it's more difficult to inspect the data to see what it did.
+Ah! Just as Python, we're using a tool called `OneHotEncoding`. Also, just as Python it transform the encoded columns into multiple columns. However, unlike Python it's more difficult to inspect the data to see what it did.
 
 ::: aside p-8 bg-indigo-100 m-4
 
 ### A Small Discussion on OneHotEncoding in ML.NET
 
-Microsoft does provide a way to do view which they go over in their [discussion of the OneHotEncoding function.](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.categoricalcatalog.onehotencoding?view=ml-dotnet)
+Microsoft does provide a way inspect the transformed data which they go over in their [discussion of the OneHotEncoding function.](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.categoricalcatalog.onehotencoding?view=ml-dotnet)
 
 The short of it is you must transform your model back into a DataView using a transform method. Then you can use the MLContext to convert the IDataView into an IEnumerable and inspect it as you would any list.
 
@@ -325,7 +322,7 @@ ML.NET and Python both provide wonderful tooling for handling data such as this,
 
 Let's get to training our model!
 
-I ran the mlnet commandline tool multiple times and ultimately the FastTree regression trainer consistently had the least worst R2 Score. It reached an R2 Score in the -800s. Abysmal, but still better than before. In the generated project, we see this is how the regression trainer is added.
+I ran the mlnet commandline tool multiple times and ultimately the FastTree regression trainer consistently had the least worst RSquared Score. It reached an RSquared Score in the -800s. Abysmal, but still better than before. In the generated project, we see this is how the regression trainer is added.
 
 ``` csharp
 var trainer = mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options() { NumberOfLeaves = 2, MinimumExampleCountPerLeaf = 10, NumberOfTrees = 100, LearningRate = 0.06297909f, Shrinkage = 0.0986204f, LabelColumnName = "Profit", FeatureColumnName = "Features" });
@@ -339,7 +336,7 @@ We can then train our model.
 var trainingPipeline = dataProcessPipeline.Append(trainer);
 ```
 
-And now we can perform an evaluation of the trainer. What's the R2 score now? Keep in mind, R2 is not the only metric we can evaluate - but it's still a really good one for determining accuracy.
+And now we can perform an evaluation of the trainer. What's the RSquared score now? Keep in mind, RSquared is not the only metric we can evaluate - but it's still a really good one for determining accuracy.
 
 So lets take a look. Here's the code to generate an analysis.
 
@@ -365,15 +362,15 @@ Console.WriteLine($"************************************************************
 
 And here's the result.
 
-<picture-wrapper :legacy="false" file-name="screen-shots/mlnet-least-bad-scores_hxseja" alt-text="Shows metrics for the FastTree trainer that are awful, but not as awful as the commandline report">
+<picture-wrapper :legacy="false" file-name="screen-shots/mlnet-least-bad-scores_hxseja" alt-text="Shows metrics for the FastTree trainer that are awful, but not as awful as the commandline report"></picture-wrapper>
 
 These metrics are still truly awful. Should you actually make predictions on the test set you would see it really is no better than a wild guess at this point. It's not even close to the actual profit.
 
-However, we see something encouraging. The actual implementation does improve the score. R2 is now a mere -2 or so. 
+However, we see something encouraging. The actual implementation does improve the score. RSquared is now a mere -2.853. 
 
 It seems at a certain point we cannot trust our mlnet commandline experiments. 
 
-After some experimentation with some of the regression trainers I was able to generate this:
+After some manual experimentation with some of the regression trainers I was able to generate this:
 
 ``` csharp
 var dataProcessPipeline = mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair("State", "State") })
@@ -386,9 +383,9 @@ That's right, good old `Ols` regression trainer is back again. It did great for 
 
 It evaluated to this:
 
-<picture-wrapper :legacy="false" file-name="screen-shots/mlnet-pretty-much-okay-r2_wozbso" alt-text="Shows metrics of the Ols trainer that are pretty much okay.">
+<picture-wrapper :legacy="false" file-name="screen-shots/mlnet-pretty-much-okay-r2_wozbso" alt-text="Shows metrics of the Ols trainer that are pretty much okay."></picture-wrapper>
 
-We have an R2 score of 0.909! This is more or less okay I guess! It's still not as good as the R2 of the `LinearRegression` algorithm from sklearn, but we're much closer.
+We have an RSquared score of 0.909! This is more or less okay I guess! It's still not as good as the RSquared of the `LinearRegression` algorithm from sklearn, but we're much closer.
 
 Now if you compare the predicted profit to the actual profit like so -
 
@@ -413,11 +410,13 @@ foreach (var ts in testSet)
 
 We see this - 
 
-mlnet-side-by-side-profits_s15hne
+::: div flex justify-center
 
-<picture-wrapper :legacy="false" file-name="screen-shots/mlnet-side-by-side-profits_s15hne" alt-text="Shows predicted and actual profits side by side">
+<picture-wrapper :legacy="false" file-name="screen-shots/mlnet-side-by-side-profits_s15hne" alt-text="Shows predicted and actual profits side by side"></picture-wrapper>
 
-Not bad! Pretty close in some instances! As a prediction tool it's better than nothing, probably.
+:::
+
+Not bad! Pretty close in some instances! This is a pretty fair prediction of potential profits.
 
 ## Thoughts
 
@@ -429,7 +428,7 @@ What are we really seeing here then?
 
 ML.NET could still use this data and create predictions that were comparable to the Python predictions. Moreover, the tooling with ML.NET set me on a path where I could figure out for myself which training algorithm to use. The commandline tool did not hand me the answers right away, as it did with simple linear regression - but it set me on a path to figure it out.
 
-Still, the sheer simplicity and ease of use from Python cannot be refuted. We are not hunting for a linear regression training algorithm, there is only one. The parameters for those functions are documented and intuitive. 
+Still, the sheer simplicity and ease of use from Python cannot be refuted. In Python's sklearn, we are not hunting for a linear regression training algorithm, there is only one: `LinearRegression()`. The parameters for that function are documented and intuitive. 
 
 With ML.NET, I'm reminded of the game Dwarf Fortress. Dwarf Fortress is well known for it's steep learning curve, but many players find the process of learning fun and rewarding. The value is there, hidden under trial and error. Success is found after a series of hilarious trials and failures. 
 
@@ -437,9 +436,9 @@ Also with ML.NET, we also come away with a deeper understanding of what's going 
 
 The Python libraries hand us success first and allow us to learn deeply later. 
 
-From a business perspective, Python is the clear favorite, at leat in the short term. The business value will be successful predictions from a process created as cheaply as possible. Long term, a business would benefit from type safety and the resulting easier maintenance. 
+From a business perspective, Python is the clear favorite, at leat in the short term. The business value will be successful predictions from a process created as cheaply as possible. However, in the long term a business would benefit from type safety and the resulting easier maintenance. 
 
-We'll see how ML.NET performs next to Python in my next post which will be looking at the Random Forest regression.
+We'll see how ML.NET performs next to Python in my next post which will be looking at the Polynomial regression.
 
 :::
 
