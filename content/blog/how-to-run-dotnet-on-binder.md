@@ -21,7 +21,7 @@ It's a wonderful service and supports many languages right out of the box. To sp
 
 ::: aside p-8 bg-indigo-100 p-4
 
-_Edit 12-6-2020:_ environment.yml will work well for most .NET tasks but is unsuitable for machine learning because of a known issue with the Linux runtime. The training of the model will fail with an error message citing a missing dependency of MKL. This dependency issue has been remedied in the Dockerfile and that will work well with machine learning.
+_Edit 12-6-2020:_ environment.yml will work well for most .NET tasks but does not work well with the Ols regression trainer because it has a depedency on the MKL library. Choose another regression trainer and enviroment.yml will work just fine.
 
 _Edit 11-25-2020:_ Someone reached out to me about this solution and pointed out that the Binder `environment.yml` file is perfectly capable of running .NET. I'm actually really happy that this is the case! It feels like .NET is a little close to the forefront there. However, here is a special thank you to [Dariel Dato-on](https://github.com/oddrationale)
 
