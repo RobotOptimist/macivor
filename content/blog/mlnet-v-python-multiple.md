@@ -127,7 +127,7 @@ print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),
 
 :::
 
-Some of the predictions are pretty good while others are just sort of okay. Nevertheless, given the small sample this is a pretty good result for a multiple linear regression model. It's nice that there are few extra steps to train this model inspite of the fact that the data is much more complex relative to simple linear regression.
+Some of the predictions are pretty good while others are just sort of okay. Nevertheless, given the small sample this is a pretty good result for a multiple linear regression model. It's nice that there are few extra steps to train this model in spite of the fact that the data is much more complex relative to simple linear regression.
 
 In fact, lets calculate the RSquared value as this will be relevant when we look at ML.NET. The RSquared value is a metric we can use to calculate the accuracy of a trainer algorithm.
 
@@ -143,34 +143,34 @@ The score for this regression is 0.9347068473282515, which is quite good given t
 
 [Try it for yourself on Binder](https://mybinder.org/v2/gist/RobotOptimist/1adeb410287b0dde2a8bbfd77d38b228/HEAD?filepath=multiple_linear_regression.ipynb)
 
-Right away we start to see some major differences. First off, the algorithm detection experiment from the commandline tool shows some less than encouraging results for the proposed model. 
+Right away we start to see some major differences. First off, the algorithm detection experiment from the command-line tool shows some less than encouraging results for the proposed model. 
 
-We can get this output by running the commandline tool against our dataset with this command.
+We can get this output by running the command-line tool against our dataset with this command.
 
 `mlnet regression --dataset .\50_Startups.csv --label-col Profit`
 
-You can read more about the commandline tool [here.](/blog/take-a-look-at-mlnet)
+You can read more about the command-line tool [here.](/blog/take-a-look-at-mlnet)
 
 <picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output_n1uacy" alt-text="Truly terrible metrics shown for the trainer algorithms in ML.NET"></picture-wrapper>
 
 The columns are not labeled at this stage of the output, but they are AlgorithmName, RSquared, Absolute-loss, Squared-loss, RMS-loss, Duration, Iteration. You can read about how to interpret these results from [Microsoft's guide.](https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/metrics#evaluation-metrics-for-regression-and-recommendation)
 
-But here we are getting negative values for our RSquared values and our other metrics are equally bad. So already things are not equivalent to Python. However, the commandline experiment still did narrow down to the top two training algorithms used for regression. 
+But here we are getting negative values for our RSquared values and our other metrics are equally bad. So already things are not equivalent to Python. However, the command-line experiment still did narrow down to the top two training algorithms used for regression. 
 
 1. SdcaRegression
 2. FastTreeRegression
 
 Also, recall that in Python we used OneHotEncoder to transform the State column such that it could be more easily used by the training algorithm. At this stage, it's unclear if ML.NET has done the same transformation - although judging by the analysis output it would appear it has not. 
 
-Lets run a quick and dirty test to see if that column is the cause of our bad data by deleting the state column and running the commandline test again.
+Lets run a quick and dirty test to see if that column is the cause of our bad data by deleting the state column and running the command-line test again.
 
 <picture-wrapper :legacy="false" file-name="screen-shots/regression-commandline-output-nostate_ft08dt" alt-text="I cannot fool you, the metrics shown for these trainers are just awful."></picture-wrapper>
 
 We see an improvement in that the negative numbers are smaller - but still not the kind of output we would like. 
 
-This indicates that the dataset is either too small for the mlnet commandline tool to create or that there is some other issue with the data that causes the mlnet commandline experiment to be no better than a guess as it regards making predictions based on this data.
+This indicates that the dataset is either too small for the mlnet command-line tool to create or that there is some other issue with the data that causes the mlnet command-line experiment to be no better than a guess as it regards making predictions based on this data.
 
-But lets forgive the commandline tool and move on to see if the actual implementation does better. After all, we took our RSquared score for Python after we had completed a full implementation.  I'd like to see parity with they Python sklearn `LinearRegression` trainer function.
+But lets forgive the command-line tool and move on to see if the actual implementation does better. After all, we took our RSquared score for Python after we had completed a full implementation.  I'd like to see parity with they Python sklearn `LinearRegression` trainer function.
 
 Some of these steps are exactly the same as simple linear regression covered in the previous blog post.
 
@@ -322,7 +322,7 @@ ML.NET and Python both provide wonderful tooling for handling data such as this,
 
 Let's get to training our model!
 
-I ran the mlnet commandline tool multiple times and ultimately the FastTree regression trainer consistently had the least worst RSquared Score. It reached an RSquared Score in the -800s. Abysmal, but still better than before. In the generated project, we see this is how the regression trainer is added.
+I ran the mlnet command-line tool multiple times and ultimately the FastTree regression trainer consistently had the least worst RSquared Score. It reached an RSquared Score in the -800s. Abysmal, but still better than before. In the generated project, we see this is how the regression trainer is added.
 
 ``` csharp
 var trainer = mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options() { NumberOfLeaves = 2, MinimumExampleCountPerLeaf = 10, NumberOfTrees = 100, LearningRate = 0.06297909f, Shrinkage = 0.0986204f, LabelColumnName = "Profit", FeatureColumnName = "Features" });
@@ -368,7 +368,7 @@ These metrics are still truly awful. Should you actually make predictions on the
 
 However, we see something encouraging. The actual implementation does improve the score. RSquared is now a mere -2.853. 
 
-It seems at a certain point we cannot trust our mlnet commandline experiments. 
+It seems at a certain point we cannot trust our mlnet command-line experiments. 
 
 After some manual experimentation with some of the regression trainers I was able to generate this:
 
@@ -426,7 +426,7 @@ This is misleading though because the Python steps come from a Udemy course. The
 
 What are we really seeing here then? 
 
-ML.NET could still use this data and create predictions that were comparable to the Python predictions. Moreover, the tooling with ML.NET set me on a path where I could figure out for myself which training algorithm to use. The commandline tool did not hand me the answers right away, as it did with simple linear regression - but it set me on a path to figure it out.
+ML.NET could still use this data and create predictions that were comparable to the Python predictions. Moreover, the tooling with ML.NET set me on a path where I could figure out for myself which training algorithm to use. The command-line tool did not hand me the answers right away, as it did with simple linear regression - but it set me on a path to figure it out.
 
 Still, the sheer simplicity and ease of use from Python cannot be refuted. In Python's sklearn, we are not hunting for a linear regression training algorithm, there is only one: `LinearRegression()`. The parameters for that function are documented and intuitive. 
 
@@ -436,7 +436,7 @@ Also with ML.NET, we also come away with a deeper understanding of what's going 
 
 The Python libraries hand us success first and allow us to learn deeply later. 
 
-From a business perspective, Python is the clear favorite, at leat in the short term. The business value will be successful predictions from a process created as cheaply as possible. However, in the long term a business would benefit from type safety and the resulting easier maintenance. 
+From a business perspective, Python is the clear favorite, at least in the short term. The business value will be successful predictions from a process created as cheaply as possible. However, in the long term a business would benefit from type safety and the resulting easier maintenance. 
 
 We'll see how ML.NET performs next to Python in my next post which will be looking at the Polynomial regression.
 
