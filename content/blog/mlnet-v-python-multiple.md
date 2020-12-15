@@ -1,6 +1,6 @@
 ---
 title: ML.NET and Python Multiple Linear Regression
-description: Examine differences when doing simple regression in ML.NET and Python
+description: Examine differences when doing multiple regression in ML.NET and Python
 date: 2020-12-6
 tags: machinelearning, dotnet, python, ml
 ---
@@ -438,7 +438,7 @@ The Python libraries hand us success first and allow us to learn deeply later.
 
 From a business perspective, Python is the clear favorite, at least in the short term. The business value will be successful predictions from a process created as cheaply as possible. However, in the long term a business would benefit from type safety and the resulting easier maintenance. 
 
-We'll see how ML.NET performs next to Python in my next post which will be looking at the Polynomial regression.
+We'll see how ML.NET performs next to Python in my next post which will be looking at the polynomial regression.
 
 :::
 
