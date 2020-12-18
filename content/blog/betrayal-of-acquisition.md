@@ -62,7 +62,7 @@ The meeting ends a half hour later than scheduled. The executives are fidgety an
 
 I am the biggest idiot in the world because I believed in my small company. I don't care about being the best in the state or _tHe GrEaT lAkeS._ I wanted to be do well in our little city. I wanted to create our own winning solution. I wanted to be a part of _that._
 
-Those people will never know my name. I am faceless employee #20612. My job is to build application solutions for clients and thats it. No more creative process. No more brainstorming. They have people that do that. Our grand strategy is now resting comfortably in the trash bin. 
+Those people will never know my name. I am faceless employee #20612. My job is to build application solutions for clients until I burn out and quit and am replaced by faceless employee #20613. No more creative process. No more brainstorming. They have people that do that. Our grand strategy is now resting comfortably in the trash bin. 
 
 I call my immediate boss. He says he's cautiously optimistic. He encourages me to do the same. I try. I try very hard. I adopt language of positivity but it doesn't stick. I can't shake this feeling of anger and betrayal. I start checking on my friends "Are you safe?" Some are. Some aren't. It hurts. It sucks.
 
@@ -89,7 +89,7 @@ I didn't sleep well. I woke at 1:30 AM and stared at the ceiling, thinking.
 
 What will I do today? The reasonable thing that guarantees my income or the empty glory of turning it down for the principles. Obviously I should do the reasonable thing. I should accept the offer. I enter into a contract with them, but I can leave anytime. 
 
-If only I could somehow shake the suspicion that they are seeking to trick me. It's ridiculous. What would they gain? By my own estimation, I'm too unimportant to care about. So, why would they expend effort to decieve me? This is a manifestation of my distrust, but it's not logical. I perceive them as invaders so I want nothing to do with them. I am not one of them and I don't seek to be branded as one of them. I don't want to earn them a single dollar. 
+If only I could somehow shake the suspicion that they are seeking to trick me. It's ridiculous. What would they gain? By my own estimation, I'm too unimportant to care about. So, why would they make an effort to decieve me? This is a manifestation of my distrust, but it's not logical. I perceive them as invaders so I want nothing to do with them. I am not one of them and I don't seek to be branded as one of them. I don't want to earn them a single dollar. 
 
 But I must. I have a family and they need to eat. I'm the sole earner. I have to do this even though I hate it. 
 
