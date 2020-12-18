@@ -31,7 +31,7 @@ And then, the meeting begins.
 
 We're being acquired by a huge multi-billion dollar company. 
 
-They do the same thing as us, they're a consultancy with locations across world. They have shareholders and regional vice presidents. Our former executive tell us that their benefits are better. He strongly implies that the offer letters will be enticing. Also,
+They do the same thing as us, they're a consultancy with locations across world. They have shareholders and regional vice presidents. Our former executive tells us that their benefits are better. He strongly implies that the offer letters will be enticing. Also,
 
 "We can get the contracts we were too small to pursue. We can win!"
 
@@ -47,7 +47,8 @@ Imagine talking about having tens of thousands of employees and referring to the
 
 What an asshole. 
 
-Is he visiting them in the hospital? Is he loaning them money because their spouse got laid off? Welcome to the "family". What a joke.
+Is he visiting them in the hospital? Is he loaning them money because their spouse got laid off? Hell no, he's viewing spreadsheets of aggregated earnings by location and sorted by performance and directing his subordinates to remove any underperforming assets.
+Welcome to the "family". What a joke.
 
 He tells us we're part of their great lakes strategy. I have a moment of confusion, _great lakes?_ We're nowhere near the great lakes. Oh wait, he's means we're in a state bordering a great lake. We're a small wheel in his big machine.
 
@@ -71,7 +72,7 @@ I start digging into the emotion. I reason that if I can understand this feeling
 
 I realize that this company reminds me strongly of another consultancy I worked for in the past. They are direct competitors. I was abused at that consultancy. I realize that I deeply distrust the acquiring company as a result of that experience. I realize that I would never voluntarily elect to work for them. I would never apply for a job there. If I had other employment I would never accept an offer from them. 
 
-Moreover, I realize I'm not just grieving for my laid off friends. I'm grieving because my values and goals no longer coincide with the company. I now _have to_ quit. I will not work for a company that does not share my values and is an impediment to my goals. 
+Moreover, I realize I'm not just grieving for my laid off friends. I'm grieving because my values and goals no longer align with the company. I now _have to_ quit. I will not work for a company that does not share my values and is an impediment to my goals. 
 
 I reschedule the mentee meeting. I try to get work done. 
 
@@ -88,7 +89,7 @@ I didn't sleep well. I woke at 1:30 AM and stared at the ceiling, thinking.
 
 What will I do today? The reasonable thing that guarantees my income or the empty glory of turning it down for the principles. Obviously I should do the reasonable thing. I should accept the offer. I enter into a contract with them, but I can leave anytime. 
 
-If only I could somehow shake the suspicion that they are seeking to trick me. It's ridiculous. What would they gain? By my own estimation I'm too unimportant to care about so why would they expend effort to decieve me? This is a manifestation of my distrust, but it's not logical. I perceive them as invaders so I want nothing to do with them. I am not one of them and I don't seek to be branded as one of them. I don't want to earn them a single dollar. 
+If only I could somehow shake the suspicion that they are seeking to trick me. It's ridiculous. What would they gain? By my own estimation, I'm too unimportant to care about. So, why would they expend effort to decieve me? This is a manifestation of my distrust, but it's not logical. I perceive them as invaders so I want nothing to do with them. I am not one of them and I don't seek to be branded as one of them. I don't want to earn them a single dollar. 
 
 But I must. I have a family and they need to eat. I'm the sole earner. I have to do this even though I hate it. 
 
