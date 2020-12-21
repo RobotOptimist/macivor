@@ -134,7 +134,7 @@ plt.show()
 
 :::
 
-It's all so easy in Python. The tools are very consistent and I find it wasy to find examples with a simple search.
+It's all so easy in Python. The tools are very consistent and I find it easy to find examples with a simple search.
 
 ## Polynomial Linear Regression in ML.NET
 
@@ -150,9 +150,9 @@ The generated code also required significant alterations in order to reach our g
 
 This is not to say others have not struggled with this and perhaps found their own way. 
 
-I'm reminded of this [github issue.](https://github.com/dotnet/machinelearning-samples/issues/639)
+I'm reminded of this [GitHub issue.](https://github.com/dotnet/machinelearning-samples/issues/639)
 
-Or this [stackoverflow question.](https://stackoverflow.com/questions/49976719/write-polynomialfeatures-function-from-scikit-learn-for-f/49996800#49996800)
+Or this [StackOverflow question.](https://stackoverflow.com/questions/49976719/write-polynomialfeatures-function-from-scikit-learn-for-f/49996800#49996800)
 
 So lets get started. We do start from the usual place of setting up our using statements and reading in the data.
 
@@ -211,7 +211,7 @@ There are two main ways, one requires a contract be defined on the transformatio
 
 We will need to define an output class for our transform. We will also need to pay more attention to the attributes assigned to the class. In particular, as we will be expanding a single vector into a multitude of vectors we will need to define an array of floats in order to capture this change. 
 
-If your intent with a transformation is to change a single property into multiple properties then an array is the simplest way to do this. However, if you have specific and consistent transformations in mind then you may also define new properties on your `TransformOutput` class. We also can now make some guesses at how the `OneHotEncoding` transform works under the hood. (If you remember that dicussion from the [previous entry in this series](/blog/mlnet-v-python-multiple#a-small-discussion-on-onehotencoding-in-mlnet))
+If your intent with a transformation is to change a single property into multiple properties then an array is the simplest way to do this. However, if you have specific and consistent transformations in mind then you may also define new properties on your `TransformOutput` class. We also can now make some guesses at how the `OneHotEncoding` transform works under the hood. (If you remember that discussion from the [previous entry in this series](/blog/mlnet-v-python-multiple#a-small-discussion-on-onehotencoding-in-mlnet))
 
 The caveat is that we must know the length of the array so we can put the proper value in the attribute. [Per the documentation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.vectortypeattribute?view=ml-dotnet), leaving the argument off of the Vector attribute should allow us to put in an array of unknown length. In practice this does not work and an error will be thrown upon attempting to fit the data.
 
@@ -254,7 +254,7 @@ public class PolynomialFeatures : CustomMappingFactory<ModelInput, TransformOutp
 }
 ```
 
-Note that this implementation is good enough for our trivial example, but if you start dealing with extremely large numbers you'll need to likely use a better implementation. The requirements are that the transformation must be threadsafe and the transformation must not have side effects. So no altering of anything aside from the output parameter.
+Note that this implementation is good enough for our trivial example, but if you start dealing with extremely large numbers you'll need to likely use a better implementation. The requirements are that the transformation must be thread safe and the transformation must not have side effects. So no altering of anything aside from the output parameter.
 
 I tested my custom transform just to make sure it was good to go. Note that the VectorType array length requirement does not matter until we reach the `Fit` method of the pipeline onto the data.
 
