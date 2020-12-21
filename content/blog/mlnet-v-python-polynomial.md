@@ -1,7 +1,7 @@
 ---
 title: ML.NET and Python Polynomial Linear Regression
 description: Examine differences when doing polynomial regression in ML.NET and Python
-date: 2020-12-6
+date: 2020-12-21
 tags: machinelearning, dotnet, python, ml
 ---
 
@@ -39,7 +39,7 @@ So something like this simple example:
 
 :::
 
-Our data looks the same as simple linear regression at first, but upon noticing exponential growth in the dependent variable we need a different equation. A linear regression line will not be accurate. In fact, observing a regression line from a typical simple regression maybe how we identify the need for a polynomial regression.
+Our data looks the same as simple linear regression at first, but upon noticing exponential growth in the dependent variable we need a different equation. A linear regression line will not be accurate. In fact, observing a regression line from a typical simple regression may be how we can identify the need for a polynomial regression.
 
 On data such as this we would need to determine the correct exponent for growth and then apply it to the independent variable. 
 
@@ -87,7 +87,7 @@ Here we have a list of 10 positions within a company and their corresponding sal
 
 [Try it yourself on Binder](https://mybinder.org/v2/gist/RobotOptimist/cc82e87e7d2104e58711b7c846a9e220/HEAD?filepath=polynomial-regression.ipynb)
 
-What I like about the python implementation is how consistent the steps are. There is very little variation between regression tasks and yet we are still able to get great results. This task has some small variations in terms of the transformation we'll be doing and how we load in the data.
+What I like about the Python implementation is how consistent the steps are. There is very little variation between regression tasks and yet we are still able to get great results. This task has some small variations in terms of the transformation we'll be doing and how we load in the data.
 
 First as usual, we import the libraries we'll need. We need `pandas` to load in the data from our file and `numpy` as it's a dependency of `pandas`. Finally we need `maplotlib.pyplot` to chart and visualize our data and results.
 
@@ -97,7 +97,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 ```
 
-Now unlike previously we are not loading all of the columns, instead we're using python array syntax to leave out the text column from the data. We can do that because having the `Level` column already does all of the work the text column would do. In fact, if the `Level` column did not already exist we would transform `Position` into something similar. If you recall discussing transformations from [multiple linear regression article](/blog/mlnet-v-python-multiple) then you might remember `OneHotEncoder` which is a function to transform text columns into non-weighted vectors for the trainer to use. In this case though, transforming `Position` into keys makes sense since there is an order inherent to the data.
+Now unlike previously we are not loading all of the columns, instead we're using Python array syntax to leave out the text column from the data. We can do that because having the `Level` column already does all of the work the text column would do. In fact, if the `Level` column did not already exist we would transform `Position` into something similar. If you recall discussing transformations from [multiple linear regression article](/blog/mlnet-v-python-multiple) then you might remember `OneHotEncoder` which is a function to transform text columns into non-weighted vectors for the trainer to use. In this case though, transforming `Position` into keys makes sense since there is an order inherent to the data.
 
 ``` python
 dataset = pd.read_csv('Position_Salaries.csv')
@@ -105,7 +105,7 @@ X = dataset.iloc[:, 1:-1].values #leaving out the Position column by reading in 
 y = dataset.iloc[:, -1].values #we read in only the last column, Salary for our dependent variable
 ```
 
-Next we'll want to transform the our `Level` column so we can model can have a proper curve representing exponential growth. Once we do that we can use good old `LinearRegression` trainer to take care of the rest. 
+Next we'll want to transform the `Level` column so we can model can have a proper curve representing exponential growth. Once we do that we can use good old `LinearRegression` trainer to take care of the rest. 
 
 Python has a class called `PolynomialFeatures` that takes care of this transformation for us. Python makes this exceptionally easy as we will soon appreciate. Notice that the `PolynomialFeatures` class takes a constructor argument called degree. Degree will be the exponent we expect the dependent variable to grow by. In this case we choose four, but you can experiment for yourself with different exponents to see how that changes the curve.
 
@@ -128,7 +128,11 @@ plt.ylabel('Salary')
 plt.show()
 ```
 
+::: div flex justify-center my-4
+
 <picture-wrapper :legacy="false" file-name="screen-shots/polynomial-regression-python_oltlxa" alt-text="A scatter chart with a regression line curving up exponentially."></picture-wrapper>
+
+:::
 
 It's all so easy in Python. The tools are very consistent and I find it wasy to find examples with a simple search.
 
@@ -207,7 +211,7 @@ There are two main ways, one requires a contract be defined on the transformatio
 
 We will need to define an output class for our transform. We will also need to pay more attention to the attributes assigned to the class. In particular, as we will be expanding a single vector into a multitude of vectors we will need to define an array of floats in order to capture this change. 
 
-If your intent with a transformation is to change a single property into multiple properties then a simple array is the simplest way to do this. However, if you have specific and consistent transformations in mind then may also define new properties on your `TransformOutput` class. We may also now make some guesses at how the `OneHotEncoding` transform works under the hood. (If you remember that dicussion from the [previous entry in this series](/blog/mlnet-v-python-multiple#a-small-discussion-on-onehotencoding-in-mlnet))
+If your intent with a transformation is to change a single property into multiple properties then an array is the simplest way to do this. However, if you have specific and consistent transformations in mind then you may also define new properties on your `TransformOutput` class. We also can now make some guesses at how the `OneHotEncoding` transform works under the hood. (If you remember that dicussion from the [previous entry in this series](/blog/mlnet-v-python-multiple#a-small-discussion-on-onehotencoding-in-mlnet))
 
 The caveat is that we must know the length of the array so we can put the proper value in the attribute. [Per the documentation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.ml.data.vectortypeattribute?view=ml-dotnet), leaving the argument off of the Vector attribute should allow us to put in an array of unknown length. In practice this does not work and an error will be thrown upon attempting to fit the data.
 
@@ -304,7 +308,7 @@ For fun, I'm also now showing the result of our transformation.
 
 And at last we have the results of all of this - it's nearly identical to the python result.
 
-<picture-wrapper :legacy="false" file-name="screen-shots/ols-train-polynomial_fxvq5m" alt-text="A chart showing a near perfect polynomial regression curve."></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="screen-shots/ols-result-polynomial_djy2aim" alt-text="A chart showing a near perfect polynomial regression curve."></picture-wrapper>
 
 ## Thoughts
 

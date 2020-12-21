@@ -25,7 +25,8 @@ module.exports = {
         'giphy-container', 
         'dialogue-container', 
         'max-h-64', 
-        'overflow-y-scroll']
+        'overflow-y-scroll',
+        'p-8']
     }
   },
   theme: {
