@@ -308,7 +308,7 @@ For fun, I'm also now showing the result of our transformation.
 
 And at last we have the results of all of this - it's nearly identical to the python result.
 
-<picture-wrapper :legacy="false" file-name="screen-shots/ols-result-polynomial_djy2aim" alt-text="A chart showing a near perfect polynomial regression curve."></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="screen-shots/ols-result-polynomial_djy2ai" alt-text="A chart showing a near perfect polynomial regression curve."></picture-wrapper>
 
 ## Thoughts
 
