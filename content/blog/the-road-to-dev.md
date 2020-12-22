@@ -65,15 +65,25 @@ You know what, if you're doing all of that - you might as well form your own LLC
 
 Also, those people you just did good work for have a cousin who needs a website, can you help? What's your rate?
 
-This is how it works.
+This is how it works. It makes it super easy to get hired by bigger company if you already have successful projects and you have experience talking to business people. 
 
-There is a way to seize your own destiny if you want to do it. People who do this successfully are leaders in our industry. They are sought after.
+There is a way to seize your own destiny if you want to do it. People who do this successfully are leaders in our industry. They are sought after. It's not easy though!
 
 It's not for everyone but it's something to think about. From what I've seen, people who try this and fail are still miles ahead of people who go into interviews with only portfolios and prayers. 
 
-## Patience and Practice
+## Patience, Practice, and People
 
-Ultimately though, patience and skill will be your friends in this initial stage of your journey. 
+Ultimately though, patience, skill, and your network will be your friends in this initial stage as well as throughout your career. 
+
+* Yes, get into those interviews and put your best face forward. 
+* Yes, practice at the craft and build up to showcase your skill.
+* Yes, build up your network on LinkedIn and elsewhere.
+
+That third point is the most important. And what do I really mean? I mean you should be trying to schedule chats with people who interest you. The goal from these chats is not to get an interview, but to learn. Ask about their business. Ask about what they like in their job. Ask about the culture. Listen to their responses and build follow up questions. You're not going to be good at this right away. You'll make mistakes and feel foolish from time to time. You'll make gaffes. Embrace that awkwardness! I try to do this three times a week even being fully employed. If you are not otherwise employed then you might try to do this three times a day. Don't exhaust yourself. If it feels like you're going through the motions then take the day off. Being genuine and authentic is very important. If you're tired it makes it a lot harder!
+
+I think it's reasonable to ask, what's the point of all that? The point is to build relationships with people. You'll want to start conversations and contribute thoughts toward any problems they might have. People who get good at this are super valuable and can get jobs anywhere. 
+
+And yes, eventually, someone will probably say "Wow, that's a great point. Hey are you looking for work?"
 
 :::
 
