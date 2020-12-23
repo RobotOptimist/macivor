@@ -79,11 +79,13 @@ Ultimately though, patience, skill, and your network will be your friends in thi
 * Yes, practice at the craft and build up to showcase your skill.
 * Yes, build up your network on LinkedIn and elsewhere.
 
-That third point is the most important. And what do I really mean? I mean you should be trying to schedule chats with people who interest you. The goal from these chats is not to get an interview, but to learn. Ask about their business. Ask about what they like in their job. Ask about the culture. Listen to their responses and build follow up questions. You're not going to be good at this right away. You'll make mistakes and feel foolish from time to time. You'll make gaffes. Embrace that awkwardness! I try to do this three times a week even being fully employed. If you are not otherwise employed then you might try to do this three times a day. Don't exhaust yourself. If it feels like you're going through the motions then take the day off. Being genuine and authentic is very important. If you're tired it makes it a lot harder!
+That third point is the most important. And what do I really mean? I mean you should be trying to schedule chats with people who interest you. The goal from these chats is not to get an interview, but to learn. Ask about their business. Ask about what they like in their job. Ask about the culture. Listen to their responses and build follow up questions. Be respectful of their time and try not to keep them longer than 15-30 minutes. 
+
+You're not going to be good at this right away. You'll make mistakes and feel foolish from time to time. You'll make gaffes. Embrace that awkwardness! I try to do this three times a week even being fully employed. If you are not otherwise employed then you might try to do this three times a day. Don't exhaust yourself. If it feels like you're going through the motions then take the day off. Being genuine and authentic is very important. If you're tired it makes it a lot harder! Also, be respectful of people's time. 
 
 I think it's reasonable to ask, what's the point of all that? The point is to build relationships with people. You'll want to start conversations and contribute thoughts toward any problems they might have. People who get good at this are super valuable and can get jobs anywhere. 
 
-And yes, eventually, someone will probably say "Wow, that's a great point. Hey are you looking for work?"
+
 
 :::
 
