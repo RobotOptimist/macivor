@@ -13,11 +13,11 @@ tags: coder, junior, developer, hired
 
 It's hard out there.
 
-I think nothing has shown me that more than following and reading the heart breaking updates from recent bootcamp grads. They don't know it, but I've seen them. I've read their portfolios. I've read their posts on LinkedIn, which are alternating in bravery and despair. I feel for them.
+I think nothing has shown me that more than following and reading the heart breaking updates from recent boot camp grads. They don't know it, but I've seen them. I've read their portfolios. I've read their posts on LinkedIn, which are alternating in bravery and despair. I feel for them.
 
-I'm a lucky one. I taught myself to code while working an office job. I never used a bootcamp, but I thought about it. I was personally invited to join one by the founder of The Odin Project. He had just started his Viking School and was looking at promising students in his free online course. I was tempted! He seemed like he could help me acheive my dream of being a developer.
+I'm a lucky one. I taught myself to code while working an office job. I never used a boot camp, but I thought about it. I was personally invited to join one by the founder of The Odin Project. He had just started his Viking School and was looking at promising students in his free online course. I was tempted! He seemed like he could help me achieve my dream of being a developer.
 
-Ultimately, the finances didn't make sense to me so I passed. Wow, how different it would be had I not. At that time bootcamps were popping up everywhere but the demand for new developers was nowhere near sated. I would probably be happily writing on Ruby or JavaScript projects somewhere. Instead, I went down the path of .NET and got an enterprise job. It was pretty good for a while.
+Ultimately, the finances didn't make sense to me so I passed. Wow, how different it would be had I not. At that time boot camps were popping up everywhere but the demand for new developers was nowhere near sated. I would probably be happily writing on Ruby or JavaScript projects somewhere. Instead, I went down the path of .NET and got an enterprise job. It was pretty good for a while.
 
 The point is that it was harder to acquire the base skills, but easier to get a job. 
 
