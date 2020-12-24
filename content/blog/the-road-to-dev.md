@@ -63,7 +63,9 @@ Also, what the hell, if nothing else is working what will you lose if you fail?
 
 Upwork might be too intimidating at first, but what about churches? What about professional groups or charities? If you're already doing portfolio work then why not do work that's meaningful and for a good cause. Yes it's free or low paid work, but what's your portfolio paying? Also, you might ask if you could include the work you do as part of your portfolio. If you do good work you might ask them for references too.
 
-You know what, if you're doing all of that - you might as well form your own LLC. (Congrats you're hired!)
+_But listen, and this is important, do this work because you want to do it, because you believe in their cause or you like them or whatever. Never allow anyone to brow beat you into doing free work. If you get an offer for free work and your emotional reaction is "meh". Pass. It's not worth it._
+
+You know what, if put in the time to do something cool for a cause or people you like - you might as well form your own LLC. (Congrats you're hired!)
 
 Also, those people you just did good work for have a cousin who needs a website, can you help? What's your rate?
 
