@@ -11,6 +11,8 @@ tags: coder, junior, developer, hired
 
 ::: div article-container
 
+<picture-wrapper :legacy="false" file-name="heroes/career-guy-up-the-steps_f1sjta" alt-text="A suit clad person climbing steps with a case in hand." classes="hero-height-128"></picture-wrapper>
+
 It's hard out there.
 
 I think nothing has shown me that more than following and reading the heart breaking updates from recent boot camp grads. They don't know it, but I've seen them. I've read their portfolios. I've read their posts on LinkedIn, which are alternating in bravery and despair. I feel for them.
@@ -33,7 +35,9 @@ You are now a triple threat to secure any open coding position. Not only do you 
 
 If you were wise in your previous position and made friends and had a decent network then that makes you even more valuable. With a little time you can be someone who knows where to get that requirement clarified, or steers the a coworker ( or even the team! ) around a critical detail that only someone experienced in business operations would know. This is particularly true if you work in a field with complicated processes, like insurance or finance. You are made of gold if you've already got insight into existing systems and processes.
 
-Of course that's not for everyone. Also, many people turn to code to flee their old job, not to return and conquer it. 
+Of course that's not for everyone. Also, many people turn to code to flee their old job, not to return and conquer it. In fact, even though I label this as "easy" few people lay the ground work necessary to make this a reality. It does require a fair amount of networking. It does require you not hate your old employer. It is easier for people with office backgrounds. These differences add up to a big advantage. However, if this is you then you should definitely try this route.
+
+Use every advantage at your disposal.
 
 ## The Traditional Way
 
@@ -53,7 +57,7 @@ So what do you do if the easy way isn't so easy and the traditional way has you 
 
 If a month or two goes by and you can't find a position then it's reasonable to start thinking of alternatives. 
 
-I like people who are self-starters who will find a different game with rules that favor them. I value this skill a lot and I'm not the only one. 
+I like people who are self-starters who will find a different game with rules that favor them. I value this skill and I'm not the only one. 
 
 Consider that keeping a portfolio of pretty but otherwise not useful projects can only get you so far. Why not try for real experience on your own terms?
 
@@ -67,7 +71,7 @@ _But listen, and this is important, do this work because you want to do it, beca
 
 You know what, if put in the time to do something cool for a cause or people you like - you might as well form your own LLC. (Congrats you're hired!)
 
-Also, those people you just did good work for have a cousin who needs a website, can you help? What's your rate?
+Also, those people you just did good work for have a friend at BigCo who needs a new developer on their team. Can they introduce you?
 
 This is how it works. It makes it super easy to get hired by a bigger company if you already have successful projects and you have experience talking to business people. People who do this successfully are leaders in our industry. They are sought after. It's not easy and it's not for everyone. From what I've seen, people who try this and fail are still miles ahead of people who go into interviews with only a portfolio and hope. 
 
@@ -97,7 +101,9 @@ It means a lot when what you do matters to the success of the company in a tangi
 
 Moreover, working with smaller companies and startups you are encouraged to steer your own success. Your success is their success and vice versa. It helps when your mission is more than providing value to faceless shareholders. Instead the mission of the business is something you shape with your own hands. It's something you can believe in. That matters to me.
 
-But there are downsides as well. The benefits might not be as good as a big company. Large enterprise companies are stable. Changes are incremental at those places. Shakeups of an entire company do not occur over the course of one or two weeks, for example. There is value in that. Even though big enterprise employment are not my favorite (although I do enjoy working on a contract basis for such companies), I do recognize that such companies provide safety and stability for their employees. There is nothing wrong with seeking safety and stability!
+But there are downsides as well. The benefits might not be as good as a big company. Large enterprise companies are stable. Changes are incremental at those places. Shakeups of an entire company do not occur over the course of one or two weeks, for example. There is value in that. Even though big enterprise employment is not my favorite (although I do enjoy working on a contract basis for such companies), I do recognize that such companies provide safety and stability for their employees. There is nothing wrong with seeking safety and stability!
+
+There is another downside to big national and multinational companies to watch out for though. I mention it here briefly as I intend to expand on this in a future post. Big companies will disappoint you. It's slow, over the course of years at times. The rewards will never seem to be quite right. There will always be a little more red tape, an extra caveat, a "gotcha" that always works against you. Be cautious.
 
 No matter where you go one thing will be true. It is up to you to seize control of your future. Do not let time and fate dictate your path. Listen to advice and learn from your mistakes but also invest time into finding the _right_ advice and learning the _right_ lessons. Many people will seek to influence you. Some will have agendas that include your best interest and some will not. And if this is your second career and you already know all of this then please forgive this gentle reminder.
 
@@ -107,7 +113,11 @@ We are a community of engineers and we want to encourage and promote each other.
 
 Most of all, I am glad to welcome you into the community of developers. 
 
-Someday, when you've become established, I want you to remember this time and help a newbie out. This is the way.
+Someday, when you've become established, I want you to remember this time and help a newbie out. Do something, an introduction, encouragement, mentorship - something.  
+
+All of those senior engineers, the people who don't quite seem to hear you. As they are so shall you be. 
+
+Remember where you came from and who helped you. Remember to help the people who come after you. This is the way.
 
 :::
 
