@@ -1,7 +1,7 @@
 ---
 title: The Road To Developer Jobs
 description: Thinking about people who are coming up and trying to get hired.
-date: 2020-11-25
+date: 2020-12-28
 tags: coder, junior, developer, hired
 ---
 
