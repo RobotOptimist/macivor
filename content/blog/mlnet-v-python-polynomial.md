@@ -273,7 +273,7 @@ display(testOutputs)
 
 Now we can create the pipeline. Since we transformed the `Level` column and `Level` is a tokenized version of `Position` I chose to drop both `Level` and `Position`. I only need the transformed feature to proceed with the regression training.
 
-For trainer, neither `SDCA` or `FastTree` do a great job here. In fact, both produce some hilarious results. Here is SDCA for example. (If you do use `SDCA` don't forget to set `maximumNumberOfIterations` as a parameter for the trainer, otherwise you'll be waiting around for fine minutes.)
+For trainer, neither `SDCA` or `FastTree` do a great job here. In fact, both produce some hilarious results. Here is SDCA for example. (If you do use `SDCA` don't forget to set `maximumNumberOfIterations` as a parameter for the trainer, otherwise you'll be waiting around for five minutes.)
 
 <picture-wrapper :legacy="false" file-name="screen-shots/sdca_polynomial_fail_hjfzcy" alt-text="A chart where the SDCA regression curve goes off into the negative trillions."></picture-wrapper>
 
