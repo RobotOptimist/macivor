@@ -48,10 +48,45 @@ Have you ever worked with someone who you admired so much that it actively cause
 
 I mean, not at first. At first I was 100% excitement. "Here's a starter template for the docs! Why are we doing this? Let me write the docs with an angle in mind for people who are not .NET. Also, who are we targeting? Should expect .NET familiarity?" So many questions. Buzz buzz buzz.
 
-I create a basic statically generated site to host the docs. I am brimming with enthusiasm as I start trying to convert the examples into docs and show my worth. Things move quickly. I initially think to use Netlify but somebody says "lets use GitHub pages instead" so I reconfigure everything for that. This is actually kind of hard. GitHub pages requires a branch dedicated to the static pages. The static site generator needs to create the files and then GitHub Actions has to pick up that output and commit it to the github-pages branch. It's a solved problem, but just the idea of a dedicated branch 
+I create a basic statically generated site to host the docs. I am brimming with enthusiasm as I start trying to convert the examples into docs and show my worth. Things move quickly. I initially think to use Netlify but somebody says "lets use GitHub pages instead" so I reconfigure everything for that. This is actually kind of hard. GitHub pages requires a branch dedicated to the static pages. The static site generator needs to create the files and then GitHub Actions has to pick up that output and commit it to the github-pages branch. It's a solved problem, but just the idea of a dedicated branch only for the static pages seemed pretty different and novel to me. 
 
-## I Fly Too High
+Anyway, there are plenty of tutorials and guides to explain how to do that. I was pretty happy once I had a build system figured out and had submitted the PR to David.
 
+I remember feeling so proud. "This is going great."
+
+## Fear
+
+After that I saw there was an opportunity to help out with the GitHub actions to package up the dotnet template into a NuGet package. I had done none of this before and I was excited for the opportunity to learn. I had a fairly bare bones description in the issue but it cited another project that did something similar and I could crib off of that. 
+
+However, there were challenges. The FeatherHttp project used Nerdbank Git Versioning, but the example project did not. Also, the example project used a PowerShell script to set a couple of things up, but along the way David let me know that he's prefer not to use a PowerShell script unless absolutely necessary.
+
+I iterated a lot. I made faulty assumptions and was misled by GitHub issues on other projects. I worked on these GitHub actions every night for a couple of weeks. I submitted several versions of it as a PR and found I was frequently missing the mark.
+
+In fact, it's kind of fun to look back at my [commit history](https://github.com/RobotOptimist/FeatherHttp/commits/ci-changes) for that and just... marvel at the struggle. 
+
+But with each breakthrough in understanding something else was happening. I allowed my insecurity to eat away at me. 
+
+> "Why can't I just _do_ this?" 
+
+David seemed to have the exact idea of what he wanted, and I felt like I was discovering that in jibs and jabs along the way.
+
+I remember how I felt proud when David finally approved the PR and my code merged. I followed it closely to make sure it built properly and the GitHub Actions behaved exactly as I had tested. It worked!
+
+But then, David found an issue and had to fix a few things. I felt like I had failed and missed the mark. 
+
+After that, when my confidence should have been soaring I felt gutted instead. What I wanted was to talk to David and hear him actually talk about the project. Communicating over GitHub issues and PR comments felt like a poor substitute. 
+
+I puttered around with the docs site for a little while longer, but my anxiety continued to eat away at me. 
+
+If you have ever sufferred from anxiety you know there is a threshold that, when crossed, the anxiety cannot be calmed. No one can say anything to assuage it. There is nothing that can be done except to either walk away if you can, or to soldier on and shove the unpleasant emotions to the side. 
+
+For me, time and emotional distance will eventually lessen the anxiety. In fact, I've come to recognize that when I heap too much expectation on an experience or outcome I will almost surely self-sabotage. I find that keeping calm and resisting excitement is the key to preventing my fears and insecurities from overwhelming me in the face of a big exciting opportunity.
+
+## Why?
+
+Because David Fowler, among the many software architects and coders that I'm aware of, is a strong leader endowed with uncommon skill, like an Achilles of code or something. Working with him, I believed, would be a step along the way to becoming _like_ him. Where, now I am a strong coder for creating business solutions, I could become like David who is a strong programmer and architect creating tools for other developers to use.
+
+So, my error was allowing David to become larger than life in my own head. The project became overshadowed by my inability to communicate well with David. Also, I felt the eyes of his other followers on me. By becoming part of this journey I opened myself up to scrutiny and criticism. I was unprepared for such feelings! Developers, particularly developers in this set, are not known for kindness and helpful criticism. 
 
 
 :::
