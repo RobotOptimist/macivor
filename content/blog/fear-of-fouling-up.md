@@ -1,7 +1,7 @@
 ---
 title: For The Fear Of Fouling Up
 description: A story about when I contributed to an OSS project.
-date: 2020-12-28
+date: 2021-01-22
 tags: coder, developer, dotnet, oss
 ---
 
