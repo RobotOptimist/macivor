@@ -1,17 +1,17 @@
 ---
-title: For The Fear Of David Fowler
-description: A story about when I contributed to an OSS project authored by David Fowler.
+title: For The Fear Of Fouling Up
+description: A story about when I contributed to an OSS project.
 date: 2020-12-28
 tags: coder, developer, dotnet, oss
 ---
 
-<page-header title="For The Fear Of David Fowler"></page-header>
+<page-header title="For The Fear Of Fouling Up"></page-header>
 
 ::: div container-center
 
 ::: div article-container
 
-<picture-wrapper :legacy="false" file-name="heroes/career-guy-up-the-steps_f1sjta" alt-text="A suit clad person climbing steps with a case in hand." classes="hero-height-128"></picture-wrapper>
+<picture-wrapper :legacy="false" file-name="heroes/Fear_of_Fouling_Up_eqshjl" alt-text="A key board with the title text 'Fear of Fouling Up' and the subtext 'how fear stymied my open source enthusiasm'" classes="hero-height-128"></picture-wrapper>
 
 ## Forewarned
 
@@ -19,7 +19,9 @@ This article starts out talking about .NET culture and patterns and swiftly tran
 
 ## The Problem With Obligatory Patterns
 
-I was reading Twitter and saw an interesting series of conversations unfold with David Fowler. He wrote about how you don't need the full enterprise implementation for every little project. He wrote that not every tiny project benefits from dependency injection and repository patterns and so on. 
+I was reading Twitter and saw an interesting series of conversations unfold with David Fowler. David Fowler is a domain famous developer and is an architect at Microsoft. He authored the SignalR project which is the most popular method of enabling web sockets in a .NET application. He is also well known for his involvement in the community where he frequently shares what he's learning about and offers resources to fellow developers are also curious and learning. He will occasionally post a strong opinion and is not averse to a little bit of controversy for the benefit of the community at large.
+
+ This particular twitter thread was about how you don't need the full enterprise implementation for every little project. He wrote that not every tiny project benefits from dependency injection and repository patterns and so on. This tweet squarely fell into the "controversy" category.
 
 He encountered a lot of resistance from .NET developers, but I deeply agreed with what he wrote. Those patterns help on larger projects, but sometimes they're useless bloat and can be discarded for smaller projects. Fowler argued that we should be thoughtful about where and why we use those patterns. While some felt that they would always end up using the patterns (so why not just implement them right away) I recalled instances where I didn't want to deal with the overhead. I've certainly worked on projects with patterns that did not make sense or were implemented poorly. Some patterns are better off not used than implemented poorly.
 
@@ -40,11 +42,11 @@ Fowler's initial 2019 tweet was about his backend [Todo app implementations](htt
 
 The exchange generated an entertaining and informative back and forth. As I read Fowler's tweets and started to feel like I understood his point of view I felt an affinity for his approach. I even agreed to his stance on testing in that many unit tests do not add value and once again we should exercise good judgement. A blanket requirement for test coverage makes sense for some development teams but sometimes it tramples the question that should be asked: "Do these tests make sense?"
 
-Reading his tweets made me think about all the times I _didn't_ reach for .NET Core for a personal project or proof of concept. Why not? Because it seemed like a lot of overhead. I didn't want my internal code reviewer berating me for not using the patterns necessary for a normal project. I didn't want to show it to another .NET developer and immediately feel like I have to apologize for not having those things - even though in the context of the project it does not make sense! So I'll just write it in Node.js or something because the expectation for fully thought out patterns are not as prevalent. I can focus on the functionality I want to explore and not deal with the overhead of Domain Driven Development or whatever.
+Reading his tweets made me think about all the times I _didn't_ reach for .NET Core for a personal project or proof of concept. Why not? Because it seemed like a lot of overhead. I didn't want my internal code reviewer berating me for not using the patterns necessary for a normal project. I didn't want to show it to another .NET developer and immediately feel like I have to apologize for not having those things - even though in the context of the project it does not make sense! So I'll just write it in Node.js or something because the expectation for fully thought out patterns are not as prevalent. I can focus on the functionality I want to explore and not deal with the overhead of a repository pattern or whatever.
 
-Hearing David Fowler sound out a few of those same thoughts made me realize that all of this expectation in .NET isn't necessary. I felt I had permission to also dissent against the tyranny of over-architected patterns.
+Hearing David Fowler sound out a few of those same thoughts made me realize that all of this expectation in .NET isn't necessary. I felt I had permission to also dissent against the use of over-architected patterns.
 
-So, when I saw in late December that Fowler had created a new project called FeatherHttp I was stoked. It appeared to me that this project was a manifestation of his thoughts around .NET bloat. I jumped on it and quickly started buzzing around the threads. I wanted to help write the documentation. I wanted to be a part of this effort. Also, here was a .NET open source project in the initial stages. I felt I could contribute. I was also very excited to work with David Fowler.
+So, when I saw in late December that Fowler had created a [new project called FeatherHttp](https://github.com/featherhttp/framework) I was stoked. It appeared to me that this project was a manifestation of his thoughts around .NET bloat. I jumped on it and quickly started buzzing around the threads. I wanted to help write the documentation. I wanted to be a part of this effort. Also, here was a .NET open source project in the initial stages. I felt I could contribute. I was also very excited to work with David Fowler.
 
 ## Getting Involved
 
@@ -86,7 +88,7 @@ I puttered around with the docs site for a little while longer, but my anxiety c
 
 David Fowler, among the many software architects and coders that I'm aware of, is a strong leader endowed with uncommon skill, like an Achilles of code or something. Working with him, I believed, would be a step along the way to becoming _like_ him. Where, now I am a strong coder for creating business solutions, I could become like David who is a strong programmer and architect creating tools for other developers to use.
 
-So, my error was allowing David to become larger than life in my own head. The project became overshadowed by my inability to communicate well with David. Also, I felt the eyes of his other followers on me. By becoming part of this journey I opened myself up to scrutiny and criticism. Even though none was forthcoming from other developers, my inner voice provided plenty! I was unprepared for such feelings. I imagined a group of fellow software developers who were unfeeling and unkind, like a host of StackOverflow curmudgeons prepared to descend upon me.
+So, first error was allowing David to become larger than life in my own head. The project became overshadowed by my inability to communicate well with David. Also, I felt the eyes of his other followers on me. By becoming part of this journey I opened myself up to scrutiny and criticism. Even though none was forthcoming from other developers, my inner voice provided plenty! I was unprepared for such feelings. I imagined a group of fellow software developers who were unfeeling and unkind, like a host of StackOverflow curmudgeons prepared to descend upon me.
 
 All of this while constructing some docs pages and a few GitHub actions. How can the voices of my insecurity be so loud?
 
@@ -122,7 +124,7 @@ Another reason I wrote this is to better understand myself. Sometimes the act of
 
 Also this internal conflict represents a huge reason why people don't want to contribute to OSS. Why wrestle with OSS when I can write code within my team and receive the validation of having done a good job, or the gentle criticism from people who will look me in the eye when they say it. 
 
-Yes, in OSS experience and conviction are assets, just as anywhere. But unlike in a job, for example, we can replace those qualities with patience and determination, where our contributions can be measured out over months instead of sprinted over in a matter of days.
+I jumped at shadows and imaginary criticisms and missed the point. You needn't suffer this. Learn from my errors and engage with a vibrant community, but learn to be patient as well - with yourself most of all.
 
 :::
 
