@@ -23,7 +23,7 @@ Other engineers at CGI feel differently and I support that. It's impossible to b
 
 But life disruptions are sometimes accompanied by opportunity and so it is with this. I chose to leave HMB/CGI.
 
-My last experience with recruiters occurred years ago when I left Nationwide. At that time I was two years into my journey as a developer and four years into my total IT experience. My skill and experience was mostly good but my ability to market myself was poor. After two years developers are generally considered mid-level (although this is very subjective based on experience). I had some interest from recruiters, but it was clear I was a stretch candidate for many of the positions in town. One recruiter in particular gave me great feedback and direction. I needed to either get more experience or market myself better. 
+My last experience with recruiters occurred years ago when I left Nationwide. At that time I was two years into my journey as a developer and four years into my total IT experience. My skill and experience were mostly good but my ability to market myself was poor. After two years developers are generally considered mid-level (although this is very subjective based on experience). I had some interest from recruiters, but it was clear I was a stretch candidate for many of the positions in town. One recruiter in particular gave me great feedback and direction. I needed to either get more experience or market myself better. 
 
 I ended up bypassing the issue and getting a job at Sogeti by referral.
 
@@ -105,7 +105,7 @@ Jay:
 
 The issue was that I did not trust the recruiter. I never replied.
 
-In fact, with this many communications, I decided to I needed to trust my instincts. Communication was so overwhelming that it I needed my subconscious to do a little work for once. If I got a bad vibe from a recruiter I just stopped immediately. Where at first I was accepting cold calls and responding to cold emails (Hey, I put myself on those job boards - I needed to make an effort to respond) I came to find that frequently there was little value in responding to those. Usually, with one notable exception, it was better to let the call go to voice mail and then listen to that. I would call back on promising voice mails and ignore the ones that seemed sketchy. 
+In fact, with this many communications, I decided to I needed to trust my instincts. Communication was so overwhelming that I needed my subconscious to do a little work for once. If I got a bad vibe from a recruiter I just stopped immediately. Where at first I was accepting cold calls and responding to cold emails (Hey, I put myself on those job boards - I needed to make an effort to respond) I came to find that frequently there was little value in responding to those. Usually, with one notable exception, it was better to let the call go to voice mail and then listen to that. I would call back on promising voice mails and ignore the ones that seemed sketchy. 
 
 _Wait, what was the notable exception? It was Jason at Stafford Technology! I ended up working with him and Jeremy Florea to get my current job. I'd highly recommend them!_
 
@@ -133,9 +133,9 @@ Stafford Technology: They are a smaller firm and very personable. They are great
 
 Agility Partners: I really enjoyed working with them. We had several good conversations. They are very honest about what they see in the market place and potential fits. 
 
-Otterbase: I worked with one individual from this company and she was very personable and had put a lot of thought into her contacts with me. I think she actually read my entire resume! 
+Otterbase: I worked with one individual from this company and she was very personable and had put a lot of thought into her contacts with me.
 
-Vaco: Are they a huge staffing firm? Yeah. Despite that they had great insight into what employers find appealing. They were one of my initial contacts and their feedback and thoughtful approach was very good.
+Vaco: They had great insight into what employers find appealing and were discerning on whether a potential employer would meet my requirements. They were one of my initial contacts and their feedback was very good.
 
 Purple Squirrel: They are very personable and forthright. I got the impression that they specialize in difficult to fill roles so it was interesting and illuminating to work with them toward an interview.
 
@@ -220,7 +220,7 @@ I didn't spend a lot of time preparing since every company is a little bit diffe
 
 Most companies had at least two interviews - culture fit and technical aptitude. 
 
-I had a few interviews where I decided the culture fit was not for me. These usually resulted from strange or funny interactions. For example, once I'd asked a hiring manager to describe the values of his company. He said:
+I had a few interviews where I decided the culture fit was not for me. These usually resulted from strange or funny interactions. For example, once I asked a hiring manager to describe the values of his company. He said:
 
 >"Uh, no one as ever asked me that. I guess... 'work hard?'"
 
