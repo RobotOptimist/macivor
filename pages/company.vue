@@ -30,7 +30,6 @@
         <aside class="flex flex-col justify-center items-center">
           <h1>Get In Touch</h1>
           <p>Contact James MacIvor via the link in the footer. We're happy to help!</p>
-          <p><i>James is a proud employee of <a href="https://www.hmbnet.com/">HMB</a>, so any work of significant size will be referred to them.</i></p>
         </aside>
       </section>
     </div>
