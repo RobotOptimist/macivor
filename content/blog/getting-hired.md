@@ -129,7 +129,7 @@ In the end I ended up working closely with a handful of recruiters who treated m
 
 In fact, I want to name the recruiting angencies that I really loved working with. My only regret with them is that I could only take one job.
 
-Stafford Technology: They are a smaller firm, but very personable. They are great listeners and do a good job for businesses in Columbus.
+Stafford Technology: They are a smaller firm and very personable. They are great listeners with a thoughtful and flexible approach.
 
 Agility Partners: I really enjoyed working with them. We had several good conversations. They are very honest about what they see in the market place and potential fits. 
 
