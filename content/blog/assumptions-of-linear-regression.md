@@ -2,16 +2,9 @@
 title: Assumptions of Linear Regression
 description: A simplified explanation of the assumptions about the data to successfully run linear regression
 date: 2020-12-6
-tags: machinelearning, linearregression, ml, regression
+image: heroes/robotmlnet-yes_tfryby.png
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="Assumptions of Linear Regression"></page-header>
-
-::: div container-center
-
-<picture-wrapper :legacy="false" file-name="heroes/robotmlnet-yes_tfryby.png" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container mt-4
 
 ## Linear relationship (Linearity) 
 
@@ -66,7 +59,3 @@ If you're like me and find these confusing at first then you'll appreciate these
 [Multivariate Normal Distribution](https://brilliant.org/wiki/multivariate-normal-distribution/#:~:text=A%20multivariate%20normal%20distribution%20is,variables%20is%20also%20normally%20distributed.)
 
 [Homescedasticity](https://www.statisticssolutions.com/homoscedasticity/)
-
-:::
-
-:::
