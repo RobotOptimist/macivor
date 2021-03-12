@@ -3,15 +3,9 @@ title: VSCode .NET Interactive Notebooks
 description: A .NET friendly alterative to Jupyter Notebooks that runs in VS Code
 date: 2020-11-25
 tags: machinelearning, dotnet, vscode, notebooks
+image: heroes/robotmlnet-yes_tfryby.png
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="VSCode .NET Interactive Notebooks"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container
 
 ## Where Jupyter Notebooks Falls Short
 
@@ -53,8 +47,4 @@ The answer is... I do!
 So I know how _I'll_ be writing my .NET notebooks from now on!
 
 But if you still prefer Jupyter Notebooks then [here is the guide to get set up with that too.](blog/../get-set-up-with-dotnet-and-jupyter-notebooks)
-
-:::
-
-:::
 
