@@ -3,15 +3,9 @@ title: Nuxt, Offline First PWA Tutorial
 description: Explains Nuxt and walks through a simple offline first PWA project
 date: 2020-09-12
 tags: nuxtjs, vuejs, pwa, workbox, bootstrap, tutorial, auth0
+image: nuxt_title_e0icz0
+alttext: The Nuxt logo with the text, Nuxt a great case for vue. The quick and easy way to spin up a Vue.js application
 ---
-
-<page-header title="Nuxt: Offline First PWA Tutorial"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-extension="jpg" file-name="heroes/nuxt_title" alt-text="The Nuxt logo with the text, Nuxt a great case for vue. The quick and easy way to spin up a Vue.js application"></picture-wrapper>
-
-::: div article-container
 
 ## I Love Vue
 
@@ -19,14 +13,14 @@ I love Vue.js. It's a fantastic JavaScript framework - easily outclassing in my 
 
 Just to run through them quickly: 
 
-::: div max-w-xs md:max-w-md
+<div class="max-w-xs md:max-w-md">
 
 1. Vue has a great learning curve.
 2. It encourages incremental adoption into legacy projects.
 3. Development is driven by community needs.
 4. Vue maintainers have friendly relationships with other framework maintainers, allowing for a free exchange of ideas and concepts.
 
-:::
+</div>
 
 ## Maybe Some Things Could be Better
 
@@ -58,7 +52,7 @@ First, lets get some requirements.
 
 Let's make this a survey app. It's for fire hydrant inspectors who are required to periodically inspect fire hydrants (pretty sure this is a fake job). So it has these requirements:
 
-::: div max-w-xs md:max-w-md
+<div class="max-w-xs md:max-w-md">
 
 1. Requires login of a user.
 2. Collects data about a fire hydrant as a form. (Hydrant serial number and condition)
@@ -66,7 +60,7 @@ Let's make this a survey app. It's for fire hydrant inspectors who are required 
 4. Must transmit fire hydrant data when connected (or reconnected).
 5. Made to work on mobile or tablet.
 
-:::
+</div>
 
 Okay great. Lets make some decisions about the app's architecture.
 
@@ -524,7 +518,3 @@ Now I can inject the variables via the CI/CD pipeline.
 Nuxt has a huge variety of libraries and plugins that can help you achieve what you're seeking to do. It's great to get something off the ground quickly so you can hone in on the business needs. 
 
 I hope this is helpful for anyone doing an offline first application!
-
-:::
-
-:::

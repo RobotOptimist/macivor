@@ -3,15 +3,9 @@ title: Share Your Dotnet Notebooks on Binder
 description: How to share your dotnet jupyter notebooks on binder
 date: 2020-11-22
 tags: binder, dotnet, jupyternotebooks, notebooks
+image: heroes/robotmlnet-yes_tfryby.png
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="Share Your .NET Notebooks on Binder"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it."></picture-wrapper>
-
-::: div article-container
 
 ## What is Binder?
 
@@ -19,7 +13,7 @@ tags: binder, dotnet, jupyternotebooks, notebooks
 
 It's a wonderful service and supports many languages right out of the box. To spin up a Python notebook you only need a simple `requirements.txt` file. If you intend to use R or Julia then an `environment.yml` file will do. You can follow Binder's guides to get this up and running.
 
-::: aside p-8 bg-indigo-100 p-4
+<aside class="p-8 bg-indigo-100 p-4">
 
 _Edit 12-6-2020:_ environment.yml will work well for most .NET tasks but does not work well with the Ols regression trainer because it has a depedency on the MKL library. Choose another regression trainer and enviroment.yml will work just fine.
 
@@ -78,8 +72,7 @@ using Microsoft.ML.Data;
 
 That could also be because we upgraded to .NET 5 in this process as well!
 
-:::
-
+</aside>
 
 Here also, if you prefer to work with a Dockerfile, is this base docker image: [jmacivor/dotnet-binder:0.1.1](https://hub.docker.com/layers/127236981/jmacivor/dotnet-binder/0.1.1/images/sha256-095b5f0245b905d1e9fcce399510198fd98f5b3445d362126453cf3ac526f908?context=explore&tab=layers) which will provide you with the .NET SDK as well as everything necessary to work on Binder. You can then copy in your notebooks and related files and run them easily.
 
@@ -160,7 +153,3 @@ RUN dotnet-interactive jupyter install
 ```
 
 By the way, dotnet-interactive has their own [Dockerfile for Binder.](https://github.com/dotnet/interactive/blob/main/Dockerfile) They go a completely different direction where they start from a base image made for Binder and then install the .NET dependencies and .NET from there. I did try this approach, but found a bunch of problems along the way. Still, you might enjoy trying it this way. The time to start up the Binder server appears to be about the same regardless of which approach you use.
-
-:::
-
-:::

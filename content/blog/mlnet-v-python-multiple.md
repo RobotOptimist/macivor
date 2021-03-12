@@ -3,19 +3,13 @@ title: ML.NET and Python Multiple Linear Regression
 description: Examine differences when doing multiple regression in ML.NET and Python
 date: 2020-12-6
 tags: machinelearning, dotnet, python, ml
+image: heroes/robotmlnet-yes_tfryby.png
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="ML.NET and Python Multiple Linear Regression"></page-header>
-
-::: div container-center
-
-<picture-wrapper :legacy="false" file-name="heroes/robotmlnet-yes_tfryby.png" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container mt-4
 
 _This is the third in a series talking about the differences in implementation between ML.NET and Python for machine learning tasks. Don't worry though, you should be able to jump right in to read this post._
 
-::: aside p-8 bg-indigo-100 m-4
+<aside class="p-8 bg-indigo-100 m-4">
 
 However, here are the previous posts if you'd like to take a look.
 
@@ -29,7 +23,7 @@ If you want to install ML.NET and setup a .NET notebook environment then I expla
 * [Run .NET on Binder](/blog/how-to-run-dotnet-on-binder)
 * [.NET and Jupyter Notebooks](/blog/get-set-up-with-dotnet-and-jupyter-notebooks)
 
-:::
+</aside>
 
 ## What is Multiple Linear Regression
 
@@ -41,13 +35,13 @@ I list these assumptions out in another [article](/blog/assumptions-of-linear-re
 
 ## The Data
 
-::: aside p-8 bg-indigo-100 m-4
+<aside class="p-8 bg-indigo-100 m-4">
 
 ### Thank you Super Data Science Team
 
 This dataset and the Python information comes from [Kirill Eremenko](https://www.linkedin.com/in/keremenko/) and [Hadelin de Ponteves](https://www.linkedin.com/in/hadelin-de-ponteves-1425ba5b/) along with the [Super Data Science Team.](https://www.superdatascience.com/). They provide an excellent quality [data science course](https://www.udemy.com/course/machinelearning/learn/lecture/19229340) on Udemy. It is reused here with permission.
 
-:::
+</aside>
 
 This data represents a bunch of different startups. Our goal is to predict the profit of a startup. 
 <div class="max-h-64 overflow-y-scroll">
@@ -85,11 +79,11 @@ ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [3])], remaind
 X = np.array(ct.fit_transform(X))
 ```
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
 <picture-wrapper :legacy="false" file-name="screen-shots/multiple_regression_transformed_data_hvytif" alt-text="The transformed data resulting from the OneHotEncoder function." classes="hero-height-128"></picture-wrapper>
 
-:::
+</div>
 
 Aside from that small change the steps are now almost identical to simple linear regression.
 
@@ -121,11 +115,11 @@ np.set_printoptions(precision=2)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 ```
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
 <picture-wrapper :legacy="false" file-name="screen-shots/python-multiple-regression_zttgcs" alt-text="An image depicting the predicted and actual data side by side."></picture-wrapper>
 
-:::
+</div>
 
 Some of the predictions are pretty good while others are just sort of okay. Nevertheless, given the small sample this is a pretty good result for a multiple linear regression model. It's nice that there are few extra steps to train this model in spite of the fact that the data is much more complex relative to simple linear regression.
 
@@ -248,7 +242,7 @@ var dataProcessPipeline = mlContext.Transforms.Categorical.OneHotEncoding(new[] 
 
 Ah! Just as Python, we're using a tool called `OneHotEncoding`. Also, just as Python it transform the encoded columns into multiple columns. However, unlike Python it's more difficult to inspect the data to see what it did.
 
-::: aside p-8 bg-indigo-100 m-4
+<aside class="p-8 bg-indigo-100 m-4">
 
 ### A Small Discussion on OneHotEncoding in ML.NET
 
@@ -318,7 +312,7 @@ In the case of ZipCode, when there are hundreds of unique entries, why would you
 
 ML.NET and Python both provide wonderful tooling for handling data such as this, but ultimately it's still up to us to make reasonable decisions about each data point.
 
-:::
+</aside>
 
 Let's get to training our model!
 
@@ -410,11 +404,11 @@ foreach (var ts in testSet)
 
 We see this - 
 
-::: div flex justify-center
+<div class="flex justify-center">
 
 <picture-wrapper :legacy="false" file-name="screen-shots/mlnet-side-by-side-profits_s15hne" alt-text="Shows predicted and actual profits side by side"></picture-wrapper>
 
-:::
+</div>
 
 Not bad! Pretty close in some instances! This is a pretty fair prediction of potential profits.
 
@@ -439,7 +433,3 @@ The Python libraries hand us success first and allow us to learn deeply later.
 From a business perspective, Python is the clear favorite, at least in the short term. The business value will be successful predictions from a process created as cheaply as possible. However, in the long term a business would benefit from type safety and the resulting easier maintenance. 
 
 We'll see how ML.NET performs next to Python in my next post which will be looking at the polynomial regression.
-
-:::
-
-:::
