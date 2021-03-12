@@ -3,15 +3,9 @@ title: For The Fear Of Fouling Up
 description: A story about when I contributed to an OSS project.
 date: 2021-01-22
 tags: coder, developer, dotnet, oss
+image: heroes/Fear_of_Fouling_Up_eqshjl
+alttext: A key board with the title text 'Fear of Fouling Up' and the subtext 'how fear stymied my open source enthusiasm'
 ---
-
-<page-header title="For The Fear Of Fouling Up"></page-header>
-
-::: div container-center
-
-::: div article-container
-
-<picture-wrapper :legacy="false" file-name="heroes/Fear_of_Fouling_Up_eqshjl" alt-text="A key board with the title text 'Fear of Fouling Up' and the subtext 'how fear stymied my open source enthusiasm'" classes="hero-height-128"></picture-wrapper>
 
 ## Forewarned
 
@@ -125,7 +119,3 @@ Another reason I wrote this is to better understand myself. Sometimes the act of
 Also this internal conflict represents a huge reason why people don't want to contribute to OSS. Why wrestle with OSS when I can write code within my team and receive the validation of having done a good job, or the gentle criticism from people who will look me in the eye when they say it. 
 
 I jumped at shadows and imaginary criticisms and missed the point. You needn't suffer this. Learn from my errors and engage with a vibrant community, but learn to be patient as well - with yourself most of all.
-
-:::
-
-:::
