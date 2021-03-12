@@ -5,7 +5,7 @@
       <picture-wrapper :legacy="false" 
         :file-name="page.image" 
         :alt-text="page.alttext" 
-        classes="hero-height-128">
+        classes="max-h-128">
       </picture-wrapper>
       <div class="article-container mt-4">
         <nuxt-content :document="page" />
