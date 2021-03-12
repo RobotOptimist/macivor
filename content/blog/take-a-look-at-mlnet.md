@@ -3,7 +3,7 @@ title: Take A Look At ML.NET
 description: A brief exploration of ML.NET where we look at how to get set up and how to use it.
 date: 2020-09-17
 tags: machinelearning, dotnet, mlnet, csharp
-image: heroes/robotmlnet-yes_tfryby.png
+image: heroes/robotmlnet-yes_tfryby
 alttext: The ML.NET logo with a robot face next to it.
 ---
 

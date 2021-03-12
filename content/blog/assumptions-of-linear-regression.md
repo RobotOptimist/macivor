@@ -2,7 +2,7 @@
 title: Assumptions of Linear Regression
 description: A simplified explanation of the assumptions about the data to successfully run linear regression
 date: 2020-12-6
-image: heroes/robotmlnet-yes_tfryby.png
+image: heroes/robotmlnet-yes_tfryby
 alttext: The ML.NET logo with a robot face next to it.
 ---
 

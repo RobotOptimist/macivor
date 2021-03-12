@@ -3,7 +3,7 @@ title: Share Your Dotnet Notebooks on Binder
 description: How to share your dotnet jupyter notebooks on binder
 date: 2020-11-22
 tags: binder, dotnet, jupyternotebooks, notebooks
-image: heroes/robotmlnet-yes_tfryby.png
+image: heroes/robotmlnet-yes_tfryby
 alttext: The ML.NET logo with a robot face next to it.
 ---
 

@@ -3,7 +3,7 @@ title: ML.NET and Python Simple Regression
 description: Examine differences when doing simple regression in ML.NET and Python
 date: 2020-11-13
 tags: machinelearning, dotnet, python, ml
-image: heroes/robotmlnet-yes_tfryby.png
+image: heroes/robotmlnet-yes_tfryby
 alttext: The ML.NET logo with a robot face next to it.
 ---
 

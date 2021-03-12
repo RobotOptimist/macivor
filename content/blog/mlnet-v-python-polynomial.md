@@ -3,7 +3,7 @@ title: ML.NET and Python Polynomial Linear Regression
 description: Examine differences when doing polynomial regression in ML.NET and Python
 date: 2020-12-21
 tags: machinelearning, dotnet, python, ml
-image: heroes/robotmlnet-yes_tfryby.png
+image: heroes/robotmlnet-yes_tfryby
 alttext: The ML.NET logo with a robot face next to it.
 ---
 
