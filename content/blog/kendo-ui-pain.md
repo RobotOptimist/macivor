@@ -3,15 +3,9 @@ title: Kendo UI - Quick Guide to Grids
 description: a supplement to the Telerik docs about Kendo UI grids
 date: 2020-10-29
 tags: kendo, kendoui, aspnetcore, aspnet
+image: heroes/kendoui_guiia7
+alttext: Kendo mascot alongside text stating 'Kendo UI The Art of Web Development.'
 ---
-
-<page-header title="Kendo UI - Quick Guide to Grids"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/kendoui" alt-text="Kendo mascot alongside text stating Kendo UI: The Art of Web Development." classes="hero-height-128" ></picture-wrapper>
-
-::: div article-container
 
 You may not have heard of Kendo UI and that's okay. They're yet another one of [Telerik's](https://www.telerik.com/) products, right up there with Sitefinity. The main thing you need to know is that Kendo UI works great as long as you stay strictly within Telerik's suggested use cases. It becomes a nightmare as soon as you attempt something outside of that. I'm speaking directly about the ASP.NET Core HtmlHelpers. The jQuery, Vue and other versions may work differently.
 
@@ -178,8 +172,4 @@ Finally, and maybe  most importantly, you must call `ToClientTemplate()` at the 
 
 Oh, just in case you're like me and you like to use constructors in your models, you must define a parameter-less constructor or the Kendo UI grid will fail silently. Not only will it fail silently, but any HTML defined in your `csthml` file below the grid will fail to be added to the page. The lack of error messages will have you laughing for hours, so sorry to steal the joy of this problem. Define parameter-less constructors and you'll be good to go.
 
-So, Kendo UI is nice when it works and you stay within the defined edge cases. It's a nightmare when you dare to set foot without, so just don't. 
-
-:::
-
-:::
+So, Kendo UI is nice when it works and you stay within the defined edge cases.

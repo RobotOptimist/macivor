@@ -1,17 +1,11 @@
 ---
 title: VSCode .NET Interactive Notebooks
-description: A .NET friendly alterative to Jupyter Notebooks that runs in VS Code
+description: A .NET friendly alternative to Jupyter Notebooks that runs in VS Code
 date: 2020-11-25
 tags: machinelearning, dotnet, vscode, notebooks
+image: heroes/robotmlnet-yes_tfryby
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="VSCode .NET Interactive Notebooks"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container
 
 ## Where Jupyter Notebooks Falls Short
 
@@ -31,12 +25,7 @@ That said, lets take a look at how well it works at the moment.
 
 In order to get Visual Studio Code to set everything up properly you'll need to attempt to open a .ipynb file.
 
-You can use the one from my gist if you don't have another one handy:
-<no-ssr>
-    <div class="max-h-32 overflow-scroll">
-        <vue-embed-gist gist-id="1bfd719dc621af45a0e633ffa7ecb9ec" file="ml_net_simple_regression.ipynb"></vue-embed-gist>
-    </div>
-</no-ssr>
+You can use the [one from my gist](https://gist.github.com/RobotOptimist/1bfd719dc621af45a0e633ffa7ecb9ec#file-ml_net_simple_regression-ipynb) if you don't have another one handy.
 
 You'll be prompted to install the Python extension. Also, if you had the .ipynb file open when Python installed then you may need to close and reopen it. VSCode will also handle installing .NET Interactive in the background. In fact, VSCode is doing so much for me automatically it was a pretty nice experience to get setup.
 
@@ -52,9 +41,5 @@ The answer is... I do!
 
 So I know how _I'll_ be writing my .NET notebooks from now on!
 
-But if you still prefer Jupyter Notebooks then [here is the guide to get set up with that too.](blog/../get-set-up-with-dotnet-and-jupyter-notebooks)
-
-:::
-
-:::
+But if you still prefer Jupyter Notebooks then [here is the guide to get set up with that too.](/blog/get-set-up-with-dotnet-and-jupyter-notebooks)
 

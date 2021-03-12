@@ -3,15 +3,9 @@ title: Setup Jupyter Notebooks With .NET
 description: Setup Jupyter Notebooks with the .NET Runtime so you can run .NET code in Jupyter
 date: 2020-11-13
 tags: machinelearning, dotnet, jupyter-notebooks, notebooks
+image: heroes/robotmlnet-yes_tfryby.png
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="Setup Jupyter Notebooks With .NET"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container
 
 ## 3 Easy Steps
 
@@ -19,11 +13,11 @@ tags: machinelearning, dotnet, jupyter-notebooks, notebooks
 
 Jupyter Notebooks is a product from Anaconda which allows you to run blocks of code in a notebook session. If you haven't seen it before, prepare to be impressed. Jupyter Notebooks is a great way to write code and explain that code along the way. 
 
-::: aside p-8 bg-indigo-100 p-4
+<aside class="p-8 bg-indigo-100 p-4">
 
 _Edit 2020-11-25: Good news! If you would prefer to work from VSCode with intellisense enabled that is now possible. I explain how to set that up [here.](/blog/dotnet-interactive-notebooks)_
 
-:::
+</aside>
 
 To download it, go here: [Anaconda Downloads](https://www.anaconda.com/products/individual#download-section)
 
@@ -61,7 +55,3 @@ Finally we can run `jupyter lab` from the Anaconda prompt and see the launcher w
 Click on .NET (C#) and test it out.
 
 <picture-wrapper file-name="screen-shots/c-sharp-notebook-test" alt-text="A screenshot C# running in Juypter Notebooks"></picture-wrapper>
-
-:::
-
-:::

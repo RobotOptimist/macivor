@@ -3,15 +3,9 @@ title: The Road To Developer Jobs
 description: Thinking about people who are coming up and trying to get hired.
 date: 2020-12-28
 tags: coder, junior, developer, hired
+image: heroes/career-guy-up-the-steps_f1sjta
+alttext: A suit clad person climbing steps with a case in hand.
 ---
-
-<page-header title="The Road To Developer Jobs"></page-header>
-
-::: div container-center
-
-::: div article-container
-
-<picture-wrapper :legacy="false" file-name="heroes/career-guy-up-the-steps_f1sjta" alt-text="A suit clad person climbing steps with a case in hand." classes="hero-height-128"></picture-wrapper>
 
 It's hard out there.
 
@@ -118,7 +112,3 @@ Someday, when you've become established, I want you to remember this time and he
 All of those senior engineers, the people who don't quite seem to hear you. As they are so shall you be. 
 
 Remember where you came from and who helped you. Remember to help the people who come after you. This is the way.
-
-:::
-
-:::

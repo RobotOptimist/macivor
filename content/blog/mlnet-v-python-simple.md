@@ -3,15 +3,9 @@ title: ML.NET and Python Simple Regression
 description: Examine differences when doing simple regression in ML.NET and Python
 date: 2020-11-13
 tags: machinelearning, dotnet, python, ml
+image: heroes/robotmlnet-yes_tfryby
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="ML.NET and Python Simple Regression"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container
 
 ## Why even bother with ML.NET
 
@@ -27,13 +21,13 @@ Once you're all set up, lets take a look at the data.
 
 ## The Data
 
-::: aside p-8 bg-indigo-100
+<aside class="p-8 bg-indigo-100">
 
 ### Thank you
 
 First this dataset and the Python information comes from [Kirill Eremenko](https://www.linkedin.com/in/keremenko/) and [Hadelin de Ponteves](https://www.linkedin.com/in/hadelin-de-ponteves-1425ba5b/) along with the [Super Data Science Team.](https://www.superdatascience.com/). They provide an excellent quality [data science course](https://www.udemy.com/course/machinelearning/learn/lecture/19229340) on Udemy. It is reused here with permission.
 
-::: 
+</div>
 
 Here is the data:
 
@@ -327,7 +321,3 @@ This was an interesting exercise to see the two languages / libraries side by si
 C# is my comfort zone. I felt more secure working with the language. However, in the context of Jupyter Notebooks, C# is pretty rough, and oddly enough, based on the discussion and blog posts I read while researching, it rides in on the coattails on F#. I did a little extra to help out anyone who comes after me who wants to use Binder. [Here's my How To Guide for .NET with Binder](/blog/how-to-run-dotnet-on-binder)
 
 That said there are features of both implementations that I like. Python requires a lot less code to accomplish the same tasks. However the mlnet command line tool is amazing and makes it all so easy to spin up a project. We'll see where a more complicated task takes us in my next post.
-
-:::
-
-:::

@@ -3,19 +3,14 @@ title: Things I Want To Tell My Dad
 description: Things I want to say to my dad as he lays dying in hospice care
 date: 2020-09-05
 ---
-<page-header title="Things I Want To Tell My Dad"></page-header>
-
-::: div container-center
 
 ## But Can't
 
-::: div article-container
-
-::: div my-8 flex justify-center
+<div class="my-8 flex justify-center">
 
 <picture-wrapper file-extension="jpg" file-name="dad-in-the-kitchen-with-us" alt-text="Mom, dad, my wife Becca and me sit on the kitchen floor. Mom holds my son, Gavin. Dad attempts to wrangle my nephew Gino. Becca is holding the puppy Apollo and I'm holding my niece Evie" attribution="From left to right Mom, Dad, Becca (wife), Me, Gavin (son), Gino (nephew), Apollo (puppy), Evie (niece)"></picture-wrapper>
 
-:::
+</div>
 
 Dad is dying. 
 
@@ -31,11 +26,11 @@ So, here we are. Dad switched to in home hospice care this week, so at least we 
 
 Best of all, he saw all of his grandkids. He perked up when they were there. He loves those kids so much. He always gives them a couple of chocolates when they're there. This time he was too weak to hand them over so mom helped. 
 
-::: div my-8 flex justify-center
+<div class="my-8 flex justify-center">
 
 <picture-wrapper file-extension="jpg" file-name="dad-with-the-grandkids" alt-text="My dad with my niece Evie, my son Gavin, and my nephew Gino" classes="w-1/2 max-w-sm"></picture-wrapper>
 
-:::
+</div>
 
 Dad and I prayed together last night. I could tell it meant a lot to him. He was lucid then, that might have been the last time.
 
@@ -57,15 +52,14 @@ Dad and I were supposed to bond as Gavin grew. We were supposed to goof around w
 
 Dad and I talked about doing a lot more fishing. We both loved to fish. Now Gavin is starting to learn too and dad was so proud of that. We were all supposed to go fishing again soon. 
 
-::: div flex justify-center my-8
+<div class="my-8 flex justify-center">
 
-::: div max-w-sm
+<div class="max-w-sm">
 
 <picture-wrapper file-extension="jpg" file-name="fishing-with-dad" alt-text="Me and dad pose next to the tiniest fish ever caught"></picture-wrapper>
 
-:::
-
-::: 
+</div>
+</div>
 
 This is already so awful, I can't tell him about all the things I wanted to do with him. The things I wanted him to see. All I can do is tell him I love him and hold his hand. Weep with my family as dad continues to fade a little more each day. 
 
@@ -74,9 +68,3 @@ Watching him suffer, I just want it to be over for him. I can't tether him to th
 Please don't hurt anymore. Please.
 
 I love you dad.
-
-:::
-
-:::
-
-<div style="display: none;" class="my-8 max-w-sm" data-reason="css_class_includer"></div>

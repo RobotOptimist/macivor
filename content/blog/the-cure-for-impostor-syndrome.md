@@ -2,20 +2,11 @@
 title: The Cure For Impostor Syndrome
 description: A description of Impostor Syndrome and how to overcome it.
 date: 2020-08-31
+image: heroes/the-four-sights_ee4mtp
+alttext: Painting of monks praying and point as a man suffers and dies
 ---
-<page-header title="The Cure For Impostor Syndrome"></page-header>
-
-::: div container-center
 
 ## We Suffer From Our Comparisons
-
-::: div flex justify-center
-
-<picture-wrapper file-extension="jpeg" file-name="heroes/the-four-sights" alt-text="Painting of monks praying and point as a man suffers and dies" attribution="The Four Sights, a depiction of the suffering witnessed by Buddha"></picture-wrapper>
-
-:::
-
-::: div article-container
 
 * Every single person I know has had it. 
 * It can keep you awake at night. 
@@ -35,11 +26,11 @@ And, in a good team, it can be somewhat mitigated. There is a support structure 
 
 But not all teams are like that. In fact, that might be a bit of an exception. Too often, there are teams where people feel no obligation to reassure you, or worse they compensate for their own feelings of inadequacy by exacerbating yours.
 
-::: div flex justify-center
+<div class="flex justify-center">
 
 <picture-wrapper file-extension="jpg" file-name="kick-em-when-their-down" alt-text="Meme cartoon where three characters labeled as self doubt, social anxiety and feeling like a fraud bully a nameless fourth character. A fifth character labeled as Your Team offers a helping hand only to suplex the bullied character. Text at the bottom reads An Unsympathetic Team Can Make Things So Much Worse"></picture-wrapper>
 
-:::
+</div>
 
 So, the working definition for Impostor Syndrome is this (from Wikipedia):
 
@@ -84,11 +75,11 @@ Yes, I did.
 
 I'm sorry to say, but the "cure" takes a while. It comes in the form of constant affirmation. And, if you believe that you're experiencing this in conjunction with Social Anxiety Disorder, then additional steps might be needed.
 
-::: div flex justify-center my-4
+<div class="flex justify-center"> my-4
 
 <picture-wrapper file-name="alter-deal" alt-text="Darth Vader stating to Boba Fett 'I have altered the deal, pray I do not alter it further'"></picture-wrapper>
 
-:::
+</div>
 
 The first thing you can do that really helps is talk to someone. This is why being on a team that offers that kind of support is important. If you feel safe talking to someone on your team, then much of this can be dispelled. Don't try to solo it! It's important to be honest with yourself and others.
 
@@ -102,14 +93,10 @@ We are constantly comparing ourselves to others. It can't be helped! It's how ou
 
 It's natural and right to use mentoring and teaching to improve ourselves and the people around us. It breaks down those social walls that hold us apart and creates a community.
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
 <picture-wrapper file-extension="jpg" file-name="expanding-brain-meme" alt-text="Expanding brain meme, little brain is feeling inadequate in your job, larger brain is combating your own Impostor syndrome, next largest brain is realizing you've been competent all along, enlightened brain is dismantling structural problems in your job that exist to make people feel incompetent"></picture-wrapper>
 
-:::
+</div>
 
 Like with anything of this nature, there are no magic pills to make those feelings of inadequacy go away. We've got to do the work of finding our place and accepting ourselves as we are.    
-
-:::
-
-:::

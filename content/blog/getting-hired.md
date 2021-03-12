@@ -3,15 +3,9 @@ title: Getting Hired As A Senior Developer
 description: Observations and exerpiences from my recent foray into recruiter land.
 date: 2021-3-9
 tags: mentoring, career, advice
+image: heroes/mentor-hero_dctiux
+alttext: A sign post with Advice, Support, Guidance and Help shown as directions.
 ---
-
-<page-header title="Getting Hired As A Senior Developer"></page-header>
-
-::: div container-center
-
-<picture-wrapper :legacy="false" file-name="heroes/mentor-hero_dctiux" alt-text="A sign post with Advice, Support, Guidance and Help shown as directions." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container
 
 ## Prior Experience
 
@@ -29,7 +23,7 @@ I ended up bypassing the issue and getting a job at Sogeti by referral.
 
 This time my experience was very different. I had been working on my LinkedIn profile and asked former coworkers and managers to add written recommendations. I also remade my resume. I experimented with many formats and publicly workshopped it. In the end, a friend of mine provided amazing resources and feedback and I was able to generate the resume in its current form.
 
-::: aside p-8 bg-indigo-100
+<aside class="aside p-8 bg-indigo-100"> 
 
 ### Job Seeker Tip: Understand Leverage
 
@@ -39,7 +33,7 @@ You can increase your leverage by working on your profile and resume in order to
 
 You would think leverage is only useful at the negotiating table for compensation. However, it can be useful well before that stage. This can include imperceptible things, like an overall more positive reception to your answers on interview questions all the way to more tangible things like skipping or truncating steps in the interview/hiring process. 
 
-:::
+</aside>
 
 ## Job Boards
 
@@ -63,7 +57,7 @@ Here is my review of each by the way:
 
 I should have just cut myself out of Monster immediately, but it took time for me to realize that most of my spam originated from there.
 
-::: aside p-8 bg-indigo-100
+<aside class="aside p-8 bg-indigo-100"> 
 
 ### Job Seeker Tip: Start With LinkedIn
 
@@ -77,7 +71,7 @@ Don't bother with Monster or Triplebyte.
 
 There are a ton of other job boards so you will want to experiment and keep track of positive results from each.
 
-:::
+</aside>
 
 ## Overwhelmed With Communication
 
@@ -139,7 +133,7 @@ Vaco: They had great insight into what employers find appealing and were discern
 
 Purple Squirrel: They are very personable and forthright. I got the impression that they specialize in difficult to fill roles so it was interesting and illuminating to work with them toward an interview.
 
-::: aside p-8 bg-indigo-100
+<aside class="aside p-8 bg-indigo-100"> 
 
 ### Job Seeker Tip: Trust Your Gut
 
@@ -154,7 +148,7 @@ Some of you are not gifted with any these sorts of instincts. To you I'll try to
 
 Hopefully this is helpful. I'm sure there are other things to look out for and this sort of thing is very personal. You may find other things help to ward you away from sketchy recruiting attempts.
 
-:::
+</aside>
 
 ## Working with Good Recruiters
 
@@ -169,7 +163,7 @@ In return, I tried to do a good job of being someone they could work with. I ret
 
 I tried to be as clear and upfront as possible about what I wanted in terms of salary, benefits, industry, hours and culture.
 
-::: aside p-8 bg-indigo-100
+<aside class="aside p-8 bg-indigo-100"> 
 
 ### Job Seeker Tip: Know What You Want
 
@@ -179,7 +173,7 @@ A recruiter can only present you with the opportunities they are aware of at the
 
 This tip is highly dependent on whether you _can_ be patient. If circumstances are moving you then you'll need to jump on the opportunity that matches what you want as closely as possible.
 
-:::
+</aside>
 
 I tried to be flexible. Hiring quality people is difficult. Many companies have been burned before by bringing in someone who's not a good fit. It sucks, but it happens. As a result, many companies have hoops you have to jump through before you get to the interview process. I tried to be as generous and non-judgemental as possible for this sort of thing. I set reasonable boundaries and communicated those early.
 
@@ -194,7 +188,7 @@ Hiring managers liked to ask about my experiences and the kinds of problems I li
 I love asking about the business, the culture and the challenges. I'd love it when a hiring manager would get into the details on something they were doing. The goal was to be engaging and open and have a fun conversation while still respecting their time. As soon as the conversation hit a couple of lulls or we'd creep to 5 minutes after the scheduled end time then I'd see if they wanted to wrap it up. Some did not! Enthusiasm for the business and its challenges interested me.
 
 
-::: aside p-8 bg-indigo-100
+<aside class="aside p-8 bg-indigo-100"> 
 
 ### Job Seeker Tip: Do Your Homework
 
@@ -212,7 +206,7 @@ The point of this is to see if you want to work for this company and also to cre
 
 Be curious, inquisitive and interested.
 
-:::
+</aside>
 
 The technical interview presented a different set of challenges. There are lots of guides toward technical interviews, but you will almost always be talking to two or more engineers about design patterns, language implementation details, architectural patterns and etc. I did not have to solve many coding challenges for which I was grateful. I do have an active GitHub where someone can see a lot of the junk I've worked on in my spare time over the years though. 
 
@@ -241,9 +235,4 @@ I think the manager who hired me is on the ball, cares a lot about his people an
 I had a choice to stay in consulting and I was very close to going that direction. I love consulting. However, with this I sensed a deeper challenge and I have to test myself against it. 
 
 Hopefully, I can make a difference.
-
-:::
-
-:::
-
 

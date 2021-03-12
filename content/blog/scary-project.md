@@ -3,15 +3,9 @@ title: Tale of Terror - A Scary Web Dev Story
 description: The story of a project gone awry.
 date: 2020-10-12
 tags: webdev, developer, Halloween
+image: heroes/jackolanterns_qf2gce
+alttext: A collection of lit jackolanterns with a dark background.
 ---
-
-<page-header title="Tale of Terror - A Scary Web Dev Story"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-extension="jpg" file-name="heroes/jackolanterns" alt-text="A collection of lit jackolanterns with a dark background." attribution="Mark Menzies" attribution-link="https://www.flickr.com/photos/markybon/1813406901" classes="hero-height-128" ></picture-wrapper>
-
-::: div article-container
 
 ## Intro
 
@@ -43,7 +37,7 @@ One day I was working on some frontend stuff and had a problem. I was inexperien
 
 I had a dual monitor set up. One screen had the page and the other had Chrome Dev Tools. I didn't have anything fancy on the screen so I was puzzled.
 
-::: div dialogue-container
+<div class="dialogue-container"
 
 "What do you mean? The console? Or something else?"
 
@@ -53,7 +47,7 @@ I had a dual monitor set up. One screen had the page and the other had Chrome De
 
 "Oh! Is that what that is? That's built into Chrome then?"
 
-:::
+</div>
 
 My heart was in my stomach. Did he not know Chrome Dev Tools? What else might he not know? Am I the one who's wrong? Maybe dev tools aren't standard tooling for all web dev. 
 
@@ -61,19 +55,19 @@ From a place of pure self doubt I withheld judgement and explained the tools. Th
 
 He showed me how he worked through JavaScript using an elaborate system of alert statements to debug his code. I kept my face straight, but internally I knew. I was in danger.
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
-::: div giphy-container
+<div class="giphy-container">
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/55itGuoAJiZEEen9gg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/reaction-55itGuoAJiZEEen9gg">via GIPHY</a></p>
 
-:::
+</div>
 
-:::
+</div>
 
 I soon learned that he also didn't know MVC. He also didn't know JavaScript too well. He asked me if I had ever used Moo Tools. This was the first time I had ever heard of Moo Tools. (It was a competitor for jQuery in like 2006 FYI.)
 
-::: div dialogue-container
+<div class="dialogue-container">
 
 "I'm so glad you're on this project and can help me out with this stuff." He said to me one day. 
 
@@ -81,21 +75,21 @@ Cold sweat trickled down my spine. I smiled.
 
 "Sure. No problem."
 
-:::
+</div>
 
 Over the weeks he struggles with user stories and I pick up more. Soon, the client was bypassing him and asking me directly to plan and implement the features.
 
 ## The Real Horror Begins
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
-::: div giphy-container
+<div class="giphy-container">
 
 <div style="width:100%;height:0;padding-bottom:140%;position:relative;"><iframe src="https://giphy.com/embed/FJh8oUprQx8w8" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/halloween-trick-r-treat-movie-FJh8oUprQx8w8">via GIPHY</a></p>
 
-:::
+</div>
 
-:::
+</div>
 
 I, barely a midlevel developer, start to plan the architecture of our little piece of the project. The .NET piece seems fine just following the established patterns I already knew. The JavaScript left a lot to be desired. 
 
@@ -105,15 +99,15 @@ I decided that since we couldn't use frameworks but needed framework like behavi
 
 I had read about something called [MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) which is something in JavaScript that allowed me to observe changes to elements and then react to them. I decided that would be the core of my project. I built a central engine around this. I made JavaScript functions representing pieces of functionality I needed and overloaded the prototype to get the functionality I needed. 
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
-::: div giphy-container
+<div class="giphy-container">
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/YQitE4YNQNahy" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/YQitE4YNQNahy">via GIPHY</a></p>
 
-:::
+</div>
 
-:::
+</div>
 
 I created a custom dependency injection setup for my functions. I believed I could create something similar to Angular.js, just a touch simpler. I worked late every night for weeks. I was marking features as completed but I would frequently revisit them. 
 
@@ -123,15 +117,15 @@ I worked into a delirium. I worked until I thought I was crazy.
 
 I believed, I really believed I was making a fairy tale palace of JavaScript. You read this and you think you know how bad it was.
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
-::: div giphy-container
+<div class="giphy-container">
 
 <div style="width:100%;height:0;padding-bottom:105%;position:relative;"><iframe src="https://giphy.com/embed/gzUvbluaZdneo" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/black-and-white-horror-scary-gzUvbluaZdneo">via GIPHY</a></p>
 
-:::
+</div>
 
-:::
+</div>
 
 It was worse.
 
@@ -145,15 +139,15 @@ Slowly, painfully, I began to realize that this was my fault. My design was flaw
 
 I was behind schedule but I was not alone. Every project the client had seemed to be struggling. The depth of the issues in the application I was working were lost as other pieces of the project seemed to fly off the rails. One project team eventually admitted they had completely forgot to implement security. Other teams scrambled to offer personnel for a "security task force" to "shore up" the security. One senior level project manager joked "Well it's like we built the car and forgot to put locks on the doors 🤷‍♂️ Oopsies!"
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
-::: div giphy-container
+<div class="giphy-container">
 
 <div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/pnPfFgZi3lnO" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/pnPfFgZi3lnO">via GIPHY</a></p>
 
-:::
+</div>
 
-:::
+</div>
 
 I kept sliding more and more fixes in, trying to fix my app - to make it good even. A good result seemed so close, yet so far away. I started to feel trapped within a prison of my own making. No one could really help me either. My tech lead was still there, but seemed lost and confused. He had been marginalized and now I owned this mess. The consultancy had long ago let me know that their hands were tied. I had made them aware of the situation with the tech lead and they had confirmed the problem, but could not act without disrupting the project. 
 
@@ -181,11 +175,11 @@ The consultancy I worked for had promised a $500 bonus if I stayed another 7 mon
 
 **It was time to get out.**
 
-::: div flex justify-center m-4
+<div class="flex justify-center m-4">
 
 <picture-wrapper file-extension="jpg" file-name="escape-from-new-work" alt-text="The box art for the 90s classic film: Escape From New York with title changed from New York to New Work"></picture-wrapper>
 
-:::
+</div>
 
 I did have one person who I owed an explanation though, and that was my co-conspirator developer who helped introduce Vue.js. Thing was, he completely understood - in fact he was already looking too. We were going to abandon this project and let this app fend for itself. The Vue.js refactoring had a long way to go, but neither of us could stomach the other dysfunctional pieces of the project.
 
@@ -197,15 +191,15 @@ I found another job that prioritized work/life balance and left. After a couple 
 
 That project is still there. Years later I saw wanted ads from the company. "EPiServer developer needed! JavaScript experience a must! Vue.js experience preferred!"
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
-::: div giphy-container
+<div class="giphy-container">
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/kmdSKqlSHQJMs" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/danger-law-school-lawblr-kmdSKqlSHQJMs">via GIPHY</a></p>
 
-:::
+</div>
 
-:::
+</div>
 
 The refactor is still in progress. The old broken JavaScript still scraping by.
 
@@ -215,12 +209,8 @@ Fellow developers, the dungeon I created still exists, seeking new inmates. That
 
 ## But Hey I'm Fine
 
-::: div flex justify-center m-4
+<div class="flex justify-center m-4">
 
 <picture-wrapper file-extension="jpg" file-name="bad-dev" alt-text="A guy at a computer desk hoists his mug at the camera. A caption reads 'Writes Unmaintainable Code, Leaves Company'" attribution="Is this me? Am I the monster?"></picture-wrapper>
 
-:::
-
-:::
-
-:::
+</div>

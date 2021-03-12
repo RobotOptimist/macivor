@@ -26,7 +26,8 @@ module.exports = {
         'dialogue-container', 
         'max-h-64', 
         'overflow-y-scroll',
-        'p-8']
+        'p-8',
+        'max-h-128']
     }
   },
   theme: {

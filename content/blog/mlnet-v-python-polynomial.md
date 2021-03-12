@@ -3,15 +3,9 @@ title: ML.NET and Python Polynomial Linear Regression
 description: Examine differences when doing polynomial regression in ML.NET and Python
 date: 2020-12-21
 tags: machinelearning, dotnet, python, ml
+image: heroes/robotmlnet-yes_tfryby
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="ML.NET and Python Polynomial Linear Regression"></page-header>
-
-::: div container-center
-
-<picture-wrapper :legacy="false" file-name="heroes/robotmlnet-yes_tfryby.png" alt-text="The ML.NET logo with a robot face next to it." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container mt-4
 
 _This is the fourth in a series talking about differences implementing machine learning tasks in ML.NET and Python_
 
@@ -27,7 +21,7 @@ Polynomial linear regression is a bit of a strange customer. Where before our re
 
 So something like this simple example:
 
-::: div table-wrapper
+<div class="table-wrapper">
 
 | Independent | Dependent |
 | ---------- | -------- |
@@ -37,7 +31,7 @@ So something like this simple example:
 | 4 | 32 |
 | 5 | 64 |
 
-:::
+</div>
 
 Our data looks the same as simple linear regression at first, but upon noticing exponential growth in the dependent variable we need a different equation. A linear regression line will not be accurate. In fact, observing a regression line from a typical simple regression may be how we can identify the need for a polynomial regression.
 
@@ -45,7 +39,7 @@ On data such as this we would need to determine the correct exponent for growth 
 
 In order to perform the regression we need to expand out the independent variable by expanding this equation out for each possible result of 0 - {possible exponent value}. In practice such a transformation would change the above example into something like this.
 
-::: div table-wrapper
+<div class="table-wrapper">
 
 |Independent1|Independent2|Independent3|Dependent|
 |--|--|--|--------|
@@ -55,7 +49,7 @@ In order to perform the regression we need to expand out the independent variabl
 |1|4|16|32|
 |1|5|25|64|
 
-:::
+</div>
 
 The reason we still call this linear regression despite the fact the growth curve is exponential is because the independent variables are still expressed linearly. Basically when we see `1, 2, 3, 4 ...` and can say 
 
@@ -73,13 +67,13 @@ Polynomial regression is commonly used for tasks such as predicting disease spre
     </no-ssr>
 </div>
 
-::: aside p-8 bg-indigo-100 m-4
+<aside class="p-8 bg-indigo-100 m-4">
 
 ### Thank you Super Data Science Team
 
 This dataset and the Python information comes from [Kirill Eremenko](https://www.linkedin.com/in/keremenko/) and [Hadelin de Ponteves](https://www.linkedin.com/in/hadelin-de-ponteves-1425ba5b/) along with the [Super Data Science Team.](https://www.superdatascience.com/). They provide an excellent quality [data science course](https://www.udemy.com/course/machinelearning/learn/lecture/19229340) on Udemy. The data is reused here with permission.
 
-:::
+</div>
 
 Here we have a list of 10 positions within a company and their corresponding salary. You can see also that each position has been assigned a level which grows linearly relative to the salaries which grow exponentially. It really pays to move up!
 
@@ -128,11 +122,11 @@ plt.ylabel('Salary')
 plt.show()
 ```
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
 <picture-wrapper :legacy="false" file-name="screen-shots/polynomial-regression-python_oltlxa" alt-text="A scatter chart with a regression line curving up exponentially."></picture-wrapper>
 
-:::
+</div>
 
 It's all so easy in Python. The tools are very consistent and I find it easy to find examples with a simple search.
 
@@ -323,7 +317,3 @@ I am not discouraged though! If anything, this series has inspired me to keep le
 I've invited a guest to co-write the next article with me. He's a Java developer and so for the first time we'll be attempting to compare implementations between .NET, Python and Java. We'll be discussing which machine learning task will be the most interesting to compare. If you have an opinion on that then you should definitely let me know via the contact me form.
 
 Either way, eventually I'll be talking about Support Vector Regression! So look for that as well.
-
-:::
-
-:::

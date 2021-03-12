@@ -98,12 +98,6 @@ export default {
   components: true,
 
   content: {
-    markdown: {
-      remarkPlugins: [
-        'remark-containers',
-        'remark-bracketed-spans'
-      ]
-    }
   },
   /*
   ** Nuxt.js dev-modules
