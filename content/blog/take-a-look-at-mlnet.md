@@ -3,15 +3,9 @@ title: Take A Look At ML.NET
 description: A brief exploration of ML.NET where we look at how to get set up and how to use it.
 date: 2020-09-17
 tags: machinelearning, dotnet, mlnet, csharp
+image: heroes/robotmlnet-yes_tfryby.png
+alttext: The ML.NET logo with a robot face next to it.
 ---
-
-<page-header title="Take A Look At ML.NET"></page-header>
-
-::: div container-center
-
-<picture-wrapper file-name="heroes/robotmlnet-yes" alt-text="The ML.NET logo with a robot face next to it."></picture-wrapper>
-
-::: div article-container
 
 ## What is ML.NET?
 
@@ -19,7 +13,7 @@ ML.NET is a service from Microsoft that allows you to add machine learning to yo
 
 Machine learning has different types of predictions it can make based on the data you give it. Here is a list of what ML.NET can do out of the box along with a short description and an example or two.
 
-::: div table-wrapper
+<div class="table-wrapper">
 
 | Prediction                           | Description                                                                                               | Example |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------- | -------
@@ -30,7 +24,7 @@ Machine learning has different types of predictions it can make based on the dat
 | Time series/sequential data | Makes predictions based on the order of previous data. | Weather forecasts, stock market predictions. |
 | Image classification | Divides images into classifications | Can determine if an image is a hotdog 😂🌭 |
 
-:::
+</div>
 
 All of these seem to be tremendously useful and ML.NET makes it easy to start using them in your existing application using your existing data.
 
@@ -103,16 +97,16 @@ For me, when I saw this example I immediately started thinking about data I have
 
 For example, I worked with a company that processed [OARRS](https://www.ohiopmp.gov/) data in order to track prescription compliance for a patient. OARRS data is kept for patients who are prescribed controlled substances. Using ML.NET we _could_ classify a patient into high or low risk categories based on prescription history. We could aggregate the prescription history for patients like so:
 
-::: div table-wrapper
+<div class="table-wrapper">
 
 | List of current prescriptions | Span of time for continuous prescriptions in days | Number of unique prescription fill locations |
 |---|---|---|
 
-:::
+</div>
 
 From there, we would need to pull from existing data whether or not a patient was compliant with their prescription instructions. This is something that the medical staff tracks as part of their counseling tasks. We can make a value judgement based on that data. A result of non-compliant would mean that "High Risk" and compliant would be "Low Risk". Using this, we can create a set of training data that more or less looks like this:
 
-::: div table-wrapper
+<div class="table-wrapper">
 
 | Current prescriptions | Continuous prescriptions in days | Unique fill locations | Risk |
 |---|---|---|---|
@@ -121,7 +115,7 @@ From there, we would need to pull from existing data whether or not a patient wa
 | adderall | 1000 | 10 | Low |
 | percocet | 200 | 2 | Low |
 
-:::
+</div>
 
 Lets say we save this aggregated anonymous data into a csv or tsv file.
 
@@ -254,18 +248,14 @@ _For this example, I did not move forward with generating this service. While I 
 
 **Always be careful to consider the ethical ramifications of a machine learning project before diving into it.**
 
-::: div flex justify-center my-4
+<div class="flex justify-center my-4">
 
 <picture-wrapper file-extension="jpg" file-name="ian-malcolm-quote" alt-text="Ian Malcolm in the Jurassic Park movie saying 'Your scientists were so preoccupied with whether they could they didn't stop to think if they should'."></picture-wrapper>
 
-:::
+</div>
 
 ## Cool! What now?
 
 I recommend doing the [ML.NET tutorial from Microsoft](https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro). It will hit on some of the stuff covered here and will get you spun up with your own training data from wikipedia. The code examples in this blog are adapted from that tutorial.
 
 Good luck and have fun!
-
-:::
-
-:::

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex justify-center">
         <picture v-if="legacy" :class="classes">
             <source :srcset="`/${fileName}.webp`" type="image/webp">
             <source :srcset="`/${fileName}.${fileExtension}`" :type="`image/${fileExtension}`">
@@ -28,7 +28,7 @@ export default {
         },
         altText: {
             type: String,
-            default: 'default image'
+            default: ''
         },
         classes: {
             type: String,

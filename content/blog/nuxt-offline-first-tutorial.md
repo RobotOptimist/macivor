@@ -3,7 +3,7 @@ title: Nuxt, Offline First PWA Tutorial
 description: Explains Nuxt and walks through a simple offline first PWA project
 date: 2020-09-12
 tags: nuxtjs, vuejs, pwa, workbox, bootstrap, tutorial, auth0
-image: nuxt_title_e0icz0
+image: heroes/nuxt_title_e0icz0
 alttext: The Nuxt logo with the text, Nuxt a great case for vue. The quick and easy way to spin up a Vue.js application
 ---
 

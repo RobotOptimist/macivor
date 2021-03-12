@@ -3,15 +3,9 @@ title: To The Mentors I Have Known
 description: A thank you to the many teachers and friends who have helped me through the years.
 date: 2020-11-26
 tags: mentoring, career, advice, learning
+image: heroes/mentor-hero_dctiux
+alttext: A sign post with Advice, Support, Guidance and Help shown as directions.
 ---
-
-<page-header title="To The Mentors I Have Known"></page-header>
-
-::: div container-center
-
-<picture-wrapper :legacy="false" file-name="heroes/mentor-hero_dctiux" alt-text="A sign post with Advice, Support, Guidance and Help shown as directions." classes="hero-height-128"></picture-wrapper>
-
-::: div article-container
 
 ## Thank you
 
@@ -247,7 +241,3 @@ This is a remembrance of those pieces of advice, events, and observations that I
 Thank you, my friends and mentors, teachers and companions. Thank you for your work and your advice and your patience and your wisdom. 
 
 Thank you for shaping me into who I am today. 
-
-:::
-
-:::
