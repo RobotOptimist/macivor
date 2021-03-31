@@ -1,5 +1,5 @@
 ---
-title: Python, ML.NET, Apache Spark and Azure Cognitive Services Do Natural Language Processing
+title: Implementing Natural Language Processing in Python, ML.NET, Apache Spark and Azure Cognitive Services
 description: Examine differences in implementing a natural language processing pipeline among the various machine learning ecosystems.
 date: 2021-03-30
 tags: machinelearning, nlp, dotnet, java
