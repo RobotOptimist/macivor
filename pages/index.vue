@@ -4,13 +4,10 @@
     <div class="container-center mt-8">      
       <picture-wrapper :legacy="false" classes="w w-3/4 md:w-56 rounded-lg" fileName="selfportrait05_wlhkie" altText="a picture of james macivor"/>
       <h2 class="subtitle font-medium text-3xl mb-5 p-2">
-        Welcome to My Website
+        Welcome
       </h2>
       <div class="links w-full">
-          <nuxt-link class="no-underline" to="/career">Career</nuxt-link>
           <nuxt-link class="no-underline" to="/blog">Blog</nuxt-link>
-          <nuxt-link class="no-underline" to="/company">Company</nuxt-link>
-          <nuxt-link class="no-underline" to="/about">About Me</nuxt-link>
       </div>      
     </div>
   </div>

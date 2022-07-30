@@ -11,18 +11,9 @@
     </div>
     <div :class="showMenu ? 'h-48' : 'h-0'" class="w-full overflow-hidden lg:h-auto block flex-grow lg:flex lg:items-center lg:w-auto transition-all duration-200 ease-in-out">
         <div class="text-sm lg:flex-grow">
-            <nuxt-link to="/career" class="block mt-4 lg:inline-block lg:mt-0 text-indigo-200 hover:text-white mr-4">
-                Career
-            </nuxt-link>
             <nuxt-link to="/blog" class="block mt-4 lg:inline-block lg:mt-0 text-indigo-200 hover:text-white mr-4">
                 Blog
             </nuxt-link>
-            <nuxt-link to="/company" class="block mt-4 lg:inline-block lg:mt-0 text-indigo-200 hover:text-white mr-4">
-                Company
-            </nuxt-link>
-            <nuxt-link to="/about" class="block mt-4 lg:inline-block lg:mt-0 text-indigo-200 hover:text-white">
-                About Me
-            </nuxt-link> 
         </div>
         <div class="flex mt-2 lg:mt-0">
             <a class="margin-top-nudge mr-2" href="/feed.xml">
