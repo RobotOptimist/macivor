@@ -1,4 +1,4 @@
-import { defineCollection, defineContentConfig } from '@nuxt/content'
+import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
@@ -6,7 +6,15 @@ export default defineContentConfig({
       // Specify the type of content in this collection
       type: 'page',
       // Load every file inside the `content/blog` directory
-      source: 'blog/**'
+      source: 'blog/**',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        date: z.string(),
+        image: z.string(),
+        alttext: z.string(),
+        path: z.string(),
+      })
     })
   }
 })

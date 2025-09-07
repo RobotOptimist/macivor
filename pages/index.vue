@@ -2,7 +2,7 @@
   <div>    
     <page-header title="Hi, I'm James MacIvor" />
     <div class="container-center mt-8">      
-      <picture-wrapper :legacy="false" classes="w w-3/4 md:w-56 rounded-lg" fileName="selfportrait05_wlhkie" altText="a picture of james macivor"/>
+      <picture-wrapper :legacy="false" height="400" width="400" classes="w w-3/4 md:w-56 rounded-lg" fileName="selfportrait05_wlhkie" altText="a picture of james macivor"/>
       <h2 class="subtitle font-medium text-3xl mb-5 p-2">
         Welcome
       </h2>

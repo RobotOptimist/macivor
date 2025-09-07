@@ -49,12 +49,17 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/cloudinary'
   ],
 
   sitemap: {
     hostname: 'https://www.macivortech.com',
     gzip: true
+  },
+
+  cloudinary: {
+    cloudName: process.env.CLOUDINARY_CLOUD_NAME || 'macivortech'
   },
 
   nitro: {

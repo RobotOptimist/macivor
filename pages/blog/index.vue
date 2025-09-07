@@ -5,6 +5,8 @@
       <ul>
         <li v-for="blog in blogData" :key="blog.title">
           <NuxtLink :to="blog.path">{{ blog.title }}</NuxtLink>
+          <p>{{ blog.date }}</p>
+          <p>{{ blog.description }}</p>
         </li>
       </ul>
     </div>
@@ -15,7 +17,9 @@
 import pageHeader from "~/components/page-header"
 
 const { data: blogData } = await useAsyncData('blog-list', () => {
-  return queryCollection('blog').all()
+  return queryCollection('blog')
+  .order('date', 'DESC')
+  .all()
 })
 
 
