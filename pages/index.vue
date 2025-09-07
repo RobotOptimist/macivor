@@ -13,15 +13,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import portrait from '~/components/portrait.vue'
 import pageHeader from "~/components/page-header"
-export default {
-  components: {
-    portrait,
-    pageHeader    
-  }
-}
 </script>
 
 <style lang="postcss">

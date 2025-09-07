@@ -1,7 +1,7 @@
 ---
 title: Upgrading From Nuxt 2 to Nuxt 3 - A Complete Guide
 description: A detailed walkthrough of modernizing a 5-year-old Nuxt 2 application to Nuxt 3, including lessons learned and best practices.
-date: 2024-12-19
+date: 2025-09-06
 tags: nuxtjs, vuejs, migration, modernization, web-development, tutorial
 image: heroes/nuxt_title_e0icz0
 alttext: The Nuxt logo representing the journey from Nuxt 2 to Nuxt 3

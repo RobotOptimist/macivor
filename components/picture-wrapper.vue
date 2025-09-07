@@ -15,42 +15,41 @@
     </div>
 </template>
 
-<script>
-export default {
-    props: {
-        fileName: {
-            type: String,
-            default: 'default-placeholder'
-        },
-        fileExtension: {
-            type: String,
-            default: 'png'
-        },
-        altText: {
-            type: String,
-            default: ''
-        },
-        classes: {
-            type: String,
-            default: ''
-        },
-        attribution: {
-            type: String,
-            default: '',
-        },
-        attributionLink: {
-            type: String,
-            default: ''
-        },
-        legacy: {
-            type: Boolean,
-            default: true
-        }
+<script setup>
+const props = defineProps({
+    fileName: {
+        type: String,
+        default: 'default-placeholder'
     },
-    computed: {
-        cloudUrl() {
-            return this.$cloudinary.image.url(this.fileName, { fetchFormat: "auto"})
-        }
+    fileExtension: {
+        type: String,
+        default: 'png'
+    },
+    altText: {
+        type: String,
+        default: ''
+    },
+    classes: {
+        type: String,
+        default: ''
+    },
+    attribution: {
+        type: String,
+        default: '',
+    },
+    attributionLink: {
+        type: String,
+        default: ''
+    },
+    legacy: {
+        type: Boolean,
+        default: true
     }
-}
+})
+
+const cloudUrl = computed(() => {
+    if (props.legacy) return ''
+    // Fallback to direct cloudinary URL without the module
+    return `https://res.cloudinary.com/macivortech/image/upload/f_auto/${props.fileName}`
+})
 </script>
