@@ -1,11 +1,14 @@
 <template>
     <div class="flex justify-center">
-        <picture v-if="legacy" :class="classes">
-            <source :srcset="`/${fileName}.webp`" type="image/webp">
-            <source :srcset="`/${fileName}.${fileExtension}`" :type="`image/${fileExtension}`">
-            <img  :src="`/${fileName}.${fileExtension}`" :alt="altText">
-        </picture>      
-        <img :class="classes" v-else :src="cloudUrl" :alt="altText"/>
+        <CldImage
+            :class="['w-full','h-auto', classes]"
+            :src="fileName"
+            :alt="altText"
+            fetchFormat="auto"
+            quality="auto"
+            :height="height"
+            :width="width"
+        />
         <div v-if="attribution != ''" class="attribution flex justify-center max-w-md">
             <p v-if="attributionLink == ''" class="text-xs italic">{{ attribution }}</p>
             <p v-else class="text-xs italic">
@@ -15,42 +18,45 @@
     </div>
 </template>
 
-<script>
-export default {
-    props: {
-        fileName: {
-            type: String,
-            default: 'default-placeholder'
-        },
-        fileExtension: {
-            type: String,
-            default: 'png'
-        },
-        altText: {
-            type: String,
-            default: ''
-        },
-        classes: {
-            type: String,
-            default: ''
-        },
-        attribution: {
-            type: String,
-            default: '',
-        },
-        attributionLink: {
-            type: String,
-            default: ''
-        },
-        legacy: {
-            type: Boolean,
-            default: true
-        }
+<script setup>
+const props = defineProps({
+    fileName: {
+        type: String,
+        default: 'default-placeholder'
     },
-    computed: {
-        cloudUrl() {
-            return this.$cloudinary.image.url(this.fileName, { fetchFormat: "auto"})
-        }
+    fileExtension: {
+        type: String,
+        default: 'png'
+    },
+    altText: {
+        type: String,
+        default: ''
+    },
+    classes: {
+        type: String,
+        default: ''
+    },
+    attribution: {
+        type: String,
+        default: '',
+    },
+    attributionLink: {
+        type: String,
+        default: ''
+    },
+    height: {
+        type: [Number, String],
+        default: null
+    },
+    width: {
+      type: [Number, String],
+      default: null
+    },
+    legacy: {
+        type: Boolean,
+        default: false
     }
-}
+})
+
+// Using CldImage component from @nuxtjs/cloudinary
 </script>

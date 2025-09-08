@@ -1,5 +1,5 @@
 <template>
   <div class="body-container">
-    <nuxt />
+    <slot />
   </div>
 </template>

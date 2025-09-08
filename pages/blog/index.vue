@@ -3,39 +3,42 @@
     <page-header title="Blog" />
     <div class="container-center mt-8">
       <ul>
-        <li v-for="blog in blogs" :key="blog.title">
-          <nuxt-link :to="`/blog/${blog.slug}`">{{ `${blog.date.toLocaleDateString()} - ${blog.title}` }}</nuxt-link>
+        <li v-for="blog in blogData" :key="blog.title">
+          <NuxtLink :to="blog.path">{{ blog.title }}</NuxtLink>
+          <p>{{ blog.date }}</p>
+          <p>{{ blog.description }}</p>
         </li>
       </ul>
     </div>
   </section>
 </template>
 
-<script>
+<script setup>
 import pageHeader from "~/components/page-header"
-export default {
-    components: {
-        pageHeader
+
+const { data: blogData } = await useAsyncData('blog-list', () => {
+  return queryCollection('blog')
+  .order('date', 'DESC')
+  .all()
+})
+
+
+const blogs = computed(() => {
+  if (!blogData.value) return []
+  return blogData.value.map(b => {
+    b.date = new Date(b.date);
+    return b;
+  }).sort((a,b) => b.date - a.date);
+})
+
+useHead({
+  title: 'James MacIvor\'s Blog Index',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: "A list of my blogs",
     },
-    head() {
-      return {
-        title: 'James MacIvor\'s Blog Index',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: "A list of my blogs",
-          },
-        ],
-      }
-  },
-  async asyncData({ $content }) {
-    const blogData = await $content('blog').only(['title', 'slug', 'date']).fetch();        
-    const blogs = blogData.map(b => {
-      b.date = new Date(b.date);
-      return b;
-    }).sort((a,b) => b.date - a.date);
-    return { blogs };
-  }
-}
+  ],
+})
 </script>
