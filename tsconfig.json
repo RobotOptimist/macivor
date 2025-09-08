@@ -9,7 +9,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "esnext",
     "target": "es2020",
-    "types": ["node", "@nuxt/types"] ,
+    "types": ["node", "nuxt", "vite/client"] ,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -19,10 +19,11 @@
     "sourceMap": true,
     "declaration": false,
     "declarationMap": false,
+    "noEmit": true,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    //"exactOptionalPropertyTypes": true,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -48,4 +49,11 @@
     "esModuleInterop": true,
     "baseUrl": ".",
   }
+  ,
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".nuxt",
+    ".output"
+  ]
 }

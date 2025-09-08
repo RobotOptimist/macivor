@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article v-if="page && page.title">
      <page-header :title="page.title"></page-header>
     <div class="container-center">
       <picture-wrapper :legacy="false" 
@@ -12,18 +12,24 @@
       </div>
     </div>
   </article>
+  <article v-else>
+    <page-header title="Loading..."></page-header>
+    <div class="container-center">
+      <p>Loading RSS article...</p>
+    </div>
+  </article>
 </template>
 
 <script>
 export default {
   head() {
     return {
-      title: this.page.title,
+      title: (this.page && this.page.title) ? this.page.title : 'RSS Article',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.page.description
+          content: (this.page && this.page.description) ? this.page.description : ''
         },
       ],
     }
