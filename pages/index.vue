@@ -7,7 +7,7 @@
         Welcome
       </h2>
       <div class="links w-full">
-          <nuxt-link class="no-underline" to="/blog">Blog</nuxt-link>
+          <nuxt-link class="no-underline" to="/resume">Resume</nuxt-link>
       </div>      
     </div>
   </div>
