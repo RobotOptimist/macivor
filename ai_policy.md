@@ -61,11 +61,12 @@ The test is **who the text is for**.
 - **Proofreading.** Agents proofread human-facing copy. They flag anything
   that is factually inaccurate, inconsistent with another page or the resume,
   or that changes meaning, and wait for a human decision. They do not rewrite.
+- **Typos and grammar.** Agents fix spelling, punctuation and grammatical
+  errors in existing human-facing copy, provided meaning is preserved. Anything
+  that would require rephrasing or could shift meaning is flagged instead.
 
 ## Open questions
 
-- **Typos.** Can agents apply pure spelling and punctuation fixes, or must
-  every proofreading finding be flagged?
 - **Product site.** The terms and privacy policy at stock-market-replay.com
   are outside this repo, but are human-facing copy; confirm they follow the
   same rule so the public `/ai-policy` page stays accurate.
@@ -97,6 +98,5 @@ Raise these for James, do not fix them:
 
 ## Related
 
-- `.cursorrules` holds general agent behavior rules. It does not yet reference
-  this file.
+- `.cursorrules` (rule 27) and `CLAUDE.md` point agents at this file.
 - Public `/ai-policy` page: not yet created; James writes it.
