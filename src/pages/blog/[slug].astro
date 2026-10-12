@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+import PageHeader from '../../components/PageHeader.astro'
+import { Image } from 'astro:assets'
+
+// `image` in frontmatter is a legacy Cloudinary public ID; match it to a local file by basename.
+const heroFiles = import.meta.glob<{ default: ImageMetadata }>('../../assets/heroes/*.{png,jpg,jpeg,webp}', { eager: true })
+const heroes = Object.fromEntries(
+  Object.entries(heroFiles).map(([path, mod]) => [path.split('/').pop()!.replace(/\.[^.]+$/, ''), mod.default]),
+)
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog')
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }))
+}
+const { post } = Astro.props
+const { Content } = await render(post)
+const hero = post.data.image ? heroes[post.data.image.split('/').pop()!] : undefined
+---
+<Base title={post.data.title} description={post.data.description}>
+  <PageHeader title={post.data.title} />
+  <article class="container-center">
+    {hero && <Image src={hero} alt={post.data.alttext ?? ''} widths={[640, 960, 1280]} sizes="100vw" class="max-h-128 w-full h-auto object-cover" />}
+    <div class="article-container mt-4">
+      <Content />
+    </div>
+  </article>
+</Base>

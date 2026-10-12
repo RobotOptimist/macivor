@@ -1,22 +1,14 @@
-# macivor-tech
+# macivor
 
-> my personal website
+Company site for MacIvor Technical LLC (macivortech.com). Astro, static
+output, hosted on Netlify. Content is Markdown in `content/`.
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # static site in dist/
+npm run preview  # serve dist/
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Requires Node 22.12 or later. See `CLAUDE.md` for layout and `ai_policy.md`
+for the rules on AI-generated text.

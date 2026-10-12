@@ -95,3 +95,5 @@ sw.*
 # Astro spike
 astro/dist
 astro/.astro
+
+.astro
