@@ -10,5 +10,5 @@ npm run build    # static site in dist/
 npm run preview  # serve dist/
 ```
 
-Requires Node 22.12 or later. See `CLAUDE.md` for layout and `ai_policy.md`
+Requires Node 22.12 or later; `.nvmrc` pins 24 (local and Netlify). See `CLAUDE.md` for layout and `ai_policy.md`
 for the rules on AI-generated text.
