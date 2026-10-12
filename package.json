@@ -1,32 +1,20 @@
 {
-  "name": "macivor-tech",
-  "version": "1.0.0",
-  "description": "my personal website",
-  "author": "james macivor",
+  "name": "macivor-astro-spike",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxi generate",
-    "start": "npx serve -s .output/public",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@nuxt/content": "^3.6.3",
-    "@nuxtjs/cloudinary": "^4.0.0",
-    "@nuxtjs/sitemap": "^7.4.3",
-    "better-sqlite3": "^12.2.0",
-    "nuxt": "^3.8.0"
+    "@astrojs/markdown-remark": "^7.3.2",
+    "@astrojs/sitemap": "^3",
+    "astro": "^7.3.8"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "@types/node": "^24.3.1",
-    "cross-env": "^7.0.3",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "html-loader": "^4.2.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.9.2",
-    "vue-tsc": "^3.0.6"
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.19"
   }
 }

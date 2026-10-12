@@ -91,7 +91,7 @@ Worked on variety of projects for Rhyme V3 prior authorization automation produc
 
 ### Owner & Senior Consultant / Team Lead
 **MacIvor Technical / HMB / Saferx Solutions**  
-*Oct 2017 - May 2021*
+*Oct 2018 - May 2021*
 
 Led custom software development consulting business and engineering teams, focusing on healthcare compliance and operational excellence.
 

@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+import PageHeader from '../../components/PageHeader.astro'
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+)
+---
+<Base title="James MacIvor's Blog Index" description="A list of my blogs">
+  <PageHeader title="Blog" />
+  <div class="container-center mt-8">
+    <ul>
+      {posts.map((p) => (
+        <li>
+          <a href={`/blog/${p.id}`}>{p.data.title}</a>
+          <p>{p.data.date.toISOString().slice(0, 10)}</p>
+          <p>{p.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>
