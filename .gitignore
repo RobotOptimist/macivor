@@ -92,3 +92,6 @@ sw.*
 .data
 .outputcontents.sqlite
 .output
+# Astro spike
+astro/dist
+astro/.astro

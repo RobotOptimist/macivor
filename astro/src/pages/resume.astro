@@ -1,0 +1,15 @@
+---
+import { getEntry, render } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import PageHeader from '../components/PageHeader.astro'
+
+const entry = await getEntry('resume', 'resume_doc')
+if (!entry) throw new Error('resume_doc missing')
+const { Content } = await render(entry)
+---
+<Base title={entry.data.title}>
+  <PageHeader title={entry.data.title} />
+  <article class="container-center">
+    <div class="article-container mt-4"><Content /></div>
+  </article>
+</Base>
