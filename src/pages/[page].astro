@@ -1,0 +1,21 @@
+---
+import { render } from 'astro:content'
+import Base from '../layouts/Base.astro'
+import PageHeader from '../components/PageHeader.astro'
+import { assertPublishable, getVisiblePages } from '../lib/pages'
+
+export async function getStaticPaths() {
+  const pages = (await getVisiblePages()).filter((p) => p.id !== 'home')
+  return pages.map((page) => ({ params: { page: page.id }, props: { page } }))
+}
+const { page } = Astro.props
+assertPublishable(page)
+const { Content } = await render(page)
+---
+<Base title={page.data.title || `[title: ${page.id}]`} description={page.data.description} markdown={`/${page.id}.md`}>
+  <PageHeader title={page.data.title || `[title: ${page.id}]`} />
+  <div class="container-center mt-8">
+    {import.meta.env.DEV && page.data.draft && <p class="text-sm italic">Draft: not included in production builds.</p>}
+    <div class="article-container mt-4"><Content /></div>
+  </div>
+</Base>

@@ -1,10 +1,17 @@
 ---
 import Logo from './Logo.astro'
-// Labels: "Resume" and "Blog" are existing site text. The rest are placeholders.
+import { getVisiblePages } from '../lib/pages'
+
+// "Resume" and "Blog" are existing site text. Other labels come from the
+// navLabel in each page's frontmatter; pages without one are not linked.
+const pageLinks = (await getVisiblePages())
+  .filter((p) => p.id !== 'home' && p.data.navLabel.trim())
+  .map((p) => ({ href: `/${p.id}`, label: p.data.navLabel, order: p.data.navOrder }))
 const links = [
-  { href: '/resume', label: 'Resume' },
-  { href: '/blog', label: 'Blog' },
-]
+  { href: '/resume', label: 'Resume', order: 30 },
+  { href: '/blog', label: 'Blog', order: 40 },
+  ...pageLinks,
+].sort((a, b) => a.order - b.order)
 ---
 <nav class="flex items-center justify-between flex-wrap bg-indigo-700 p-4">
   <a href="/" class="flex items-center flex-shrink-0 text-white mr-6">
@@ -22,7 +29,6 @@ const links = [
       {links.map((l) => (
         <a href={l.href} class="block mt-4 lg:inline-block lg:mt-0 text-indigo-200 hover:text-white mr-4">{l.label}</a>
       ))}
-      <!-- TODO(james): copy: nav labels for About, Contact, AI policy once those pages exist -->
     </div>
   </div>
 </nav>

@@ -18,7 +18,7 @@ const { post } = Astro.props
 const { Content } = await render(post)
 const hero = post.data.image ? heroes[post.data.image.split('/').pop()!] : undefined
 ---
-<Base title={post.data.title} description={post.data.description}>
+<Base title={post.data.title} description={post.data.description} markdown={`/blog/${post.id}.md`}>
   <PageHeader title={post.data.title} />
   <article class="container-center">
     {hero && <Image src={hero} alt={post.data.alttext ?? ''} widths={[640, 960, 1280]} sizes="100vw" class="max-h-128 w-full h-auto object-cover" />}

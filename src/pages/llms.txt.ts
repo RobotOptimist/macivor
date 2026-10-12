@@ -2,12 +2,14 @@
 // the repo and conversation notes and need James's review before launch.
 import type { APIRoute } from 'astro'
 import { getCollection } from 'astro:content'
+import { getVisiblePages } from '../lib/pages'
 
 export const GET: APIRoute = async ({ site }) => {
   const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.date.getTime() - a.data.date.getTime(),
   )
   const abs = (p: string) => new URL(p, site).toString()
+  const pages = (await getVisiblePages()).filter((p) => p.id !== 'home' && p.data.title)
   const lines = [
     '# MacIvor Technical LLC',
     '',
@@ -16,6 +18,7 @@ export const GET: APIRoute = async ({ site }) => {
     '## Pages',
     '',
     `- [Resume](${abs('/resume.md')}): James MacIvor's full resume`,
+    ...pages.map((p) => `- [${p.data.title}](${abs(`/${p.id}.md`)})${p.data.description ? `: ${p.data.description}` : ''}`),
     '',
     '## Blog',
     '',

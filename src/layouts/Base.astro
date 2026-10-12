@@ -6,8 +6,10 @@ import SiteFooter from '../components/SiteFooter.astro'
 interface Props {
   title: string
   description?: string
+  /** Path of this page's Markdown twin, if one exists. */
+  markdown?: string
 }
-const { title, description = '' } = Astro.props
+const { title, description = '', markdown } = Astro.props
 const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 <!doctype html>
@@ -23,7 +25,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="alternate" type="text/markdown" href={`${Astro.url.pathname.replace(/\/$/, '') || '/index'}.md`} />
+    {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
   </head>
   <body>
     <div class="body-container">
