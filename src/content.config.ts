@@ -21,4 +21,17 @@ const resume = defineCollection({
   }),
 })
 
-export const collections = { blog, resume }
+// Standalone pages (about, contact, ai-policy, home body). James writes the
+// prose, title and nav label; pages stay hidden from the build until `draft: false`.
+const pages = defineCollection({
+  loader: glob({ pattern: '*.md', base: './content/pages' }),
+  schema: z.object({
+    title: z.string().default(''),
+    description: z.string().default(''),
+    navLabel: z.string().default(''),
+    navOrder: z.number().default(50),
+    draft: z.boolean().default(true),
+  }),
+})
+
+export const collections = { blog, resume, pages }

@@ -18,7 +18,11 @@ in existing copy is allowed when meaning is preserved.
   emit the Markdown twins and `llms.txt` at build time.
 - `src/layouts/`, `src/components/`: shared layout, nav, footer, page header.
 - `src/styles/global.css`, `tailwind.config.cjs`: the design system (Tailwind 3).
-- `src/content.config.ts`: `blog` and `resume` collections, read from `content/`.
+- `src/content.config.ts`: `blog`, `resume` and `pages` collections, read from `content/`.
+- `content/pages/`: about, contact, ai-policy and the home body. Prose, `title`,
+  `description` and `navLabel` are James's to write; `draft: true` (the
+  default) keeps a page out of production builds and the nav. A published
+  page with no title fails the build.
 - `content/blog/`, `content/resume/`: published Markdown. `content/_parked/`
   is not loaded.
 - `src/assets/`: images processed by `astro:assets`. Hero images are matched
