@@ -4,7 +4,7 @@ import { unified } from '@astrojs/markdown-remark'
 import rehypePictureWrapper from './src/lib/rehype-picture-wrapper.mjs'
 
 export default defineConfig({
-  site: 'https://macivortech.com',
+  site: 'https://www.macivortech.com',
   integrations: [sitemap()],
   markdown: {
     processor: unified({ rehypePlugins: [rehypePictureWrapper] }),
