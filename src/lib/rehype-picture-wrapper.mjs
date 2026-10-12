@@ -14,7 +14,7 @@ function toImg(attrs) {
   const ext = attr(attrs, 'file-extension') || 'png'
   const alt = attr(attrs, 'alt-text')
   const src = `/img/${id}.${ext}`
-  return `<img src="${src}" alt="${alt}" loading="lazy" class="mx-auto my-4 max-h-128">`
+  return `<img src="${src}" alt="${alt}" loading="lazy" class="mx-auto" style="width:min(100%,28rem);height:auto">`
 }
 
 // For the Markdown twins: same tags, as Markdown image syntax with absolute URLs.

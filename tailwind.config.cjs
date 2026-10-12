@@ -58,7 +58,31 @@ module.exports = {
     },
     transitionProperty: {
       'height': 'height',
-    }
+    },
+    extend: {
+      // Reading styles for blog posts (`prose`), tuned to the site's indigo/gray palette.
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': theme('colors.gray.700'),
+            '--tw-prose-headings': theme('colors.gray.900'),
+            '--tw-prose-lead': theme('colors.gray.600'),
+            '--tw-prose-links': theme('colors.indigo.700'),
+            '--tw-prose-bold': theme('colors.gray.900'),
+            '--tw-prose-bullets': theme('colors.indigo.400'),
+            '--tw-prose-counters': theme('colors.indigo.500'),
+            '--tw-prose-quotes': theme('colors.gray.700'),
+            '--tw-prose-quote-borders': theme('colors.indigo.300'),
+            '--tw-prose-hr': theme('colors.gray.300'),
+            '--tw-prose-code': theme('colors.gray.800'),
+            '--tw-prose-pre-bg': theme('colors.gray.800'),
+            a: { fontWeight: '500', '&:visited': { color: theme('colors.indigo.800') } },
+            'blockquote p:first-of-type::before': { content: 'none' },
+            'blockquote p:last-of-type::after': { content: 'none' },
+          },
+        },
+      }),
+    },
   },
-  plugins: []
+  plugins: [require('@tailwindcss/typography')]
 }

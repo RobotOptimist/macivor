@@ -254,3 +254,44 @@ a:visited.text-white{
     @apply max-w-4xl;
   }
 }
+
+/* Blog posts: `prose` (typography plugin) owns the reading styles. These
+   undo the site-wide bare-element rules above, which were written for a
+   centred, narrow layout. */
+.post :where(p, ul, ol, pre, table) {
+  font-size: inherit;
+  max-width: none;
+}
+.post :where(h1, h2, h3, h4) {
+  margin-left: 0;
+  margin-right: 0;
+}
+.post :where(ul, ol) {
+  margin-left: 0;
+  text-align: left;
+}
+.post :where(blockquote) {
+  background: none;
+  font-style: normal;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 0 0 1em;
+}
+.post :where(blockquote)::before {
+  content: none;
+}
+.post :where(blockquote p) {
+  display: block;
+}
+.post :where(a) {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.post :where(table) {
+  display: table;
+  table-layout: auto;
+  font-size: 0.9em;
+}
+.post :where(code) {
+  font-size: 0.9em;
+}
