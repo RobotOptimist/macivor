@@ -50,4 +50,4 @@
 
 26. **Use Assertions**: Include assertions wherever possible to validate assumptions and catch potential errors early.
 
-27. **Read ai_policy.md First**: Before writing or editing anything a site visitor will read, read `ai_policy.md`. Human-facing copy is never AI-generated: leave a `TODO(james): copy` placeholder and flag issues instead. Repo-facing text, agent-facing text (llms.txt), structure and code are fine.
+27. **Read ai_policy.md First**: Before writing or editing anything a site visitor will read, read `ai_policy.md`. Human-facing copy is not AI-generated except for the exceptions it lists (accessibility text and microcopy, legal copy, translations, minor spelling/grammar and link fixes): otherwise leave a `TODO(james): copy` placeholder and flag issues instead. Repo-facing text, agent-facing text (llms.txt), structure and code are fine.
