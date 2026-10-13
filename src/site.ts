@@ -8,7 +8,7 @@ export const site = {
 
   description: 'MacIvor Technical LLC is an app dev company that creates applications for mobile and desktop.',
 
-  legalName: '',
+  legalName: 'MacIvor Technical LLC',
 
   // Used for <meta name="theme-color"> and the manifest. The palette itself is James's
   // hand-picked indigo; this is still the white the site shipped with.
