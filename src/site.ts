@@ -1,20 +1,16 @@
 // Site-wide strings. Everything here is human-facing text, so James writes it
 // (see ai_policy.md). Empty values are simply left out of the output.
 export const site = {
-  // TODO(james): copy: short brand name. Used for og:site_name, and as the
-  // manifest `name`/`short_name` when set.
-  name: '',
 
-  // TODO(james): copy: home page <title>, and the manifest name when `name` is empty.
-  // Currently the text the site shipped with; issue #85 asks for it to change.
-  homeTitle: 'James MacIvor Website',
+  name: 'MacIvor Technical LLC',
 
-  // TODO(james): copy: default meta description for pages that have none.
-  description: '',
+  homeTitle: 'MacIvor Technical LLC',
 
-  // TODO(james): copy: legal name shown in the footer's copyright line.
+  description: 'MacIvor Technical LLC is an app dev company that creates applications for mobile and desktop.',
+
   legalName: '',
 
-  // Palette is still undecided (issue #85); this is the value the site shipped with.
+  // Used for <meta name="theme-color"> and the manifest. The palette itself is James's
+  // hand-picked indigo; this is still the white the site shipped with.
   themeColor: '#ffffff',
 }
