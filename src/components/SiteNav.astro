@@ -1,6 +1,6 @@
 ---
-import Logo from './Logo.astro'
 import { getVisiblePages } from '../lib/pages'
+import { site } from '../site'
 
 // "Resume" and "Blog" are existing site text. Other labels come from the
 // navLabel in each page's frontmatter; pages without one are not linked.
@@ -14,9 +14,9 @@ const links = [
 ].sort((a, b) => a.order - b.order)
 ---
 <nav class="flex items-center justify-between flex-wrap bg-indigo-700 p-4">
-  <a href="/" class="flex items-center flex-shrink-0 text-white mr-6">
-    <Logo class="h-12 mr-4" />
-    <span class="font-semibold text-xl tracking-tight">James MacIvor</span>
+  <a href="/" class="flex items-center flex-shrink-0 mr-6">
+    <!-- Commissioned logo. Alt text is James's own string from site.ts. -->
+    <img src="/logo/MacIvor_Logo_White.svg" alt={site.name} width="224" height="96" class="h-24 w-auto -my-7 -ml-4" />
   </a>
   <div class="block lg:hidden">
     <button id="menu-toggle" aria-expanded="false" aria-controls="menu"

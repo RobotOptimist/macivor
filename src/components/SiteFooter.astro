@@ -1,7 +1,18 @@
 ---
+import { getEntry } from 'astro:content'
+import { isVisible } from '../lib/pages'
+import { site } from '../site'
+
+// The AI policy link appears once that page is published; its label is James's.
+const policy = await getEntry('pages', 'ai-policy')
+const policyLabel = policy && isVisible(policy) ? policy.data.navLabel || policy.data.title : ''
+const year = new Date().getFullYear()
 ---
-<footer class="flex items-center justify-end flex-wrap bg-indigo-700 p-4 mt-8">
+<footer class="flex items-center justify-between flex-wrap bg-indigo-700 p-4 mt-8 text-sm text-indigo-100">
+  <div>
+    {site.legalName && <span>&copy; {year} {site.legalName}</span>}
+  </div>
   <div class="text-right">
-    <!-- TODO(james): copy: footer text (entity name, contact, AI policy link) -->
+    {policyLabel && <a href="/ai-policy" class="text-white hover:text-indigo-200">{policyLabel}</a>}
   </div>
 </footer>

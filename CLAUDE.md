@@ -17,6 +17,8 @@ in existing copy is allowed when meaning is preserved.
 - `src/pages/`: routes. `blog/[slug].md.ts`, `resume.md.ts` and `llms.txt.ts`
   emit the Markdown twins and `llms.txt` at build time.
 - `src/layouts/`, `src/components/`: shared layout, nav, footer, page header.
+- `src/site.ts`: site-wide strings (brand name, home title, default description,
+  legal name). Human-facing, so James writes them; empty values are omitted.
 - `src/styles/global.css`, `tailwind.config.cjs`: the design system (Tailwind 3).
 - `src/content.config.ts`: `blog`, `resume` and `pages` collections, read from `content/`.
 - `content/pages/`: about, contact, ai-policy and the home body. Prose, `title`,

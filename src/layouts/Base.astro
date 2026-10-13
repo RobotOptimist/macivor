@@ -2,6 +2,7 @@
 import '../styles/global.css'
 import SiteNav from '../components/SiteNav.astro'
 import SiteFooter from '../components/SiteFooter.astro'
+import { site } from '../site'
 
 interface Props {
   title: string
@@ -9,8 +10,11 @@ interface Props {
   /** Path of this page's Markdown twin, if one exists. */
   markdown?: string
 }
-const { title, description = '', markdown } = Astro.props
+const { title, markdown } = Astro.props
+const description = Astro.props.description || site.description
 const canonical = new URL(Astro.url.pathname, Astro.site)
+// Emblem centred on a 1200x630 card (public/social-card.png).
+const socialImage = new URL('/social-card.png', Astro.site)
 ---
 <!doctype html>
 <html lang="en">
@@ -19,6 +23,18 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    <meta name="theme-color" content={site.themeColor} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    {site.name && <meta property="og:site_name" content={site.name} />}
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {site.name && <meta property="og:image:alt" content={site.name} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImage} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

@@ -4,11 +4,12 @@ import PageHeader from '../components/PageHeader.astro'
 import { getEntry, render } from 'astro:content'
 import { Image } from 'astro:assets'
 import { isVisible } from '../lib/pages'
+import { site } from '../site'
 import portrait from '../assets/macivor_portrait_hqdkcf.jpg'
 const home = await getEntry('pages', 'home')
 const Body = home && isVisible(home) ? (await render(home)).Content : null
 ---
-<Base title="James MacIvor Website" description="" markdown="/index.md">
+<Base title={site.homeTitle} markdown="/index.md">
   <PageHeader title="Hi, I'm James MacIvor" />
   <div class="container-center mt-8">
     <Image src={portrait} width={400} height={400} class="w-3/4 md:w-56 rounded-lg" alt="a picture of james macivor" />
