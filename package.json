@@ -1,5 +1,8 @@
 {
-  "name": "macivor-astro-spike",
+  "name": "macivor",
+  "version": "1.0.0",
+  "description": "Company site for MacIvor Technical LLC (macivortech.com)",
+  "author": "James MacIvor",
   "private": true,
   "type": "module",
   "scripts": {
