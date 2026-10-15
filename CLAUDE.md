@@ -6,11 +6,13 @@ uses "I".
 
 ## Read first
 
-`ai_policy.md`. Text that human visitors read must never be AI-generated.
-Leave `<!-- TODO(james): copy: ... -->` placeholders and flag problems
-instead of writing or rewriting prose. Commits, PR descriptions, docs,
-`llms.txt`, structure and code are fine to write. Fixing typos and grammar
-in existing copy is allowed when meaning is preserved.
+`ai_policy.md`. Text that human visitors read is not AI-generated, apart from
+the exceptions it lists (accessibility text and microcopy, legal copy,
+translations, minor spelling/grammar and broken-link fixes). Otherwise leave a
+`<!-- TODO(james): copy: ... -->` placeholder and flag problems instead of
+writing or rewriting prose. Page metadata (`<title>`, meta description, social
+card text) is human-written. Commits, PR descriptions, docs, `llms.txt`,
+structure and code are fine to write.
 
 ## Layout
 
