@@ -6,6 +6,8 @@ navOrder: 21
 draft: false
 ---
 
+![a picture of james macivor](../../src/assets/macivor_portrait_hqdkcf.jpg)
+
 ## Who am I?
 My name is James MacIvor and I own MacIvor Technical LLC.
 

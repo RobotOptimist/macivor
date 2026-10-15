@@ -1,9 +1,10 @@
 ---
-title: ""
-description: ""
-navLabel: ""
+title: "Welcome to MacIvor Technical LLC"
+description: "The home page for MacIvor Technical LLC"
+navLabel: "home"
 navOrder: 0
 draft: true
 ---
-
-<!-- TODO(james): copy: Home page body: what MacIvor Technical LLC is and what it makes; the page structure (portrait, links) is already built. Fill in title, description and navLabel above, write the body here, then set draft: false. -->
+<div class="hero-logo">
+  <img src="/logo/MacIvor_Logo_White.svg" alt="MacIvor Technical LLC" width="504" height="216" />
+</div>
