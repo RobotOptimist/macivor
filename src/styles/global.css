@@ -136,6 +136,14 @@ a:visited.text-white{
 .container-title > h1 {
   color: white;
 }
+/* Hero logo on the home page: the logo is white, so it needs the brand gradient behind it. */
+.hero-logo {
+  background: linear-gradient(90deg, #4c51bf, #313587);
+  @apply flex justify-center rounded-lg p-6 w-full;
+}
+.hero-logo img {
+  @apply h-auto w-full max-w-xs;
+}
 .section-container {
   @apply flex justify-center;
 }
@@ -294,4 +302,9 @@ a:visited.text-white{
 }
 .post :where(code) {
   font-size: 0.9em;
+}
+
+/* About-the-owner portrait: keep it a modest size rather than full column width. */
+article[data-page="about-the-owner"] .post img {
+  @apply w-56 max-w-full rounded-lg mx-auto block;
 }

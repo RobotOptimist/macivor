@@ -1,28 +1,14 @@
 ---
 import Base from '../layouts/Base.astro'
-import PageHeader from '../components/PageHeader.astro'
 import { getEntry, render } from 'astro:content'
-import { Image } from 'astro:assets'
 import { isVisible } from '../lib/pages'
 import { site } from '../site'
-import portrait from '../assets/macivor_portrait_hqdkcf.jpg'
 const home = await getEntry('pages', 'home')
 const Body = home && isVisible(home) ? (await render(home)).Content : null
 ---
 <Base title={site.homeTitle} markdown="/index.md">
-  <PageHeader title="Hi, I'm James MacIvor" />
+  <h1 class="sr-only">{site.name}</h1>
   <div class="container-center mt-8">
-    <Image src={portrait} width={400} height={400} class="w-3/4 md:w-56 rounded-lg" alt="a picture of james macivor" />
     {Body && <div class="article-container mt-4"><Body /></div>}
-    <div class="links w-full mt-4">
-      <a class="no-underline" href="/resume">Resume</a>
-      <a class="no-underline" href="/blog">Blog</a>
-    </div>
   </div>
 </Base>
-<style is:global>
-  .links a { @apply block w-full font-bold text-xl border border-solid border-indigo-500; border-bottom: none; padding: 5%; }
-  @screen md { .links { @apply flex; } .links a { @apply w-1/4 border border-solid border-indigo-500; } }
-  @screen lg { .links a { @apply w-40 text-center text-base p-0 pt-3 pb-3; } .links { @apply justify-center; } }
-  .links a:hover, .links a:active { @apply bg-indigo-700 text-white; }
-</style>

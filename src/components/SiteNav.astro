@@ -4,8 +4,9 @@ import { site } from '../site'
 
 // "Resume" and "Blog" are existing site text. Other labels come from the
 // navLabel in each page's frontmatter; pages without one are not linked.
+// The AI policy is linked from the footer only (its navLabel is the footer label).
 const pageLinks = (await getVisiblePages())
-  .filter((p) => p.id !== 'home' && p.data.navLabel.trim())
+  .filter((p) => p.id !== 'home' && p.id !== 'ai-policy' && p.data.navLabel.trim())
   .map((p) => ({ href: `/${p.id}`, label: p.data.navLabel, order: p.data.navOrder }))
 const links = [
   { href: '/resume', label: 'Resume', order: 30 },

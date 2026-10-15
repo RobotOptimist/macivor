@@ -14,9 +14,8 @@ const { Content } = await render(page)
 ---
 <Base title={page.data.title || `[title: ${page.id}]`} description={page.data.description} markdown={`/${page.id}.md`}>
   <PageHeader title={page.data.title || `[title: ${page.id}]`} />
-  <article class="mx-auto w-full max-w-2xl px-4 sm:px-6 mt-8 text-left">
+  <article data-page={page.id} class="mx-auto w-full max-w-2xl px-4 sm:px-6 mt-8 text-left">
     {import.meta.env.DEV && page.data.draft && <p class="text-sm italic mb-4 max-w-none">Draft: not included in production builds.</p>}
-    {page.data.description && <p class="text-lg text-gray-700 mb-6 max-w-none">{page.data.description}</p>}
     <div class="post prose prose-lg max-w-none">
       <Content />
     </div>
