@@ -3,7 +3,7 @@ title: "AI Policy for MacIvor Technical LLC"
 description: "Use of AI for creating content is restricted. This page describes the policy in greater detail"
 navLabel: "AI Policy"
 navOrder: 70
-draft: true
+draft: false
 ---
 
 As artificially generated content continues to spread across the internet it is important to take a stance as an individual and as a company on how AI will be used for my projects.
